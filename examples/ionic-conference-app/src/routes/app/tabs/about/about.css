@@ -1,0 +1,47 @@
+.about-info ion-icon {
+	margin-inline-end: 32px;
+}
+
+.about-info ion-list {
+	padding-top: 0;
+}
+
+.about-page ion-toolbar {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	right: 0;
+
+	--background: transparent;
+	--color: white;
+}
+
+.about-page ion-toolbar ion-button,
+ion-toolbar ion-back-button,
+ion-toolbar ion-menu-button {
+	--color: white;
+}
+
+.about-page #date-input-popover {
+	--offset-y: -var(--ion-safe-area-bottom);
+
+	--max-width: 90%;
+	--width: 336px;
+}
+
+.about-page .ion-text-end {
+	text-align: end !important;
+}
+
+/*
+ * iOS Only
+ */
+
+.about-page .ios .about-info {
+	--ion-padding: 19px;
+}
+
+.about-page .ios .about-info h3 {
+	font-weight: 700;
+}

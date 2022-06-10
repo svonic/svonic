@@ -1,0 +1,31 @@
+/*
+ * Material Design
+ */
+
+.schedule-filter-modal .md ion-toolbar ion-button {
+	text-transform: capitalize;
+	letter-spacing: 0;
+}
+
+.schedule-filter-modal .md ion-checkbox {
+	--background-checked: transparent;
+	--border-color: transparent;
+	--border-color-checked: transparent;
+	--checkmark-color: var(--ion-color-primary);
+}
+
+.schedule-filter-modal .md ion-list {
+	background: inherit;
+}
+
+/*
+ * iOS
+ */
+
+.schedule-filter-modal .ios ion-list-header {
+	margin-top: 10px;
+}
+
+.schedule-filter-modal .ios ion-label {
+	color: var(--ion-color-primary);
+}

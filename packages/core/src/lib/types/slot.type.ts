@@ -1,0 +1,16 @@
+export type SlotType =
+	| 'bottom'
+	| 'content'
+	| 'end'
+	| 'error'
+	| 'header'
+	| 'helper'
+	| 'icon-only'
+	| 'primary'
+	| 'secondary'
+	| 'separator'
+	| 'start'
+	| 'time-label'
+	| 'title'
+	| 'top'
+	| undefined;
