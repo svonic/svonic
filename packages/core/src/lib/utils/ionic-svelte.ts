@@ -11,7 +11,7 @@ const getHelperFunctions = () => {
 };
 
 export const initializeIonic = async (config: IonicConfig = {}): Promise<void> => {
-	if (typeof window !== 'undefined') {
+	// if (typeof window !== 'undefined') {
 		const initialize = (await import('@ionic/core/components')).initialize;
 
 		/**
@@ -32,5 +32,5 @@ export const initializeIonic = async (config: IonicConfig = {}): Promise<void> =
 			...config,
 			_ce: ce
 		});
-	}
+	// }
 };

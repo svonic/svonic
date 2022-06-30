@@ -1,6 +1,4 @@
-import { getConfig } from './config';
-
-const config = getConfig;
+import { config } from "./global-config";
 
 export type Platforms = keyof typeof PLATFORMS_MAP;
 
