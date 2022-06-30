@@ -13,7 +13,7 @@
 		"preview": "svelte-kit preview"
 	},
 	"dependencies": {
-		"@mdi/js": "6.7.96",
+		"@mdi/js": "6.8.96",
 		"ionicons": "6.0.2"
 	},
 	"devDependencies": {
@@ -22,24 +22,24 @@
 		"@svonic/core": "workspace:*",
 		"@svonic/forms": "workspace:*",
 		"@svonic/ui": "workspace:*",
-		"@typescript-eslint/eslint-plugin": "5.27.1",
-		"@typescript-eslint/parser": "5.27.1",
+		"@typescript-eslint/eslint-plugin": "5.30.0",
+		"@typescript-eslint/parser": "5.30.0",
 		"autoprefixer": "10.4.7",
-		"eslint": "8.17.0",
+		"eslint": "8.18.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"highlight.js": "11.5.1",
 		"postcss": "8.4.14",
-		"postcss-load-config": "3.1.4",
-		"prettier": "2.6.2",
+		"postcss-load-config": "4.0.1",
+		"prettier": "2.7.1",
 		"prettier-plugin-svelte": "2.7.0",
 		"svelte": "3.48.0",
-		"svelte-check": "2.7.2",
-		"svelte-highlight": "6.0.1",
+		"svelte-check": "2.8.0",
+		"svelte-highlight": "6.1.1",
 		"svelte-preprocess": "4.10.7",
-		"tailwindcss": "3.1.2",
+		"tailwindcss": "3.1.4",
 		"tslib": "2.4.0",
-		"typescript": "4.7.3"
+		"typescript": "4.7.4"
 	},
 	"engines": {
 		"node": ">=16.7.0",
