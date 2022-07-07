@@ -1,7 +1,29 @@
-<script lang="ts">
+<script>
+	import Button from '$lib/components/button/Button.svelte';
+	import Application from '$lib/components/application/Application.svelte';
+	import Header from '$lib/components/header/Header.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
+	import Toolbar from '$lib/components/toolbar/Toolbar.svelte';
+	import Content from '$lib/components/content/Content.svelte';
+	import Title from '$lib/components/title/Title.svelte';
 </script>
 
-<h1>Welcome to Svonic Core!</h1>
+<Application>
+	<Header>
+		<Toolbar>
+			<Title>Header</Title>
+		</Toolbar>
+	</Header>
 
-<style>
-</style>
+	<Content>
+		<h1>Main Content</h1>
+		<Button>Hello Ionic</Button>
+		<slot />
+	</Content>
+
+	<Footer>
+		<Toolbar>
+			<Title>Footer</Title>
+		</Toolbar>
+	</Footer>
+</Application>

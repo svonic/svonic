@@ -2,10 +2,18 @@
 	import { browser } from '$app/env';
 	import type { ApplicationConfig } from '$lib/types/application-config.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
-	import { initializeIonic } from '$lib/utils/ionic-svelte';
+	import { initializeIonic, initializeIonicSSR } from '$lib/utils/ionic-svelte';
+	import {
+		initialize,
+		initializeSSR,
+		isAllowedIonicModeValue,
+		isIonicElement
+	} from '$lib/utils/global';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonApp } from '@ionic/core/components/ion-app';
+	// import { hydrateDocument } from '@ionic/core/hydrate';
 	import { onMount } from 'svelte';
+	import type { Mode } from '@ionic/core/components';
 
 	let component: IonApp;
 	let cssClass: CssClassType = '';
@@ -15,21 +23,94 @@
 
 	export { cssClass as class };
 
-	export let config: ApplicationConfig = {};
+	export let config: ApplicationConfig = {
+		mode: 'md'
+	};
 	export let id: string | undefined = undefined;
 
+	let defaultMode: Mode = 'md';
+
+	initialized = true;
+
 	if (browser) {
+		// console.log('document', document);
+
 		onMount(async () => {
 			const IonApp = (await import('@ionic/core/components/ion-app')).IonApp;
 
 			defineCustomElement('ion-app', IonApp);
 
-			await initializeIonic(config).then(() => {
+			initializeIonicSSR(config, document).then(() => {
 				initialized = true;
-				// setTimeout(() => {
-				// 	document.documentElement.classList.add('hydrated');
-				// }, 400);
+				// console.log('mounted initialized', initialized);
+				// console.log('ionic window', window.Ionic);
 			});
+
+			// console.log('document', document);
+
+			// await initializeIonicSSR(config, document).then(() => {
+			// 	initialized = true;
+			// 	console.log('mounted initialized', initialized);
+			// 	console.log('ionic window', window.Ionic);
+			// });
+
+			// document.body.childNodes.forEach((elm) => {
+			// 	console.log('elm', elm);
+			// 	setMode(elm);
+			// });
+
+			// console.log('mounted document', document);
+
+			// await hydrateDocument(document, {
+			// 	clientHydrateAnnotations: false,
+			// 	excludeComponents: [
+			// 		// overlays
+			// 		'ion-action-sheet',
+			// 		'ion-alert',
+			// 		'ion-loading',
+			// 		'ion-modal',
+			// 		'ion-picker',
+			// 		'ion-popover',
+			// 		'ion-toast',
+			// 		'ion-toast',
+
+			// 		// navigation
+			// 		'ion-router',
+			// 		'ion-route',
+			// 		'ion-route-redirect',
+			// 		'ion-router-link',
+			// 		'ion-router-outlet',
+
+			// 		// tabs
+			// 		'ion-tabs',
+			// 		'ion-tab',
+
+			// 		// auxiliar
+			// 		'ion-picker-column',
+			// 		'ion-virtual-scroll'
+			// 	]
+			// }).then((hydrateResults) => {
+			// 	hydrateResults.diagnostics.forEach((d) => {
+			// 		if (d.type === 'error') {
+			// 			console.error(d.messageText);
+			// 		} else if (d.type === 'debug') {
+			// 			console.debug(d.messageText);
+			// 		} else {
+			// 			console.log(d.messageText);
+			// 		}
+			// 	});
+			// });
+
+			// console.log('ionic window', window.Ionic);
+
+			// await initializeIonic(config).then(() => {
+			// 	initialized = true;
+			// 	// setTimeout(() => {
+			// 	// 	document.documentElement.classList.add('hydrated');
+			// 	// }, 400);
+			// 	console.log('mounted initialized', initialized);
+			// 	console.log('ionic window', window.Ionic);
+			// });
 		});
 	}
 
@@ -54,11 +135,17 @@
 	};
 </script>
 
-{#if initialized}
+<!-- {#if initialized}
 	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
 		<slot />
 	</ion-app>
 {:else}
+	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
+		<slot />
+	</ion-app>
+{/if} -->
+
+{#if initialized}
 	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
 		<slot />
 	</ion-app>
