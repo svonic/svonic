@@ -2,12 +2,18 @@
 	import { browser } from '$app/env';
 	import type { ApplicationConfig } from '$lib/types/application-config.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
-	import { initializeIonic } from '$lib/utils/ionic-svelte';
-	import { initialize } from '$lib/utils/global';
+	import { initializeIonic, initializeIonicSSR } from '$lib/utils/ionic-svelte';
+	import {
+		initialize,
+		initializeSSR,
+		isAllowedIonicModeValue,
+		isIonicElement
+	} from '$lib/utils/global';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonApp } from '@ionic/core/components/ion-app';
-	import { hydrateDocument } from '@ionic/core/hydrate';
+	// import { hydrateDocument } from '@ionic/core/hydrate';
 	import { onMount } from 'svelte';
+	import type { Mode } from '@ionic/core/components';
 
 	let component: IonApp;
 	let cssClass: CssClassType = '';
@@ -22,13 +28,36 @@
 	};
 	export let id: string | undefined = undefined;
 
-	initialize(config);
+	let defaultMode: Mode = 'md';
+
+	initialized = true;
 
 	if (browser) {
+		// console.log('document', document);
+
 		onMount(async () => {
 			const IonApp = (await import('@ionic/core/components/ion-app')).IonApp;
 
 			defineCustomElement('ion-app', IonApp);
+
+			initializeIonicSSR(config, document).then(() => {
+				initialized = true;
+				// console.log('mounted initialized', initialized);
+				// console.log('ionic window', window.Ionic);
+			});
+
+			// console.log('document', document);
+
+			// await initializeIonicSSR(config, document).then(() => {
+			// 	initialized = true;
+			// 	console.log('mounted initialized', initialized);
+			// 	console.log('ionic window', window.Ionic);
+			// });
+
+			// document.body.childNodes.forEach((elm) => {
+			// 	console.log('elm', elm);
+			// 	setMode(elm);
+			// });
 
 			// console.log('mounted document', document);
 
@@ -72,7 +101,7 @@
 			// 	});
 			// });
 
-			console.log('ionic window', window.Ionic);
+			// console.log('ionic window', window.Ionic);
 
 			// await initializeIonic(config).then(() => {
 			// 	initialized = true;
@@ -116,9 +145,11 @@
 	</ion-app>
 {/if} -->
 
-<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
-	<slot />
-</ion-app>
+{#if initialized}
+	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
+		<slot />
+	</ion-app>
+{/if}
 
 <style>
 </style>

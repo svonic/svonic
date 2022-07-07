@@ -4,6 +4,8 @@ import '@ionic/core/css/normalize.css';
 import '@ionic/core/css/structure.css';
 import '@ionic/core/css/typography.css';
 
+import { initializeSSR } from './global';
+
 const getHelperFunctions = () => {
 	return {
 		ce: (eventName: string, opts: any) => new CustomEvent(eventName, opts)
@@ -11,7 +13,7 @@ const getHelperFunctions = () => {
 };
 
 export const initializeIonic = async (config: IonicConfig = {}): Promise<void> => {
-	// if (typeof window !== 'undefined') {
+	if (typeof window !== 'undefined') {
 		const initialize = (await import('@ionic/core/components')).initialize;
 
 		/**
@@ -32,5 +34,18 @@ export const initializeIonic = async (config: IonicConfig = {}): Promise<void> =
 			...config,
 			_ce: ce
 		});
-	// }
+	}
+};
+
+export const initializeIonicSSR = async (config: IonicConfig = {}, document: Document): Promise<void> => {
+	if (typeof (document as Document) !== 'undefined') {
+		document.documentElement.classList.add('ion-ce');
+	}
+
+	const { ce } = getHelperFunctions();
+
+	initializeSSR(document, {
+		...config,
+		_ce: ce
+	});
 };
