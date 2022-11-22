@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 	import type { ApplicationConfig } from '$lib/types/application-config.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { initializeIonic } from '$lib/utils/ionic-svelte';

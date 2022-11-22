@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ProgressSpinnerType } from '$lib/types/progress-spinner.type';
 	import { defineCustomElement } from '$lib/utils/utils';

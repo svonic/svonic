@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 	import { menuController } from '$lib/controllers/menu';
 	import type { ButtonType } from '$lib/types/button.type';
 	import type { ColorType } from '$lib/types/color.type';

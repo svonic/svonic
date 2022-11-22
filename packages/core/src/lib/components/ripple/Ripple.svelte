@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonRippleEffect } from '@ionic/core/components/ion-ripple-effect';
 	import { onMount } from 'svelte';
