@@ -10,7 +10,7 @@ importers:
       eslint: 8.28.0
       eslint-plugin-import: 2.26.0
       eslint-plugin-svelte3: 4.0.0
-      prettier: 2.7.1
+      prettier: 2.8.0
       typescript: 4.9.3
     devDependencies:
       '@changesets/cli': 2.25.2
@@ -19,7 +19,7 @@ importers:
       eslint: 8.28.0
       eslint-plugin-import: 2.26.0_vfrilbydaxalswvos6uuh4sxs4
       eslint-plugin-svelte3: 4.0.0_eslint@8.28.0
-      prettier: 2.7.1
+      prettier: 2.8.0
       typescript: 4.9.3
 
   documentation:
@@ -40,7 +40,7 @@ importers:
       ionicons: 6.0.4
       postcss: 8.4.19
       postcss-load-config: 4.0.1
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -55,7 +55,7 @@ importers:
       ionicons: 6.0.4
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../packages/core/package
       '@svonic/forms': link:../packages/forms/package
       '@svonic/ui': link:../packages/ui/package
@@ -68,8 +68,8 @@ importers:
       highlight.js: 11.6.0
       postcss: 8.4.19
       postcss-load-config: 4.0.1_postcss@8.4.19
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte: 3.53.1
       svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
       svelte-highlight: 6.2.1
@@ -94,7 +94,7 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-svelte3: 4.0.0
       ionicons: 6.0.4
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -109,7 +109,7 @@ importers:
       swiper: 8.4.5
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../../packages/core/package
       '@svonic/forms': link:../../packages/forms/package
       '@svonic/ui': link:../../packages/ui/package
@@ -119,8 +119,8 @@ importers:
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0_eslint@8.28.0
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte: 3.53.1
       svelte-check: 2.9.2_svelte@3.53.1
       svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
@@ -130,7 +130,7 @@ importers:
 
   packages/core:
     specifiers:
-      '@ionic/core': 6.3.7
+      '@ionic/core': 6.3.8
       '@sveltejs/adapter-auto': next
       '@sveltejs/kit': next
       '@sveltejs/package': 1.0.0-next.6
@@ -140,7 +140,7 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-svelte3: 4.0.0
       ionicons: 6.0.4
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -150,20 +150,20 @@ importers:
       typescript: 4.9.3
       vite: 3.2.4
     dependencies:
-      '@ionic/core': 6.3.7
+      '@ionic/core': 6.3.8
       ionicons: 6.0.4
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
       '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0_eslint@8.28.0
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte-check: 2.9.2_svelte@3.53.1
       svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
       svelte2tsx: 0.5.20_7dvewpees4iyn2tkw2qzal77a4
@@ -173,7 +173,7 @@ importers:
 
   packages/core/package:
     specifiers:
-      '@ionic/core': 6.3.7
+      '@ionic/core': 6.3.8
       '@sveltejs/adapter-auto': next
       '@sveltejs/kit': next
       '@sveltejs/package': 1.0.0-next.6
@@ -183,7 +183,7 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-svelte3: 4.0.0
       ionicons: 6.0.4
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -193,20 +193,20 @@ importers:
       typescript: 4.9.3
       vite: 3.2.4
     dependencies:
-      '@ionic/core': 6.3.7
+      '@ionic/core': 6.3.8
       ionicons: 6.0.4
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
       '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0_eslint@8.28.0
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte-check: 2.9.2_svelte@3.53.1
       svelte-preprocess: 4.10.7_7dvewpees4iyn2tkw2qzal77a4
       svelte2tsx: 0.5.20_7dvewpees4iyn2tkw2qzal77a4
@@ -234,7 +234,7 @@ importers:
       ionicons: 6.0.4
       postcss: 8.4.19
       postcss-load-config: 4.0.1
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -255,7 +255,7 @@ importers:
       zod: 3.19.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../core/package
       '@svonic/ui': link:../ui/package
@@ -267,8 +267,8 @@ importers:
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
       postcss: 8.4.19
       postcss-load-config: 4.0.1_postcss@8.4.19
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
       svelte-preprocess: 4.10.7_jgeygver3mevbte7srfft5qwby
       svelte2tsx: 0.5.20_7dvewpees4iyn2tkw2qzal77a4
@@ -318,7 +318,7 @@ importers:
       zod: 3.19.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../../core/package
       '@svonic/ui': link:../../ui/package
@@ -356,7 +356,7 @@ importers:
       ionicons: 6.0.4
       postcss: 8.4.19
       postcss-load-config: 4.0.1
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -372,7 +372,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../core/package
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
@@ -383,8 +383,8 @@ importers:
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
       postcss: 8.4.19
       postcss-load-config: 4.0.1_postcss@8.4.19
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
       svelte-preprocess: 4.10.7_jgeygver3mevbte7srfft5qwby
       svelte2tsx: 0.5.20_7dvewpees4iyn2tkw2qzal77a4
@@ -409,7 +409,7 @@ importers:
       ionicons: 6.0.4
       postcss: 8.4.19
       postcss-load-config: 4.0.1
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
       svelte-check: 2.9.2
@@ -425,7 +425,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.556_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../../core/package
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
@@ -436,8 +436,8 @@ importers:
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
       postcss: 8.4.19
       postcss-load-config: 4.0.1_postcss@8.4.19
-      prettier: 2.7.1
-      prettier-plugin-svelte: 2.8.1_nryolsexf6k3znhuh4uzpugsem
+      prettier: 2.8.0
+      prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
       svelte-preprocess: 4.10.7_jgeygver3mevbte7srfft5qwby
       svelte2tsx: 0.5.20_7dvewpees4iyn2tkw2qzal77a4
@@ -489,7 +489,7 @@ packages:
       fs-extra: 7.0.1
       lodash.startcase: 4.4.0
       outdent: 0.5.0
-      prettier: 2.7.1
+      prettier: 2.8.0
       resolve-from: 5.0.0
       semver: 5.7.1
     dev: true
@@ -656,7 +656,7 @@ packages:
       '@changesets/types': 5.2.0
       fs-extra: 7.0.1
       human-id: 1.0.2
-      prettier: 2.7.1
+      prettier: 2.8.0
     dev: true
 
   /@esbuild/android-arm/0.15.12:
@@ -743,8 +743,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@ionic/core/6.3.7:
-    resolution: {integrity: sha512-HWntdPsc4lVHHwz7kY2BSQteafwXsPxc8y5wAdfeA8woRLGse+1Vq00CDUihf7tTUflM1CdmVgGtyYlDAnO2fA==}
+  /@ionic/core/6.3.8:
+    resolution: {integrity: sha512-mpawxkbjx/lBaWMYexvEHzKP9+03gKKe/CXHGnBh7z9WHpDuR+H9jdojjiHkakoN79TcdM3G+BYMZ0tVGeeJhw==}
     dependencies:
       '@stencil/core': 2.19.2
       ionicons: 6.0.4
@@ -828,8 +828,8 @@ packages:
       import-meta-resolve: 2.1.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.556_svelte@3.53.1+vite@3.2.4:
-    resolution: {integrity: sha512-poCCk0Eqd5uFwEzeoi2KsP+RtjeEoYsg+UMDIEZiNIZtM6lw2CPDZS98TYOFAdLN+pQJJAji8ZNfvcE/rJN+jA==}
+  /@sveltejs/kit/1.0.0-next.559_svelte@3.53.1+vite@3.2.4:
+    resolution: {integrity: sha512-8Dx5w7O5LGbzzCQ0SG/1FI7cKtfsA1y0qr+mIfFHxb78oUW3P1h88Xs4nlrO7nJslaZ/BuBcj4yblMv1C5+rpQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -3165,6 +3165,16 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prettier-plugin-svelte/2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa:
+    resolution: {integrity: sha512-KA3K1J3/wKDnCxW7ZDRA/QL2Q67N7Xs3gOERqJ5X1qFjq1DdnN3K1R29scSKwh+kA8FF67pXbYytUpvN/i3iQw==}
+    peerDependencies:
+      prettier: ^1.16.4 || ^2.0.0
+      svelte: ^3.2.0
+    dependencies:
+      prettier: 2.8.0
+      svelte: 3.53.1
+    dev: true
+
   /prettier-plugin-svelte/2.8.1_nryolsexf6k3znhuh4uzpugsem:
     resolution: {integrity: sha512-KA3K1J3/wKDnCxW7ZDRA/QL2Q67N7Xs3gOERqJ5X1qFjq1DdnN3K1R29scSKwh+kA8FF67pXbYytUpvN/i3iQw==}
     peerDependencies:
@@ -3177,6 +3187,12 @@ packages:
 
   /prettier/2.7.1:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true

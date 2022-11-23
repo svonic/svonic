@@ -33,7 +33,7 @@
 		"publish": "npm publish ./package"
 	},
 	"dependencies": {
-		"@ionic/core": "6.3.7",
+		"@ionic/core": "6.3.8",
 		"ionicons": "6.0.4",
 		"svelte": "3.53.1"
 	},
@@ -46,7 +46,7 @@
 		"eslint": "8.28.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
-		"prettier": "2.7.1",
+		"prettier": "2.8.0",
 		"prettier-plugin-svelte": "2.8.1",
 		"svelte-check": "2.9.2",
 		"svelte-preprocess": "4.10.7",
