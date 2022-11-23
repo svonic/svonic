@@ -11,5 +11,13 @@
 `;
 </script>
 
-<Button color="primary" expand="block" {...$$restProps}>Block</Button>
-<Button color="success" expand="full" {...$$restProps}>Full</Button>
+<Button
+	color="primary"
+	expand="block"
+	{...$$restProps}>Block</Button
+>
+<Button
+	color="success"
+	expand="full"
+	{...$$restProps}>Full</Button
+>

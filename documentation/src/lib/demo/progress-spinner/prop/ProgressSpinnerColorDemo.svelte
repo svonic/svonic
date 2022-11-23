@@ -18,12 +18,39 @@
 `;
 </script>
 
-<ProgressSpinner color="primary" {...$$restProps} />
-<ProgressSpinner color="secondary" {...$$restProps} />
-<ProgressSpinner color="tertiary" {...$$restProps} />
-<ProgressSpinner color="success" {...$$restProps} />
-<ProgressSpinner color="warning" {...$$restProps} />
-<ProgressSpinner color="danger" {...$$restProps} />
-<ProgressSpinner color="light" {...$$restProps} />
-<ProgressSpinner color="medium" {...$$restProps} />
-<ProgressSpinner color="dark" {...$$restProps} />
+<ProgressSpinner
+	color="primary"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="secondary"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="tertiary"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="success"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="warning"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="danger"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="light"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="medium"
+	{...$$restProps}
+/>
+<ProgressSpinner
+	color="dark"
+	{...$$restProps}
+/>

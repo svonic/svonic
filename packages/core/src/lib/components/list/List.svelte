@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { LineType } from '$lib/types/line.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -36,7 +36,13 @@
 	}
 </script>
 
-<ion-list class="{cssClass}" inset="{inset}" lines="{lines}" mode="{mode}" bind:this="{component}">
+<ion-list
+	class="{cssClass}"
+	inset="{inset}"
+	lines="{lines}"
+	mode="{mode}"
+	bind:this="{component}"
+>
 	<slot />
 </ion-list>
 

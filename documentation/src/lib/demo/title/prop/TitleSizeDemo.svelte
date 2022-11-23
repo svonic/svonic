@@ -20,14 +20,23 @@
 `;
 </script>
 
-<Toolbar color="primary" {...$$restProps}>
+<Toolbar
+	color="primary"
+	{...$$restProps}
+>
 	<Title size="small">Small Title above a Default Title</Title>
 </Toolbar>
 
-<Toolbar color="light" {...$$restProps}>
+<Toolbar
+	color="light"
+	{...$$restProps}
+>
 	<Title>Default Title</Title>
 </Toolbar>
 
-<Toolbar color="dark" {...$$restProps}>
+<Toolbar
+	color="dark"
+	{...$$restProps}
+>
 	<Title size="large">Large Title</Title>
 </Toolbar>

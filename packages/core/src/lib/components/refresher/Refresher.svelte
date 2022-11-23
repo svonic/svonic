@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { RefresherCustomEvent, RefresherEventDetail } from '@ionic/core/components';
@@ -82,7 +82,10 @@
 	on:ionRefresh="{onIonRefresh}"
 	on:ionStart="{onIonStart}"
 >
-	<slot name="fixed" slot="fixed" />
+	<slot
+		name="fixed"
+		slot="fixed"
+	/>
 </ion-refresher>
 
 <style>

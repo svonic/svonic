@@ -42,22 +42,34 @@
 	};
 </script>
 
-<Toolbar color="medium" {...$$restProps}>
+<Toolbar
+	color="medium"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="start">
 		<DrawerButton autoHide="{false}" />
 	</ButtonGroup>
 	<ButtonGroup toSlot="secondary">
 		<Button>
-			<Ionicon icon="{star}" toSlot="icon-only" />
+			<Ionicon
+				icon="{star}"
+				toSlot="icon-only"
+			/>
 		</Button>
 	</ButtonGroup>
 	<Title>Left side menu toggle</Title>
 </Toolbar>
 
-<Toolbar color="light" {...$$restProps}>
+<Toolbar
+	color="light"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="primary">
 		<Button on:click="{clickedStart}">
-			<Ionicon icon="{star}" toSlot="icon-only" />
+			<Ionicon
+				icon="{star}"
+				toSlot="icon-only"
+			/>
 		</Button>
 	</ButtonGroup>
 	<Title>Right side menu toggle</Title>

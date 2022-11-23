@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import {
 		Button,
@@ -60,7 +60,10 @@
 	<Toolbar>
 		<ButtonGroup toSlot="end">
 			{#if showSkip}
-				<Button color="primary" on:click="{startApp}">Skip</Button>
+				<Button
+					color="primary"
+					on:click="{startApp}">Skip</Button
+				>
 			{/if}
 		</ButtonGroup>
 		<Title>Account</Title>
@@ -85,7 +88,11 @@
 		on:swiper="{setSwiperRef}"
 	>
 		<SwiperSlide>
-			<img alt="" class="slide-image" src="assets/img/ica-slidebox-img-1.png" />
+			<img
+				alt=""
+				class="slide-image"
+				src="assets/img/ica-slidebox-img-1.png"
+			/>
 			<h2 class="slide-title">
 				Welcome to
 				<b>ICA</b>
@@ -97,7 +104,11 @@
 			</p>
 		</SwiperSlide>
 		<SwiperSlide>
-			<img alt="" class="slide-image" src="assets/img/ica-slidebox-img-2.png" />
+			<img
+				alt=""
+				class="slide-image"
+				src="assets/img/ica-slidebox-img-2.png"
+			/>
 			<h2 class="slide-title">What is Ionic?</h2>
 			<p>
 				<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile
@@ -105,7 +116,11 @@
 			</p>
 		</SwiperSlide>
 		<SwiperSlide>
-			<img alt="" class="slide-image" src="assets/img/ica-slidebox-img-3.png" />
+			<img
+				alt=""
+				class="slide-image"
+				src="assets/img/ica-slidebox-img-3.png"
+			/>
 			<h2 class="slide-title">What is Ionic Appflow?</h2>
 			<p>
 				<b>Ionic Appflow</b> is a powerful set of services and features built on top of Ionic Framework
@@ -113,11 +128,21 @@
 			</p>
 		</SwiperSlide>
 		<SwiperSlide>
-			<img alt="" src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+			<img
+				alt=""
+				src="assets/img/ica-slidebox-img-4.png"
+				class="slide-image"
+			/>
 			<h2 class="slide-title">Ready to Play?</h2>
-			<Button fill="clear" on:click="{startApp}">
+			<Button
+				fill="clear"
+				on:click="{startApp}"
+			>
 				Continue
-				<Ionicon icon="{arrowForward}" toSlot="end" />
+				<Ionicon
+					icon="{arrowForward}"
+					toSlot="end"
+				/>
 			</Button>
 		</SwiperSlide>
 	</Swiper>

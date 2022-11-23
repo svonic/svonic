@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
@@ -23,7 +23,12 @@
 	}
 </script>
 
-<ion-title class="{cssClass}" color="{color}" size="{size}" on:ionChange>
+<ion-title
+	class="{cssClass}"
+	color="{color}"
+	size="{size}"
+	on:ionChange
+>
 	<slot />
 </ion-title>
 

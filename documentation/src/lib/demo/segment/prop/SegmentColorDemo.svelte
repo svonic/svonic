@@ -178,7 +178,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="primary" value="standard">
+		<Segment
+			color="primary"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -196,7 +199,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="secondary" value="standard">
+		<Segment
+			color="secondary"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -214,7 +220,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="tertiary" value="standard">
+		<Segment
+			color="tertiary"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -232,7 +241,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="success" value="standard">
+		<Segment
+			color="success"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -250,7 +262,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="warning" value="standard">
+		<Segment
+			color="warning"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -268,7 +283,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="danger" value="standard">
+		<Segment
+			color="danger"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -286,7 +304,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="light" value="standard">
+		<Segment
+			color="light"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -304,7 +325,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="medium" value="standard">
+		<Segment
+			color="medium"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>
@@ -322,7 +346,10 @@
 	</ListHeader>
 
 	<Item>
-		<Segment color="dark" value="standard">
+		<Segment
+			color="dark"
+			value="standard"
+		>
 			<SegmentButton value="standard">
 				<Label>Standard</Label>
 			</SegmentButton>

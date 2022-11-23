@@ -20,11 +20,18 @@
 	};
 </script>
 
-<Checkbox bind:checked="{isOpen}" bind:value on:ionChange="{checkBoxChange}" />
+<Checkbox
+	bind:checked="{isOpen}"
+	bind:value="{value}"
+	on:ionChange="{checkBoxChange}"
+/>
 <p>Is Open: {isOpen}</p>
 <p>Value is: {value}</p>
 
-<Dialog class="{cssClass}" isOpen="{isOpen}">
+<Dialog
+	class="{cssClass}"
+	isOpen="{isOpen}"
+>
 	<DialogHeader>
 		<DialogTitle>Right Panel</DialogTitle>
 		<svelte:fragment slot="end">

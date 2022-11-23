@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
 	import { defineCustomElement } from '$lib/utils/utils';
@@ -21,7 +21,10 @@
 	}
 </script>
 
-<ion-card-content class="{cssClass}" mode="{mode}">
+<ion-card-content
+	class="{cssClass}"
+	mode="{mode}"
+>
 	<slot />
 </ion-card-content>
 

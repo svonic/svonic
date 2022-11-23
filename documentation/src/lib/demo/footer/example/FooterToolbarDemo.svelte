@@ -29,8 +29,14 @@
 	<Toolbar color="light">
 		<Title>Click to Add Text</Title>
 		<ButtonGroup toSlot="end">
-			<Button id="changeText" on:click="{toggleText}">
-				<Ionicon icon="{refresh}" toSlot="start" />
+			<Button
+				id="changeText"
+				on:click="{toggleText}"
+			>
+				<Ionicon
+					icon="{refresh}"
+					toSlot="start"
+				/>
 			</Button>
 		</ButtonGroup>
 	</Toolbar>

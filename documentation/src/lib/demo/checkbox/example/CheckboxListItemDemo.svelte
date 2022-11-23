@@ -28,14 +28,25 @@
 	<ListHeader>Checkboxes in a List</ListHeader>
 	<Item>
 		<Label>Pepperoni</Label>
-		<Checkbox checked="{true}" toSlot="end" value="pepperoni" />
+		<Checkbox
+			checked="{true}"
+			toSlot="end"
+			value="pepperoni"
+		/>
 	</Item>
 	<Item>
 		<Label>Sausage</Label>
-		<Checkbox disabled="{true}" toSlot="end" value="sausage" />
+		<Checkbox
+			disabled="{true}"
+			toSlot="end"
+			value="sausage"
+		/>
 	</Item>
 	<Item>
 		<Label>Mushrooms</Label>
-		<Checkbox toSlot="end" value="mushrooms" />
+		<Checkbox
+			toSlot="end"
+			value="mushrooms"
+		/>
 	</Item>
 </List>

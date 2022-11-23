@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ValueType } from '$lib/types/value.type';
 	import { defineCustomElement } from '$lib/utils/utils';
@@ -22,7 +22,11 @@
 	}
 </script>
 
-<ion-select-option class="{cssClass}" disabled="{disabled}" value="{value}">
+<ion-select-option
+	class="{cssClass}"
+	disabled="{disabled}"
+	value="{value}"
+>
 	<slot />
 </ion-select-option>
 

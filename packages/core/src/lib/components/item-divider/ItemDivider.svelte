@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -24,10 +24,21 @@
 	}
 </script>
 
-<ion-item-divider class="{cssClass}" color="{color}" mode="{mode}" sticky="{sticky}">
-	<slot name="start" slot="start" />
+<ion-item-divider
+	class="{cssClass}"
+	color="{color}"
+	mode="{mode}"
+	sticky="{sticky}"
+>
+	<slot
+		name="start"
+		slot="start"
+	/>
 	<slot />
-	<slot name="end" slot="end" />
+	<slot
+		name="end"
+		slot="end"
+	/>
 </ion-item-divider>
 
 <style>

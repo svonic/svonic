@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import { onMount } from 'svelte';
@@ -22,7 +22,11 @@
 	}
 </script>
 
-<ion-footer class="{cssClass}" collapse="{collapse}" translucent="{translucent}">
+<ion-footer
+	class="{cssClass}"
+	collapse="{collapse}"
+	translucent="{translucent}"
+>
 	<slot />
 </ion-footer>
 

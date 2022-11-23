@@ -45,8 +45,17 @@
 	};
 </script>
 
-<div class="flex flex-col items-center m-auto w-72" id="present-toast-target">
-	<Button expand="block" {...$$restProps} on:click="{presentToast}"
-		>Pair <Ionicon slot="end" icon="{bluetooth}" /></Button
+<div
+	class="flex flex-col items-center m-auto w-72"
+	id="present-toast-target"
+>
+	<Button
+		expand="block"
+		{...$$restProps}
+		on:click="{presentToast}"
+		>Pair <Ionicon
+			slot="end"
+			icon="{bluetooth}"
+		/></Button
 	>
 </div>

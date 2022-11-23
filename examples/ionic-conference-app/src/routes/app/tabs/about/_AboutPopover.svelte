@@ -25,19 +25,34 @@
 >
 	<Content>
 		<List lines="none">
-			<Item button="{true}" on:click="{() => close('https://ionicframework.com/getting-started')}">
+			<Item
+				button="{true}"
+				on:click="{() => close('https://ionicframework.com/getting-started')}"
+			>
 				<Label>Learn Ionic</Label>
 			</Item>
-			<Item button="{true}" on:click="{() => close('https://ionicframework.com/docs/')}">
+			<Item
+				button="{true}"
+				on:click="{() => close('https://ionicframework.com/docs/')}"
+			>
 				<Label>Documentation</Label>
 			</Item>
-			<Item button="{true}" on:click="{() => close('https://showcase.ionicframework.com')}">
+			<Item
+				button="{true}"
+				on:click="{() => close('https://showcase.ionicframework.com')}"
+			>
 				<Label>Showcase</Label>
 			</Item>
-			<Item button="{true}" on:click="{() => close('https://github.com/ionic-team/ionic')}">
+			<Item
+				button="{true}"
+				on:click="{() => close('https://github.com/ionic-team/ionic')}"
+			>
 				<Label>GitHub Repo</Label>
 			</Item>
-			<Item button="{true}" on:click="{() => close('support')}">
+			<Item
+				button="{true}"
+				on:click="{() => close('support')}"
+			>
 				<Label>Support</Label>
 			</Item>
 		</List>

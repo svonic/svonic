@@ -59,10 +59,22 @@
 
 	<div class="about-header">
 		<!-- Instead of loading an image each time the select changes, use opacity to transition them -->
-		<div class="about-image madison" style="{location === 'madison' ? 'opacity : 1' : ''}"></div>
-		<div class="about-image austin" style="{location === 'austin' ? 'opacity : 1' : ''}"></div>
-		<div class="about-image chicago" style="{location === 'chicago' ? 'opacity : 1' : ''}"></div>
-		<div class="about-image seattle" style="{location === 'seattle' ? 'opacity : 1' : ''}"></div>
+		<div
+			class="about-image madison"
+			style="{location === 'madison' ? 'opacity : 1' : ''}"
+		></div>
+		<div
+			class="about-image austin"
+			style="{location === 'austin' ? 'opacity : 1' : ''}"
+		></div>
+		<div
+			class="about-image chicago"
+			style="{location === 'chicago' ? 'opacity : 1' : ''}"
+		></div>
+		<div
+			class="about-image seattle"
+			style="{location === 'seattle' ? 'opacity : 1' : ''}"
+		></div>
 	</div>
 
 	<div class="about-info">
@@ -81,14 +93,20 @@
 		<List lines="none">
 			<Item>
 				<Label>Location</Label>
-				<Select interfaceOptions="{selectOptions}" bind:value="{location}">
+				<Select
+					interfaceOptions="{selectOptions}"
+					bind:value="{location}"
+				>
 					<SelectOption value="madison">Madison, WI</SelectOption>
 					<SelectOption value="austin">Austin, TX</SelectOption>
 					<SelectOption value="chicago">Chicago, IL</SelectOption>
 					<SelectOption value="seattle">Seattle, WA</SelectOption>
 				</Select>
 			</Item>
-			<Item button="{true}" id="open-date-input">
+			<Item
+				button="{true}"
+				id="open-date-input"
+			>
 				<Label>Date</Label>
 				<Text toSlot="end">{conferenceDate}</Text>
 				<Menu
@@ -98,7 +116,11 @@
 					side="top"
 					trigger="open-date-input"
 				>
-					<DatePicker max="2056" presentation="date" bind:value="{conferenceDate}" />
+					<DatePicker
+						max="2056"
+						presentation="date"
+						bind:value="{conferenceDate}"
+					/>
 				</Menu>
 			</Item>
 		</List>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -169,9 +169,18 @@
 	on:ionChange="{onIonChange}"
 	on:ionFocus="{onIonFocus}"
 >
-	<slot name="buttons" slot="buttons" />
-	<slot name="time-label" slot="time-label" />
-	<slot name="title" slot="title" />
+	<slot
+		name="buttons"
+		slot="buttons"
+	/>
+	<slot
+		name="time-label"
+		slot="time-label"
+	/>
+	<slot
+		name="title"
+		slot="title"
+	/>
 </ion-datetime>
 
 <style>

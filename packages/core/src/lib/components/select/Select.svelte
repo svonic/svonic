@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { InterfaceType } from '$lib/types/interface.type';
 	import type { ModeType } from '$lib/types/mode.type';

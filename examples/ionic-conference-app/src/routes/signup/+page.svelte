@@ -43,24 +43,40 @@
 
 <Content>
 	<div class="signup-logo">
-		<img alt="Ionic Logo" src="assets/img/appicon.svg" />
+		<img
+			alt="Ionic Logo"
+			src="assets/img/appicon.svg"
+		/>
 	</div>
 
 	<form action="">
 		<List lines="none">
 			<Item>
-				<Label color="primary" position="stacked">Username</Label>
-				<Input name="username" required="{true}" type="text" />
+				<Label
+					color="primary"
+					position="stacked">Username</Label
+				>
+				<Input
+					name="username"
+					required="{true}"
+					type="text"
+				/>
 			</Item>
 
 			{#if !usernameValid || submitted === true}
-				<Text class="ion-padding-start" color="danger">
+				<Text
+					class="ion-padding-start"
+					color="danger"
+				>
 					<p class="ion-padding-start">Username is required</p>
 				</Text>
 			{/if}
 
 			<Item>
-				<Label color="primary" position="stacked">Password</Label>
+				<Label
+					color="primary"
+					position="stacked">Password</Label
+				>
 				<Input
 					autocapitalize="off"
 					name="password"
@@ -71,14 +87,21 @@
 			</Item>
 
 			{#if !passwordValid || submitted === true}
-				<Text class="ion-padding-start" color="danger">
+				<Text
+					class="ion-padding-start"
+					color="danger"
+				>
 					<p class="ion-padding-start">Password is required</p>
 				</Text>
 			{/if}
 		</List>
 
 		<div class="ion-padding">
-			<Button expand="block" type="submit" on:click="{onSignup}">Create</Button>
+			<Button
+				expand="block"
+				type="submit"
+				on:click="{onSignup}">Create</Button
+			>
 		</div>
 	</form>
 </Content>

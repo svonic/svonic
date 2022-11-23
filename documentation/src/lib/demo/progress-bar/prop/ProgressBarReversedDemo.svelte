@@ -10,4 +10,8 @@
 `;
 </script>
 
-<ProgressBar reversed="{true}" type="indeterminate" {...$$restProps} />
+<ProgressBar
+	reversed="{true}"
+	type="indeterminate"
+	{...$$restProps}
+/>

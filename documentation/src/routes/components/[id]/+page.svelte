@@ -79,7 +79,7 @@
 
 	export let componentData: ComponentData;
 
-	$ : componentData = data.body.componentData;
+	$: componentData = data.body.componentData;
 
 	const demoComponentList = [
 		{ name: 'accordion', component: AccordionDemo },

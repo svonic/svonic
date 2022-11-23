@@ -50,7 +50,10 @@
 <Content>
 	{#if username}
 		<div class="ion-padding-top ion-text-center">
-			<img alt="avatar" src="https://www.gravatar.com/avatar?d=mm&s=140" />
+			<img
+				alt="avatar"
+				src="https://www.gravatar.com/avatar?d=mm&s=140"
+			/>
 			<h2>{username}</h2>
 
 			<List inset="{true}">

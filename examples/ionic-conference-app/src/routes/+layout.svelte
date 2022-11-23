@@ -102,8 +102,14 @@
 	};
 </script>
 
-<Application class="{dark === true ? 'dark-theme' : ''}" id="ionic-app">
-	<NavigationPane class="app-menu" contentId="main-content">
+<Application
+	class="{dark === true ? 'dark-theme' : ''}"
+	id="ionic-app"
+>
+	<NavigationPane
+		class="app-menu"
+		contentId="main-content"
+	>
 		<Drawer
 			contentId="main-content"
 			id="main-menu"
@@ -126,7 +132,10 @@
 								href="{basePathName + p.url}"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{p.icon}" toSlot="start" />
+								<Ionicon
+									icon="{p.icon}"
+									toSlot="start"
+								/>
 								<Label>{p.title}</Label>
 							</Item>
 						</DrawerToggle>
@@ -144,7 +153,10 @@
 								href="/account"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{person}" toSlot="start" />
+								<Ionicon
+									icon="{person}"
+									toSlot="start"
+								/>
 								<Label>Account</Label>
 							</Item>
 						</DrawerToggle>
@@ -156,14 +168,24 @@
 								href="/support"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{helpOutline}" toSlot="start" />
+								<Ionicon
+									icon="{helpOutline}"
+									toSlot="start"
+								/>
 								<Label>Support</Label>
 							</Item>
 						</DrawerToggle>
 
 						<DrawerToggle autoHide="{false}">
-							<Item button="{true}" detail="{false}" on:click="{logout}">
-								<Ionicon icon="{logOut}" toSlot="start" />
+							<Item
+								button="{true}"
+								detail="{false}"
+								on:click="{logout}"
+							>
+								<Ionicon
+									icon="{logOut}"
+									toSlot="start"
+								/>
 								<Label>Logout</Label>
 							</Item>
 						</DrawerToggle>
@@ -181,7 +203,10 @@
 								href="/login"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{logIn}" toSlot="start" />
+								<Ionicon
+									icon="{logIn}"
+									toSlot="start"
+								/>
 								<Label>Login</Label>
 							</Item>
 						</DrawerToggle>
@@ -193,7 +218,10 @@
 								href="/support"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{helpOutline}" toSlot="start" />
+								<Ionicon
+									icon="{helpOutline}"
+									toSlot="start"
+								/>
 								<Label>Support</Label>
 							</Item>
 						</DrawerToggle>
@@ -205,13 +233,19 @@
 								href="/signup"
 								svelteKitPrefetch="{true}"
 							>
-								<Ionicon icon="{personAdd}" toSlot="start" />
+								<Ionicon
+									icon="{personAdd}"
+									toSlot="start"
+								/>
 								<Label>Signup</Label>
 							</Item>
 						</DrawerToggle>
 
 						<Item>
-							<Ionicon icon="{moonOutline}" toSlot="start" />
+							<Ionicon
+								icon="{moonOutline}"
+								toSlot="start"
+							/>
 							<Label>Dark Mode</Label>
 							<Toggle bind:checked="{dark}" />
 						</Item>
@@ -222,8 +256,15 @@
 					<ListHeader>Tutorial</ListHeader>
 
 					<DrawerToggle autoHide="{false}">
-						<Item button="{true}" svelteKitPrefetch="{true}" on:click="{openTutorial}">
-							<Ionicon icon="{hammer}" toSlot="start" />
+						<Item
+							button="{true}"
+							svelteKitPrefetch="{true}"
+							on:click="{openTutorial}"
+						>
+							<Ionicon
+								icon="{hammer}"
+								toSlot="start"
+							/>
 							<Label>Show Tutorial</Label>
 						</Item>
 					</DrawerToggle>

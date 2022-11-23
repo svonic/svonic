@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { AutoCompleteType } from '$lib/types/autocomplete.type';
 	import type { AutoCorrectType } from '$lib/types/autocorrect.type';
 	import type { ColorType } from '$lib/types/color.type';

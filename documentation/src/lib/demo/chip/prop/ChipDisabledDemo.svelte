@@ -12,6 +12,9 @@
 `;
 </script>
 
-<Chip disabled="{true}" {...$$restProps}>
+<Chip
+	disabled="{true}"
+	{...$$restProps}
+>
 	<Label>Disabled Chip</Label>
 </Chip>

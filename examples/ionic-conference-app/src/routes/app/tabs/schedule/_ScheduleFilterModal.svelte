@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import {
 		Button,
 		ButtonGroup,
@@ -67,7 +67,11 @@
 	$: getTracks($allTracks);
 </script>
 
-<Modal class="schedule-filter-modal" swipeToClose="{true}" bind:this="{modal}">
+<Modal
+	class="schedule-filter-modal"
+	swipeToClose="{true}"
+	bind:this="{modal}"
+>
 	<Header translucent="{true}">
 		<Toolbar>
 			<ButtonGroup toSlot="start">
@@ -79,7 +83,10 @@
 			</ButtonGroup>
 			<Title>Filter Sessions</Title>
 
-			<Button toSlot="end" on:click="{dismiss}">Done</Button>
+			<Button
+				toSlot="end"
+				on:click="{dismiss}">Done</Button
+			>
 		</Toolbar>
 	</Header>
 
@@ -90,7 +97,11 @@
 			{#each tracks as track}
 				<Item track="{track.name.toLowerCase()}">
 					{#if ios}
-						<Ionicon color="medium" icon="{track.icon}" toSlot="start" />
+						<Ionicon
+							color="medium"
+							icon="{track.icon}"
+							toSlot="start"
+						/>
 					{/if}
 					<Label>{track.name}</Label>
 					<Checkbox bind:checked="{track.isChecked}" />
@@ -103,8 +114,14 @@
 		<Footer translucent="{true}">
 			<Toolbar>
 				<ButtonGroup>
-					<Button toSlot="start" on:click="{() => selectAll(false)}">Deselect All</Button>
-					<Button toSlot="end" on:click="{() => selectAll(true)}">Select All</Button>
+					<Button
+						toSlot="start"
+						on:click="{() => selectAll(false)}">Deselect All</Button
+					>
+					<Button
+						toSlot="end"
+						on:click="{() => selectAll(true)}">Select All</Button
+					>
 				</ButtonGroup>
 			</Toolbar>
 		</Footer>

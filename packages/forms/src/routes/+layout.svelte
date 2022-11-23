@@ -18,7 +18,12 @@
 <AppShell headerColor="light">
 	<svelte:fragment slot="app-toolbar-title">App Title</svelte:fragment>
 	<svelte:fragment slot="drawer-end">
-		<Drawer contentId="main" id="main-menu" side="end" type="overlay">
+		<Drawer
+			contentId="main"
+			id="main-menu"
+			side="end"
+			type="overlay"
+		>
 			<Content>
 				<AppNavigation navList="{navList}">
 					<svelte:fragment slot="end">

@@ -21,8 +21,14 @@
 	}
 </script>
 
-<Toolbar class="{cssClass}" color="{color}">
-	<Segment value="{value}" on:ionChange="{tabSelected}">
+<Toolbar
+	class="{cssClass}"
+	color="{color}"
+>
+	<Segment
+		value="{value}"
+		on:ionChange="{tabSelected}"
+	>
 		<slot />
 	</Segment>
 </Toolbar>

@@ -127,7 +127,11 @@
 </Header>
 
 <Content>
-	<div class="map-canvas show-map" id="map" bind:this="{mapCanvas}"></div>
+	<div
+		class="map-canvas show-map"
+		id="map"
+		bind:this="{mapCanvas}"
+	></div>
 </Content>
 
 <style>

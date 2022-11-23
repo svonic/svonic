@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { DownloadType } from '$lib/types/download.type';
 	import type { HrefType } from '$lib/types/href.type';

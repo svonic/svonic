@@ -10,4 +10,8 @@
 `;
 </script>
 
-<ProgressBar buffer="{0.5}" value="{0.25}" {...$$restProps} />
+<ProgressBar
+	buffer="{0.5}"
+	value="{0.25}"
+	{...$$restProps}
+/>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import { onMount } from 'svelte';
@@ -20,7 +20,12 @@
 	}
 </script>
 
-<ion-menu-toggle auto-hide="{autoHide}" class="{cssClass}" menu="{DrawerId}" on:click>
+<ion-menu-toggle
+	auto-hide="{autoHide}"
+	class="{cssClass}"
+	menu="{DrawerId}"
+	on:click
+>
 	<slot />
 </ion-menu-toggle>
 

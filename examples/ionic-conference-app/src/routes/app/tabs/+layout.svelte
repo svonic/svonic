@@ -86,12 +86,21 @@
 	};
 </script>
 
-<NavigationTabGroup bind:this="{tabGroup}" on:svo:did-change="{onTabDidChange}">
-	<svelte:component this="{NavigationTab}" tabId="{selectedTab}">
+<NavigationTabGroup
+	bind:this="{tabGroup}"
+	on:svo:did-change="{onTabDidChange}"
+>
+	<svelte:component
+		this="{NavigationTab}"
+		tabId="{selectedTab}"
+	>
 		<slot />
 	</svelte:component>
 
-	<NavigationTabBar selectedTab="{selectedTab}" toSlot="bottom">
+	<NavigationTabBar
+		selectedTab="{selectedTab}"
+		toSlot="bottom"
+	>
 		<NavigationTabButton
 			href="{basePathName}/schedule"
 			svelteKitPrefetch="{true}"

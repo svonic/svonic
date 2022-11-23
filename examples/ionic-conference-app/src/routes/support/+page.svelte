@@ -30,7 +30,10 @@
 
 <Content>
 	<div class="support-logo">
-		<img alt="Ionic Logo" src="assets/img/appicon.svg" />
+		<img
+			alt="Ionic Logo"
+			src="assets/img/appicon.svg"
+		/>
 	</div>
 
 	<form action="">
@@ -45,7 +48,10 @@
 			</Text>
 
 			<div>
-				<Button expand="block" type="submit">Submit</Button>
+				<Button
+					expand="block"
+					type="submit">Submit</Button
+				>
 			</div>
 		</List>
 	</form>

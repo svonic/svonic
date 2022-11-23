@@ -10,4 +10,7 @@
 `;
 </script>
 
-<Checkbox checked="{true}" {...$$restProps} /> Checked
+<Checkbox
+	checked="{true}"
+	{...$$restProps}
+/> Checked

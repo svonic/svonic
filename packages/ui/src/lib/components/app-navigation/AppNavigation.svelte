@@ -29,7 +29,12 @@
 				closeAndNavigate(item.route);
 			}}"
 		>
-			<Icon color="medium" path="{item.icon}" size="large" toSlot="start" />
+			<Icon
+				color="medium"
+				path="{item.icon}"
+				size="large"
+				toSlot="start"
+			/>
 			<Label>{item.label}</Label>
 		</Item>
 	{/each}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -29,7 +29,12 @@
 	}
 </script>
 
-<ion-note class="{cssClass}" color="{color}" mode="{mode}" bind:this="{component}">
+<ion-note
+	class="{cssClass}"
+	color="{color}"
+	mode="{mode}"
+	bind:this="{component}"
+>
 	<slot />
 </ion-note>
 

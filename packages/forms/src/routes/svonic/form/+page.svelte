@@ -42,19 +42,42 @@
 
 <div class="bg-white m-8 p-8">
 	<Form
-		bind:formValidationSchema
-		bind:formValue
-		bind:formState
-		bind:handleSubmit
+		bind:formValidationSchema="{formValidationSchema}"
+		bind:formValue="{formValue}"
+		bind:formState="{formState}"
+		bind:handleSubmit="{handleSubmit}"
 		on:submit="{onSave}"
 	>
 		<List lines="full">
-			<FormFieldInput fill="outline" label="Name" labelPosition="stacked" name="name" />
-			<FormFieldInput fill="solid" label="Email" labelPosition="floating" name="email" />
-			<FormFieldInputDate label="Start Date" name="startDate" />
-			<FormFieldSelect label="Type" name="type" />
-			<FormFieldCheckbox label="Is Active?" labelPosition="fixed" name="isActive" />
-			<FormFieldTextArea label="Comments" name="comments" />
+			<FormFieldInput
+				fill="outline"
+				label="Name"
+				labelPosition="stacked"
+				name="name"
+			/>
+			<FormFieldInput
+				fill="solid"
+				label="Email"
+				labelPosition="floating"
+				name="email"
+			/>
+			<FormFieldInputDate
+				label="Start Date"
+				name="startDate"
+			/>
+			<FormFieldSelect
+				label="Type"
+				name="type"
+			/>
+			<FormFieldCheckbox
+				label="Is Active?"
+				labelPosition="fixed"
+				name="isActive"
+			/>
+			<FormFieldTextArea
+				label="Comments"
+				name="comments"
+			/>
 		</List>
 		<Button type="submit">Submit</Button>
 	</Form>

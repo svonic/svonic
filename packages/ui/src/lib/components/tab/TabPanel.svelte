@@ -7,7 +7,10 @@
 	const { tabIndex } = getContext(key);
 </script>
 
-<div class="flex-grow overscroll-y-contain" hidden="{$tabIndex !== index}">
+<div
+	class="flex-grow overscroll-y-contain"
+	hidden="{$tabIndex !== index}"
+>
 	<slot />
 </div>
 

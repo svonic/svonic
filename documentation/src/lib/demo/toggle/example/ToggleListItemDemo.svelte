@@ -28,16 +28,27 @@
 <List {...$$restProps}>
 	<Item>
 		<Label>Pepperoni</Label>
-		<Toggle checked="{true}" toSlot="end" value="pepperoni" />
+		<Toggle
+			checked="{true}"
+			toSlot="end"
+			value="pepperoni"
+		/>
 	</Item>
 
 	<Item>
 		<Label>Sausage</Label>
-		<Toggle disabled="{true}" toSlot="end" value="sausage" />
+		<Toggle
+			disabled="{true}"
+			toSlot="end"
+			value="sausage"
+		/>
 	</Item>
 
 	<Item>
 		<Label>Mushrooms</Label>
-		<Toggle toSlot="end" value="mushrooms" />
+		<Toggle
+			toSlot="end"
+			value="mushrooms"
+		/>
 	</Item>
 </List>

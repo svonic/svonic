@@ -91,13 +91,22 @@
 `;
 </script>
 
-<Toolbar color="primary" {...$$restProps}>
+<Toolbar
+	color="primary"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="secondary">
 		<Button>
-			<Ionicon icon="{personCircle}" toSlot="icon-only" />
+			<Ionicon
+				icon="{personCircle}"
+				toSlot="icon-only"
+			/>
 		</Button>
 		<Button>
-			<Ionicon icon="{search}" toSlot="icon-only" />
+			<Ionicon
+				icon="{search}"
+				toSlot="icon-only"
+			/>
 		</Button>
 	</ButtonGroup>
 	<ButtonGroup toSlot="primary">
@@ -114,39 +123,66 @@
 	<Title>Default ButtonGroup</Title>
 </Toolbar>
 
-<Toolbar color="medium" {...$$restProps}>
+<Toolbar
+	color="medium"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="secondary">
 		<Button fill="solid">
-			<Ionicon icon="{personCircle}" toSlot="start" />
+			<Ionicon
+				icon="{personCircle}"
+				toSlot="start"
+			/>
 			Contact
 		</Button>
 	</ButtonGroup>
 	<Title>Solid ButtonGroup</Title>
 	<ButtonGroup toSlot="primary">
-		<Button fill="solid" color="secondary">
+		<Button
+			fill="solid"
+			color="secondary"
+		>
 			Help
-			<Ionicon icon="{helpCircle}" toSlot="end" />
+			<Ionicon
+				icon="{helpCircle}"
+				toSlot="end"
+			/>
 		</Button>
 	</ButtonGroup>
 </Toolbar>
 
-<Toolbar color="light" {...$$restProps}>
+<Toolbar
+	color="light"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="secondary">
 		<Button fill="outline">
-			<Ionicon icon="{star}" toSlot="start" />
+			<Ionicon
+				icon="{star}"
+				toSlot="start"
+			/>
 			Star
 		</Button>
 	</ButtonGroup>
 	<Title>Outline ButtonGroup</Title>
 	<ButtonGroup toSlot="primary">
-		<Button color="danger" fill="outline">
+		<Button
+			color="danger"
+			fill="outline"
+		>
 			Edit
-			<Ionicon icon="{create}" toSlot="end" />
+			<Ionicon
+				icon="{create}"
+				toSlot="end"
+			/>
 		</Button>
 	</ButtonGroup>
 </Toolbar>
 
-<Toolbar color="secondary" {...$$restProps}>
+<Toolbar
+	color="secondary"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="secondary">
 		<Button>Account</Button>
 	</ButtonGroup>

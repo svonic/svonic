@@ -17,7 +17,11 @@
 	}
 </script>
 
-<CommandBarButton id="{id}" iconEnd="{mdiChevronDown}" label="{label}" />
+<CommandBarButton
+	id="{id}"
+	iconEnd="{mdiChevronDown}"
+	label="{label}"
+/>
 <Menu
 	class="{cssClass}"
 	dismissOnSelect="{true}"

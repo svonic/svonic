@@ -9,7 +9,10 @@
 	export let isOpen = false;
 </script>
 
-<Modal class="{cssClass}" isOpen="{isOpen}">
+<Modal
+	class="{cssClass}"
+	isOpen="{isOpen}"
+>
 	<div class="ion-page">
 		<slot />
 	</div>

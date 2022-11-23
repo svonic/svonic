@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { LineType } from '$lib/types/line.type';
@@ -24,7 +24,12 @@
 	}
 </script>
 
-<ion-list-header class="{cssClass}" color="{color}" lines="{lines}" mode="{mode}">
+<ion-list-header
+	class="{cssClass}"
+	color="{color}"
+	lines="{lines}"
+	mode="{mode}"
+>
 	<slot />
 </ion-list-header>
 

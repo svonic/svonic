@@ -6,7 +6,10 @@
 	export let label = '';
 </script>
 
-<SegmentButton layout="icon-start" value="{index}">
+<SegmentButton
+	layout="icon-start"
+	value="{index}"
+>
 	<Icon path="{icon}" />
 	<Label>{label}</Label>
 </SegmentButton>

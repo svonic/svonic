@@ -44,38 +44,65 @@
 `;
 </script>
 
-<Chip color="primary" {...$$restProps}>
+<Chip
+	color="primary"
+	{...$$restProps}
+>
 	<Label>Primary</Label>
 </Chip>
 
-<Chip color="secondary" {...$$restProps}>
+<Chip
+	color="secondary"
+	{...$$restProps}
+>
 	<Label>Secondary</Label>
 </Chip>
 
-<Chip color="tertiary" {...$$restProps}>
+<Chip
+	color="tertiary"
+	{...$$restProps}
+>
 	<Label>Tertiary</Label>
 </Chip>
 
-<Chip color="success" {...$$restProps}>
+<Chip
+	color="success"
+	{...$$restProps}
+>
 	<Label>Success</Label>
 </Chip>
 
-<Chip color="warning" {...$$restProps}>
+<Chip
+	color="warning"
+	{...$$restProps}
+>
 	<Label>Warning</Label>
 </Chip>
 
-<Chip color="danger" {...$$restProps}>
+<Chip
+	color="danger"
+	{...$$restProps}
+>
 	<Label>Danger</Label>
 </Chip>
 
-<Chip color="light" {...$$restProps}>
+<Chip
+	color="light"
+	{...$$restProps}
+>
 	<Label>Light</Label>
 </Chip>
 
-<Chip color="medium" {...$$restProps}>
+<Chip
+	color="medium"
+	{...$$restProps}
+>
 	<Label>Medium</Label>
 </Chip>
 
-<Chip color="dark" {...$$restProps}>
+<Chip
+	color="dark"
+	{...$$restProps}
+>
 	<Label>Dark</Label>
 </Chip>

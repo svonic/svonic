@@ -13,7 +13,19 @@
 `;
 </script>
 
-<Button fill="clear" {...$$restProps}>Clear</Button>
-<Button fill="default" {...$$restProps}>Default</Button>
-<Button fill="outline" {...$$restProps}>Outline</Button>
-<Button fill="solid" {...$$restProps}>Solid</Button>
+<Button
+	fill="clear"
+	{...$$restProps}>Clear</Button
+>
+<Button
+	fill="default"
+	{...$$restProps}>Default</Button
+>
+<Button
+	fill="outline"
+	{...$$restProps}>Outline</Button
+>
+<Button
+	fill="solid"
+	{...$$restProps}>Solid</Button
+>

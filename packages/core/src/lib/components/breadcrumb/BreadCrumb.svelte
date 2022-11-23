@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { DownloadType } from '$lib/types/download.type';
@@ -77,10 +77,19 @@
 	on:ionBlur="{onIonBlur}"
 	on:ionFocus="{onIonFocus}"
 >
-	<slot name="start" slot="start" />
+	<slot
+		name="start"
+		slot="start"
+	/>
 	<slot />
-	<slot name="separator" slot="separator" />
-	<slot name="end" slot="end" />
+	<slot
+		name="separator"
+		slot="separator"
+	/>
+	<slot
+		name="end"
+		slot="end"
+	/>
 </ion-breadcrumb>
 
 <style>

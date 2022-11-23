@@ -11,5 +11,11 @@
 `;
 </script>
 
-<Button disabled="{true}" {...$$restProps}>Disabled</Button>
-<Button disabled="{false}" {...$$restProps}>Enabled</Button>
+<Button
+	disabled="{true}"
+	{...$$restProps}>Disabled</Button
+>
+<Button
+	disabled="{false}"
+	{...$$restProps}>Enabled</Button
+>

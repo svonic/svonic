@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { TabsCustomEvent } from '@ionic/core/components';
@@ -58,9 +58,15 @@
 	on:ionTabsDidChange="{onIonTabsDidChange}"
 	on:ionTabsWillChange="{onIonTabsWillChange}"
 >
-	<slot name="top" slot="top" />
+	<slot
+		name="top"
+		slot="top"
+	/>
 	<slot />
-	<slot name="bottom" slot="bottom" />
+	<slot
+		name="bottom"
+		slot="bottom"
+	/>
 </ion-tabs>
 
 <style>

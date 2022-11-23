@@ -24,7 +24,10 @@
 	<ListHeader>
 		<Label>Default at 50%</Label>
 	</ListHeader>
-	<ProgressBar type="determinate" value="{0.5}" />
+	<ProgressBar
+		type="determinate"
+		value="{0.5}"
+	/>
 
 	<ListHeader>
 		<Label>Indeterminate</Label>

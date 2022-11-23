@@ -17,7 +17,11 @@
 `;
 </script>
 
-<Segment disabled="{true}" value="sunny" {...$$restProps}>
+<Segment
+	disabled="{true}"
+	value="sunny"
+	{...$$restProps}
+>
 	<SegmentButton value="sunny">
 		<Label>Sunny</Label>
 	</SegmentButton>

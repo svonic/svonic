@@ -27,10 +27,16 @@
 	};
 </script>
 
-<Toolbar color="primary" {...$$restProps}>
+<Toolbar
+	color="primary"
+	{...$$restProps}
+>
 	<ButtonGroup toSlot="primary">
 		<Button on:click="{clickedSearch}">
-			<Ionicon icon="{search}" toSlot="icon-only" />
+			<Ionicon
+				icon="{search}"
+				toSlot="icon-only"
+			/>
 		</Button>
 	</ButtonGroup>
 	<InputSearch placeholder="Search Favorites" />

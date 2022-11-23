@@ -13,20 +13,42 @@
 
 <div class="bg-white m-8 p-8">
 	<div class="mb-8">
-		<CommandBar class="shadow svo-command-bar" color="primary">
+		<CommandBar
+			class="shadow svo-command-bar"
+			color="primary"
+		>
 			<svelte:fragment slot="start">
-				<CommandBarButton iconStart="{mdiPlus}" label="New" />
-				<CommandBarButton iconEnd="{mdiContentSaveOutline}" label="Save" />
-				<CommandBarMenu id="option-menu-id" label="Ionic Options">
-					<CommandBarMenuButton label="Learn Ionic" iconStart="{mdiSchoolOutline}" />
+				<CommandBarButton
+					iconStart="{mdiPlus}"
+					label="New"
+				/>
+				<CommandBarButton
+					iconEnd="{mdiContentSaveOutline}"
+					label="Save"
+				/>
+				<CommandBarMenu
+					id="option-menu-id"
+					label="Ionic Options"
+				>
+					<CommandBarMenuButton
+						label="Learn Ionic"
+						iconStart="{mdiSchoolOutline}"
+					/>
 					<CommandBarMenuButton label="Documentation" />
 					<CommandBarMenuButton label="Showcase" />
-					<CommandBarMenuButton label="GitHub Repo" on:click="{dismiss}" />
+					<CommandBarMenuButton
+						label="GitHub Repo"
+						on:click="{dismiss}"
+					/>
 				</CommandBarMenu>
 			</svelte:fragment>
 			<svelte:fragment slot="end">
 				<Button>
-					<Icon path="{mdiDotsVertical}" size="large" toSlot="icon-only" />
+					<Icon
+						path="{mdiDotsVertical}"
+						size="large"
+						toSlot="icon-only"
+					/>
 				</Button>
 			</svelte:fragment>
 			<Title>Default CommandBarButtons</Title>
