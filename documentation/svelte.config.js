@@ -1,4 +1,4 @@
-import azure from 'svelte-adapter-azure-swa';
+import adapter from 'svelte-adapter-azure-swa';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +12,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: azure()
+		adapter: adapter()
 		// vite: {
 		// 	optimizeDeps: {
 		// 		include: ['highlight.js', 'highlight.js/lib/core']
