@@ -36,7 +36,7 @@ importers:
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0
       eslint-plugin-svelte3: 4.0.0
-      highlight.js: 11.6.0
+      highlight.js: 11.7.0
       ionicons: 6.0.4
       postcss: 8.4.19
       postcss-load-config: 4.0.1
@@ -55,7 +55,7 @@ importers:
       ionicons: 6.0.4
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../packages/core/package
       '@svonic/forms': link:../packages/forms/package
       '@svonic/ui': link:../packages/ui/package
@@ -65,7 +65,7 @@ importers:
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0_eslint@8.28.0
       eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
-      highlight.js: 11.6.0
+      highlight.js: 11.7.0
       postcss: 8.4.19
       postcss-load-config: 4.0.1_postcss@8.4.19
       prettier: 2.8.0
@@ -109,7 +109,7 @@ importers:
       swiper: 8.4.5
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../../packages/core/package
       '@svonic/forms': link:../../packages/forms/package
       '@svonic/ui': link:../../packages/ui/package
@@ -155,7 +155,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
       '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
@@ -198,7 +198,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
       '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
@@ -255,7 +255,7 @@ importers:
       zod: 3.19.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../core/package
       '@svonic/ui': link:../ui/package
@@ -318,7 +318,7 @@ importers:
       zod: 3.19.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../../core/package
       '@svonic/ui': link:../../ui/package
@@ -372,7 +372,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../core/package
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
@@ -425,7 +425,7 @@ importers:
       svelte: 3.53.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.89
-      '@sveltejs/kit': 1.0.0-next.559_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@sveltejs/package': 1.0.0-next.6_7dvewpees4iyn2tkw2qzal77a4
       '@svonic/core': link:../../core/package
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
@@ -828,8 +828,8 @@ packages:
       import-meta-resolve: 2.1.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.559_svelte@3.53.1+vite@3.2.4:
-    resolution: {integrity: sha512-8Dx5w7O5LGbzzCQ0SG/1FI7cKtfsA1y0qr+mIfFHxb78oUW3P1h88Xs4nlrO7nJslaZ/BuBcj4yblMv1C5+rpQ==}
+  /@sveltejs/kit/1.0.0-next.562_svelte@3.53.1+vite@3.2.4:
+    resolution: {integrity: sha512-VgJzjtfjVLW/4A/vDtURc10PrS3bb/N62LHzqLZcUNb5+eN4a0k5cayC7Hz2tmtvrb2Qsg+piEAogvqjKBxrOg==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -837,7 +837,7 @@ packages:
       svelte: ^3.44.0
       vite: ^3.2.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.1.0_svelte@3.53.1+vite@3.2.4
+      '@sveltejs/vite-plugin-svelte': 1.3.1_svelte@3.53.1+vite@3.2.4
       '@types/cookie': 0.5.1
       cookie: 0.5.0
       devalue: 4.2.0
@@ -872,8 +872,8 @@ packages:
       - typescript
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.1.0_svelte@3.53.1+vite@3.2.4:
-    resolution: {integrity: sha512-cFRfEdztubtj1c/rYh7ArK7XCfFJn6wG6+J8/e9amFsKtEJILovoBrK0/mxt1AjPQg0vaX+fHPKvhx+q8mTPaQ==}
+  /@sveltejs/vite-plugin-svelte/1.3.1_svelte@3.53.1+vite@3.2.4:
+    resolution: {integrity: sha512-2Uu2sDdIR+XQWF7QWOVSF2jR9EU6Ciw1yWfYnfLYj8HIgnNxkh/8g22Fw2pBUI8QNyW/KxtqJUWBI+8ypamSrQ==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -888,8 +888,9 @@ packages:
       kleur: 4.1.5
       magic-string: 0.26.7
       svelte: 3.53.1
-      svelte-hmr: 0.15.0_svelte@3.53.1
+      svelte-hmr: 0.15.1_svelte@3.53.1
       vite: 3.2.4
+      vitefu: 0.2.2_vite@3.2.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2384,6 +2385,11 @@ packages:
     engines: {node: '>=12.0.0'}
     dev: true
 
+  /highlight.js/11.7.0:
+    resolution: {integrity: sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
@@ -3642,8 +3648,8 @@ packages:
       highlight.js: 11.6.0
     dev: true
 
-  /svelte-hmr/0.15.0_svelte@3.53.1:
-    resolution: {integrity: sha512-Aw21SsyoohyVn4yiKXWPNCSW2DQNH/76kvUnE9kpt4h9hcg9tfyQc6xshx9hzgMfGF0kVx0EGD8oBMWSnATeOg==}
+  /svelte-hmr/0.15.1_svelte@3.53.1:
+    resolution: {integrity: sha512-BiKB4RZ8YSwRKCNVdNxK/GfY+r4Kjgp9jCLEy0DuqAKfmQtpL38cQK3afdpjw4sqSs4PLi3jIPJIFp259NkZtA==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: '>=3.19.0'
@@ -4007,6 +4013,17 @@ packages:
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vitefu/0.2.2_vite@3.2.4:
+    resolution: {integrity: sha512-8CKEIWPm4B4DUDN+h+hVJa9pyNi7rzc5MYmbxhs1wcMakueGFNWB5/DL30USm9qU3xUPnL4/rrLEAwwFiD1tag==}
+    peerDependencies:
+      vite: ^3.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      vite: 3.2.4
     dev: true
 
   /wcwidth/1.0.1:
