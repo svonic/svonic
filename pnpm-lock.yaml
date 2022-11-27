@@ -25,7 +25,6 @@ importers:
   documentation:
     specifiers:
       '@mdi/js': 7.0.96
-      '@sveltejs/adapter-auto': next
       '@sveltejs/kit': next
       '@svonic/core': workspace:*
       '@svonic/forms': workspace:*
@@ -43,6 +42,7 @@ importers:
       prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
       svelte: 3.53.1
+      svelte-adapter-azure-swa: 0.12.0
       svelte-check: 2.9.2
       svelte-highlight: 6.2.1
       svelte-preprocess: 4.10.7
@@ -54,7 +54,6 @@ importers:
       '@mdi/js': 7.0.96
       ionicons: 6.0.4
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.89
       '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../packages/core/package
       '@svonic/forms': link:../packages/forms/package
@@ -71,6 +70,7 @@ importers:
       prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
       svelte: 3.53.1
+      svelte-adapter-azure-swa: 0.12.0_kazewug2wnbrondp34zsomtmam
       svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
       svelte-highlight: 6.2.1
       svelte-preprocess: 4.10.7_jgeygver3mevbte7srfft5qwby
@@ -3584,6 +3584,16 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /svelte-adapter-azure-swa/0.12.0_kazewug2wnbrondp34zsomtmam:
+    resolution: {integrity: sha512-wIo7cDKLF2yPAXd+UNKgxxviAYLB3bM8wmC9bbgTF3FtQO54eyZrI8EPVxOF14ECqTbgpcXDO7w6rbmEDsXrwg==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0-next.395
+    dependencies:
+      '@sveltejs/kit': 1.0.0-next.562_svelte@3.53.1+vite@3.2.4
+      esbuild: 0.15.12
+      set-cookie-parser: 2.5.1
     dev: true
 
   /svelte-check/2.9.2_g7z2chviobwh5b53nr2x4mtdq4:
