@@ -41,6 +41,7 @@ importers:
       postcss-load-config: 4.0.1
       prettier: 2.8.0
       prettier-plugin-svelte: 2.8.1
+      set-cookie-parser: 2.5.1
       svelte: 3.53.1
       svelte-adapter-azure-swa: 0.12.0
       svelte-check: 2.10.0
@@ -53,6 +54,7 @@ importers:
     dependencies:
       '@mdi/js': 7.0.96
       ionicons: 6.0.4
+      set-cookie-parser: 2.5.1
     devDependencies:
       '@sveltejs/kit': 1.0.0-next.571_svelte@3.53.1+vite@3.2.4
       '@svonic/core': link:../packages/core/package
@@ -78,6 +80,9 @@ importers:
       tslib: 2.4.1
       typescript: 4.9.3
       vite: 3.2.4
+
+  documentation/build/server:
+    specifiers: {}
 
   examples/ionic-conference-app:
     specifiers:
@@ -3592,7 +3597,6 @@ packages:
 
   /set-cookie-parser/2.5.1:
     resolution: {integrity: sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==}
-    dev: true
 
   /shebang-command/1.2.0:
     resolution: {integrity: sha512-EV3L1+UQWGor21OmnvojK36mhg+TyIKDh3iFBKBohr5xeXIhNBcx8oWdgkTEEQ+BEFFYdLRuqMfd5L84N1V5Vg==}

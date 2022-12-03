@@ -13,7 +13,8 @@
 	},
 	"dependencies": {
 		"@mdi/js": "7.0.96",
-		"ionicons": "6.0.4"
+		"ionicons": "6.0.4",
+		"set-cookie-parser": "2.5.1"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "next",
