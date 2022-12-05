@@ -38,7 +38,7 @@
 		"@mdi/js": "7.0.96",
 		"felte": "1.2.6",
 		"ionicons": "6.0.4",
-		"svelte": "^3.53.1",
+		"svelte": "3.53.1",
 		"zod": "3.19.1"
 	},
 	"devDependencies": {
