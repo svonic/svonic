@@ -33,9 +33,9 @@
 		"publish": "npm publish ./package"
 	},
 	"dependencies": {
-		"@ionic/core": "6.3.9",
+		"@ionic/core": "6.4.0",
 		"ionicons": "6.0.4",
-		"svelte": "3.53.1"
+		"svelte": "3.54.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -46,13 +46,13 @@
 		"eslint": "8.29.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
-		"prettier": "2.8.0",
+		"prettier": "2.8.1",
 		"prettier-plugin-svelte": "2.8.1",
 		"svelte-check": "2.10.1",
 		"svelte-preprocess": "4.10.7",
 		"svelte2tsx": "0.5.22",
 		"tslib": "2.4.1",
-		"typescript": "4.9.3",
+		"typescript": "4.9.4",
 		"vite": "3.2.5"
 	}
 }
