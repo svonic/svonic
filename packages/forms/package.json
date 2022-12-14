@@ -35,11 +35,11 @@
 	"dependencies": {
 		"@felte/reporter-dom": "1.1.4",
 		"@felte/validator-zod": "1.0.12",
-		"@mdi/js": "7.0.96",
+		"@mdi/js": "7.1.96",
 		"felte": "1.2.6",
 		"ionicons": "6.0.4",
-		"svelte": "3.54.0",
-		"zod": "3.19.1"
+		"svelte": "3.55.0",
+		"zod": "3.20.2"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -47,22 +47,22 @@
 		"@sveltejs/package": "1.0.0-next.6",
 		"@svonic/core": "workspace:*",
 		"@svonic/ui": "workspace:*",
-		"@typescript-eslint/eslint-plugin": "5.45.1",
-		"@typescript-eslint/parser": "5.45.1",
+		"@typescript-eslint/eslint-plugin": "5.46.1",
+		"@typescript-eslint/parser": "5.46.1",
 		"autoprefixer": "10.4.13",
 		"eslint": "8.29.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
-		"postcss": "8.4.19",
+		"postcss": "8.4.20",
 		"postcss-load-config": "4.0.1",
 		"prettier": "2.8.1",
-		"prettier-plugin-svelte": "2.8.1",
-		"svelte-check": "2.10.1",
-		"svelte-preprocess": "4.10.7",
+		"prettier-plugin-svelte": "2.9.0",
+		"svelte-check": "2.10.2",
+		"svelte-preprocess": "5.0.0",
 		"svelte2tsx": "0.5.22",
 		"tailwindcss": "3.2.4",
 		"tslib": "2.4.1",
 		"typescript": "4.9.4",
-		"vite": "3.2.5"
+		"vite": "4.0.1"
 	}
 }
