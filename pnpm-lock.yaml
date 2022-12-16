@@ -27,7 +27,7 @@ importers:
   documentation:
     specifiers:
       '@mdi/js': 7.1.96
-      '@sveltejs/kit': next
+      '@sveltejs/kit': 1.0.0
       '@svonic/core': workspace:*
       '@svonic/forms': workspace:*
       '@svonic/ui': workspace:*
@@ -58,7 +58,7 @@ importers:
       ionicons: 6.0.4
       set-cookie-parser: 2.5.1
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
       '@svonic/core': link:../packages/core/package
       '@svonic/forms': link:../packages/forms/package
       '@svonic/ui': link:../packages/ui/package
@@ -74,7 +74,7 @@ importers:
       prettier: 2.8.1
       prettier-plugin-svelte: 2.9.0_ajxj753sv7dbwexjherrch25ta
       svelte: 3.55.0
-      svelte-adapter-azure-swa: 0.12.0_oogoraclbppcquiitsbqrelvd4
+      svelte-adapter-azure-swa: 0.12.0_@sveltejs+kit@1.0.0
       svelte-check: 2.10.2_7tgmgw23w4ankk7vtabgm5xtbu
       svelte-highlight: 6.2.1
       svelte-preprocess: 5.0.0_4pbnl6cqae4gmabfifuvcfaifu
@@ -88,8 +88,8 @@ importers:
 
   examples/ionic-conference-app:
     specifiers:
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
       '@svonic/core': workspace:*
       '@svonic/forms': workspace:*
       '@svonic/ui': workspace:*
@@ -115,8 +115,8 @@ importers:
       ionicons: 6.0.4
       swiper: 8.4.5
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
       '@svonic/core': link:../../packages/core/package
       '@svonic/forms': link:../../packages/forms/package
       '@svonic/ui': link:../../packages/ui/package
@@ -137,10 +137,10 @@ importers:
 
   packages/core:
     specifiers:
-      '@ionic/core': 6.4.0
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@ionic/core': 6.4.1
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@typescript-eslint/eslint-plugin': 5.46.1
       '@typescript-eslint/parser': 5.46.1
       eslint: 8.29.0
@@ -157,13 +157,13 @@ importers:
       typescript: 4.9.4
       vite: 4.0.1
     dependencies:
-      '@ionic/core': 6.4.0
+      '@ionic/core': 6.4.1
       ionicons: 6.0.4
       svelte: 3.55.0
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
       eslint: 8.29.0
@@ -180,10 +180,10 @@ importers:
 
   packages/core/package:
     specifiers:
-      '@ionic/core': 6.4.0
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@ionic/core': 6.4.1
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@typescript-eslint/eslint-plugin': 5.46.1
       '@typescript-eslint/parser': 5.46.1
       eslint: 8.29.0
@@ -200,13 +200,13 @@ importers:
       typescript: 4.9.4
       vite: 4.0.1
     dependencies:
-      '@ionic/core': 6.4.0
+      '@ionic/core': 6.4.1
       ionicons: 6.0.4
       svelte: 3.55.0
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
       eslint: 8.29.0
@@ -226,9 +226,9 @@ importers:
       '@felte/reporter-dom': 1.1.4
       '@felte/validator-zod': 1.0.12
       '@mdi/js': 7.1.96
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@svonic/core': workspace:*
       '@svonic/ui': workspace:*
       '@typescript-eslint/eslint-plugin': 5.46.1
@@ -261,9 +261,9 @@ importers:
       svelte: 3.55.0
       zod: 3.20.2
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@svonic/core': link:../core/package
       '@svonic/ui': link:../ui/package
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
@@ -289,9 +289,9 @@ importers:
       '@felte/reporter-dom': 1.1.4
       '@felte/validator-zod': 1.0.12
       '@mdi/js': 7.1.96
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@svonic/core': workspace:*
       '@svonic/ui': workspace:*
       '@typescript-eslint/eslint-plugin': 5.46.1
@@ -324,9 +324,9 @@ importers:
       svelte: 3.55.0
       zod: 3.20.2
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@svonic/core': link:../../core/package
       '@svonic/ui': link:../../ui/package
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
@@ -350,9 +350,9 @@ importers:
   packages/ui:
     specifiers:
       '@mdi/js': 7.1.96
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@svonic/core': workspace:*
       '@typescript-eslint/eslint-plugin': 5.46.1
       '@typescript-eslint/parser': 5.46.1
@@ -378,9 +378,9 @@ importers:
       ionicons: 6.0.4
       svelte: 3.55.0
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@svonic/core': link:../core/package
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
@@ -403,9 +403,9 @@ importers:
   packages/ui/package:
     specifiers:
       '@mdi/js': 7.1.96
-      '@sveltejs/adapter-auto': next
-      '@sveltejs/kit': next
-      '@sveltejs/package': 1.0.0-next.6
+      '@sveltejs/adapter-auto': 1.0.0
+      '@sveltejs/kit': 1.0.0
+      '@sveltejs/package': 1.0.0
       '@svonic/core': workspace:*
       '@typescript-eslint/eslint-plugin': 5.46.1
       '@typescript-eslint/parser': 5.46.1
@@ -431,9 +431,9 @@ importers:
       ionicons: 6.0.4
       svelte: 3.55.0
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.90
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
-      '@sveltejs/package': 1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm
+      '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.0
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/package': 1.0.0_niwyv7xychq2ag6arq5eqxbomm
       '@svonic/core': link:../../core/package
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
@@ -948,8 +948,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@ionic/core/6.4.0:
-    resolution: {integrity: sha512-rWqXX67bWDD5r5Kleacy4dTBIXcB1gX+2Q5AK7LAtmtHUUuJPqGw/bAWE8hGKlF7ehJTyzb5CYV9XDzb8/00Zw==}
+  /@ionic/core/6.4.1:
+    resolution: {integrity: sha512-l1Z2sA9VjkO5rFhQMlNkqWQaSRyV1mcb6nYvLgi1cyDegcSDqLLJjZeyKVKYxTuc2qCaZhRlBe+c2155W8hmsw==}
     dependencies:
       '@stencil/core': 2.19.2
       ionicons: 6.0.4
@@ -1027,14 +1027,17 @@ packages:
     hasBin: true
     dev: false
 
-  /@sveltejs/adapter-auto/1.0.0-next.90:
-    resolution: {integrity: sha512-qxH46Oqqn40998wTmnbffONI0HcW/kiZ3OIjZoysjONne+LU4uEsG425MZ2RHDxmR04zxhsdjCAsn6B4du8D7w==}
+  /@sveltejs/adapter-auto/1.0.0_@sveltejs+kit@1.0.0:
+    resolution: {integrity: sha512-yKyPvlLVua1bJ/42FrR3X041mFGdB4GzTZOAEoHUcNBRE5Mhx94+eqHpC3hNvAOiLEDcKfVO0ObyKSu7qldU+w==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0
     dependencies:
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
       import-meta-resolve: 2.2.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.587_svelte@3.55.0+vite@4.0.1:
-    resolution: {integrity: sha512-F8zYXd7URcq57sGfrBRWTLtfj6JKkhNhwM4M8w4hNnJsJlZawPUvpybOSlIP87Z8URO8iCmyigQHxAYYzedrOg==}
+  /@sveltejs/kit/1.0.0_svelte@3.55.0+vite@4.0.1:
+    resolution: {integrity: sha512-6VgD5C3i2XOT7GRBi5LaPPLiFAmpiDkhKJNVt8fLg1RmaL6f7rT4Kiwi2XGpYRj3V1F4t1QRdsfmAkkDUKY3OA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1061,8 +1064,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/package/1.0.0-next.6_niwyv7xychq2ag6arq5eqxbomm:
-    resolution: {integrity: sha512-EwekVYRnD1r0deTt+9OKRvDopdX59FdfMVV+sN/LtIRO8+mEYuuDkj4uurt5yA9o2sMsv9xiAIWT5qKrq0rXuQ==}
+  /@sveltejs/package/1.0.0_niwyv7xychq2ag6arq5eqxbomm:
+    resolution: {integrity: sha512-YTTzhbOtmyq342S3tTYRJ9QQntRlukWieP5gQmqTMxdn1Ztr93pzR9vLCZ0q/pV4sqmEllc70lHJX/iV5uEYEg==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:
@@ -3812,12 +3815,12 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-adapter-azure-swa/0.12.0_oogoraclbppcquiitsbqrelvd4:
+  /svelte-adapter-azure-swa/0.12.0_@sveltejs+kit@1.0.0:
     resolution: {integrity: sha512-wIo7cDKLF2yPAXd+UNKgxxviAYLB3bM8wmC9bbgTF3FtQO54eyZrI8EPVxOF14ECqTbgpcXDO7w6rbmEDsXrwg==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0-next.395
     dependencies:
-      '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.0+vite@4.0.1
+      '@sveltejs/kit': 1.0.0_svelte@3.55.0+vite@4.0.1
       esbuild: 0.15.12
       set-cookie-parser: 2.5.1
     dev: true

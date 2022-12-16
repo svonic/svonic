@@ -17,7 +17,7 @@
 		"set-cookie-parser": "2.5.1"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "1.0.0",
 		"@svonic/core": "workspace:*",
 		"@svonic/forms": "workspace:*",
 		"@svonic/ui": "workspace:*",
