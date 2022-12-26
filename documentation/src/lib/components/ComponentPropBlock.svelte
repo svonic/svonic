@@ -29,11 +29,17 @@
 
 {#if propList.length > 0}
 	{#if normalPropList.length > 0}
-		<ComponentPropSection propList="{normalPropList}" title="Properties" />
+		<ComponentPropSection
+			propList="{normalPropList}"
+			title="Properties"
+		/>
 	{/if}
 
 	{#if specialPropList.length > 0}
-		<ComponentPropSection propList="{specialPropList}" title="Special Properties" />
+		<ComponentPropSection
+			propList="{specialPropList}"
+			title="Special Properties"
+		/>
 	{/if}
 {:else}
 	<Card class="text-slate-900 dark:text-slate-100">

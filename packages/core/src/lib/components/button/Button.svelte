@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ButtonType } from '$lib/types/button.type';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
@@ -104,10 +104,19 @@
 	on:ionBlur="{onIonBlur}"
 	on:ionFocus="{onIonFocus}"
 >
-	<slot name="icon-only" slot="icon-only" />
-	<slot name="start" slot="start" />
+	<slot
+		name="icon-only"
+		slot="icon-only"
+	/>
+	<slot
+		name="start"
+		slot="start"
+	/>
 	<slot />
-	<slot name="end" slot="end" />
+	<slot
+		name="end"
+		slot="end"
+	/>
 </ion-button>
 
 <style>

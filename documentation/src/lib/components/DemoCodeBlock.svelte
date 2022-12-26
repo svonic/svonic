@@ -21,9 +21,17 @@
 		<p>{@html description}</p>
 		<div class="text-center">
 			{#if $mode === 'ios'}
-				<svelte:component this="{demoComponent}" mode="{$mode}" bind:codeSnippet="{code}" />
+				<svelte:component
+					this="{demoComponent}"
+					mode="{$mode}"
+					bind:codeSnippet="{code}"
+				/>
 			{:else}
-				<svelte:component this="{demoComponent}" mode="{$mode}" bind:codeSnippet="{code}" />
+				<svelte:component
+					this="{demoComponent}"
+					mode="{$mode}"
+					bind:codeSnippet="{code}"
+				/>
 			{/if}
 		</div>
 		{#if code}

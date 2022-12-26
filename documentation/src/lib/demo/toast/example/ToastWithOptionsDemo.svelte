@@ -88,7 +88,13 @@
 	};
 </script>
 
-<div class="flex flex-col items-center m-auto w-72" id="present-toast-with-options-target">
-	<Button expand="block" {...$$restProps} on:click="{presentToastWithOptions}">Present Toast</Button
+<div
+	class="flex flex-col items-center m-auto w-72"
+	id="present-toast-with-options-target"
+>
+	<Button
+		expand="block"
+		{...$$restProps}
+		on:click="{presentToastWithOptions}">Present Toast</Button
 	>
 </div>

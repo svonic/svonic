@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import { onMount } from 'svelte';
@@ -19,7 +19,10 @@
 	}
 </script>
 
-<ion-grid class="{cssClass}" fixed="{fixed}">
+<ion-grid
+	class="{cssClass}"
+	fixed="{fixed}"
+>
 	<slot />
 </ion-grid>
 

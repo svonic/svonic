@@ -18,12 +18,39 @@
 `;
 </script>
 
-<Button color="primary" {...$$restProps}>Primary</Button>
-<Button color="secondary" {...$$restProps}>Secondary</Button>
-<Button color="tertiary" {...$$restProps}>Tertiary</Button>
-<Button color="success" {...$$restProps}>Success</Button>
-<Button color="warning" {...$$restProps}>Warning</Button>
-<Button color="danger" {...$$restProps}>Danger</Button>
-<Button color="light" {...$$restProps}>Light</Button>
-<Button color="medium" {...$$restProps}>Medium</Button>
-<Button color="dark" {...$$restProps}>Dark</Button>
+<Button
+	color="primary"
+	{...$$restProps}>Primary</Button
+>
+<Button
+	color="secondary"
+	{...$$restProps}>Secondary</Button
+>
+<Button
+	color="tertiary"
+	{...$$restProps}>Tertiary</Button
+>
+<Button
+	color="success"
+	{...$$restProps}>Success</Button
+>
+<Button
+	color="warning"
+	{...$$restProps}>Warning</Button
+>
+<Button
+	color="danger"
+	{...$$restProps}>Danger</Button
+>
+<Button
+	color="light"
+	{...$$restProps}>Light</Button
+>
+<Button
+	color="medium"
+	{...$$restProps}>Medium</Button
+>
+<Button
+	color="dark"
+	{...$$restProps}>Dark</Button
+>

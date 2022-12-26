@@ -25,15 +25,24 @@
 </script>
 
 <Button {...$$restProps}>
-	<Icon icon="{star}" toSlot="start" />
+	<Icon
+		icon="{star}"
+		toSlot="start"
+	/>
 	Left Icon
 </Button>
 
 <Button {...$$restProps}>
 	Right Icon
-	<Icon icon="{star}" toSlot="end" />
+	<Icon
+		icon="{star}"
+		toSlot="end"
+	/>
 </Button>
 
 <Button {...$$restProps}>
-	<Icon icon="{star}" toSlot="icon-only" />
+	<Icon
+		icon="{star}"
+		toSlot="icon-only"
+	/>
 </Button>

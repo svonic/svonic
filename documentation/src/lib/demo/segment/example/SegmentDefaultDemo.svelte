@@ -17,7 +17,10 @@
 `;
 </script>
 
-<Segment value="friends" {...$$restProps}>
+<Segment
+	value="friends"
+	{...$$restProps}
+>
 	<SegmentButton value="friends">
 		<Label>Friends</Label>
 	</SegmentButton>

@@ -56,5 +56,8 @@
 </script>
 
 <div id="action-sheet-target">
-	<Button {...$$restProps} on:click="{showActionSheet}">Show Action Sheet</Button>
+	<Button
+		{...$$restProps}
+		on:click="{showActionSheet}">Show Action Sheet</Button
+	>
 </div>

@@ -55,22 +55,52 @@
 
 	<Item>
 		<RangeSlider value="{20}">
-			<Icon icon="{sunny}" size="small" toSlot="start" />
-			<Icon icon="{sunny}" toSlot="end" />
+			<Icon
+				icon="{sunny}"
+				size="small"
+				toSlot="start"
+			/>
+			<Icon
+				icon="{sunny}"
+				toSlot="end"
+			/>
 		</RangeSlider>
 	</Item>
 
 	<Item>
-		<RangeSlider color="secondary" max="{200}" min="{-200}" pin="{true}">
-			<Icon icon="{contrast}" size="small" toSlot="start" />
-			<Icon icon="{contrast}" toSlot="end" />
+		<RangeSlider
+			color="secondary"
+			max="{200}"
+			min="{-200}"
+			pin="{true}"
+		>
+			<Icon
+				icon="{contrast}"
+				size="small"
+				toSlot="start"
+			/>
+			<Icon
+				icon="{contrast}"
+				toSlot="end"
+			/>
 		</RangeSlider>
 	</Item>
 
 	<Item>
-		<RangeSlider color="dark" dualKnobs="{true}" pin="{true}">
-			<Icon icon="{brush}" size="small" toSlot="start" />
-			<Icon icon="{brush}" toSlot="end" />
+		<RangeSlider
+			color="dark"
+			dualKnobs="{true}"
+			pin="{true}"
+		>
+			<Icon
+				icon="{brush}"
+				size="small"
+				toSlot="start"
+			/>
+			<Icon
+				icon="{brush}"
+				toSlot="end"
+			/>
 		</RangeSlider>
 	</Item>
 
@@ -83,8 +113,17 @@
 			snaps="{true}"
 			value="{1400}"
 		>
-			<Icon color="danger" icon="{thermometer}" size="small" toSlot="start" />
-			<Icon color="danger" icon="{thermometer}" toSlot="end" />
+			<Icon
+				color="danger"
+				icon="{thermometer}"
+				size="small"
+				toSlot="start"
+			/>
+			<Icon
+				color="danger"
+				icon="{thermometer}"
+				toSlot="end"
+			/>
 		</RangeSlider>
 	</Item>
 </List>

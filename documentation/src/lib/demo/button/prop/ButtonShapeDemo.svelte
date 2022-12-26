@@ -10,4 +10,7 @@
 `;
 </script>
 
-<Button shape="round" {...$$restProps}>Round</Button>
+<Button
+	shape="round"
+	{...$$restProps}>Round</Button
+>

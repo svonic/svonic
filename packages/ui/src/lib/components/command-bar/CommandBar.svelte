@@ -9,13 +9,22 @@
 	export let color: ColorType = 'primary';
 </script>
 
-<Toolbar class="{cssClass}" color="{color}">
+<Toolbar
+	class="{cssClass}"
+	color="{color}"
+>
 	<ButtonGroup toSlot="end">
 		<slot name="start" />
 	</ButtonGroup>
-	<slot name="secondary" slot="secondary" />
+	<slot
+		name="secondary"
+		slot="secondary"
+	/>
 	<slot />
-	<slot name="primary" slot="primary" />
+	<slot
+		name="primary"
+		slot="primary"
+	/>
 	<ButtonGroup toSlot="end">
 		<slot name="end" />
 	</ButtonGroup>

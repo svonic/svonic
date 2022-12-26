@@ -45,10 +45,16 @@
 		</ButtonGroup>
 		<ButtonGroup toSlot="end">
 			<Button on:click="{toggleFavorite}">
-				<Ionicon icon="{isFavorite ? star : starOutline}" toSlot="icon-only" />
+				<Ionicon
+					icon="{isFavorite ? star : starOutline}"
+					toSlot="icon-only"
+				/>
 			</Button>
 			<Button on:click="{shareSession}">
-				<Ionicon icon="{share}" toSlot="icon-only" />
+				<Ionicon
+					icon="{share}"
+					toSlot="icon-only"
+				/>
 			</Button>
 		</ButtonGroup>
 	</Toolbar>
@@ -71,20 +77,40 @@
 	{/if}
 
 	<List>
-		<Item button="{true}" on:click="{() => sessionClick('watch')}">
+		<Item
+			button="{true}"
+			on:click="{() => sessionClick('watch')}"
+		>
 			<Label color="primary">Watch</Label>
 		</Item>
-		<Item button="{true}" on:click="{() => sessionClick('add to calendar')}">
+		<Item
+			button="{true}"
+			on:click="{() => sessionClick('add to calendar')}"
+		>
 			<Label color="primary">Add to Calendar</Label>
 		</Item>
-		<Item button="{true}" on:click="{() => sessionClick('mark as unwatched')}">
+		<Item
+			button="{true}"
+			on:click="{() => sessionClick('mark as unwatched')}"
+		>
 			<Label color="primary">Mark as Unwatched</Label>
 		</Item>
-		<Item button="{true}" on:click="{() => sessionClick('download video')}">
+		<Item
+			button="{true}"
+			on:click="{() => sessionClick('download video')}"
+		>
 			<Label color="primary">Download video</Label>
-			<Ionicon color="primary" icon="{cloudDownload}" size="small" toSlot="end" />
+			<Ionicon
+				color="primary"
+				icon="{cloudDownload}"
+				size="small"
+				toSlot="end"
+			/>
 		</Item>
-		<Item button="{true}" on:click="{() => sessionClick('leave feedback')}">
+		<Item
+			button="{true}"
+			on:click="{() => sessionClick('leave feedback')}"
+		>
 			<Label color="primary">Leave Feedback</Label>
 		</Item>
 	</List>

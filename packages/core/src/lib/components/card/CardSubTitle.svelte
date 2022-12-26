@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -23,7 +23,11 @@
 	}
 </script>
 
-<ion-card-subtitle class="{cssClass}" color="{color}" mode="{mode}">
+<ion-card-subtitle
+	class="{cssClass}"
+	color="{color}"
+	mode="{mode}"
+>
 	<slot />
 </ion-card-subtitle>
 

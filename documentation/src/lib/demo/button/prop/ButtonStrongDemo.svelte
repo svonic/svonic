@@ -11,5 +11,13 @@
 `;
 </script>
 
-<Button color="primary" strong="{true}" {...$$restProps}>Strong</Button>
-<Button color="success" strong="{false}" {...$$restProps}>Default</Button>
+<Button
+	color="primary"
+	strong="{true}"
+	{...$$restProps}>Strong</Button
+>
+<Button
+	color="success"
+	strong="{false}"
+	{...$$restProps}>Default</Button
+>

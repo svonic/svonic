@@ -39,12 +39,22 @@
 	<Toolbar>
 		<Title class="capitalize">{componentData?.label}</Title>
 		<ButtonGroup toSlot="end">
-			<Segment mode="ios" bind:value="{segmentValue}" on:svo:change="{updateMode}">
-				<SegmentButton value="ios" layout="icon-top">
+			<Segment
+				mode="ios"
+				bind:value="{segmentValue}"
+				on:svo:change="{updateMode}"
+			>
+				<SegmentButton
+					value="ios"
+					layout="icon-top"
+				>
 					iOS
 					<Icon path="{mdiApple}" />
 				</SegmentButton>
-				<SegmentButton value="md" layout="icon-top">
+				<SegmentButton
+					value="md"
+					layout="icon-top"
+				>
 					MD
 					<Icon path="{mdiAndroid}" />
 				</SegmentButton>
@@ -61,11 +71,18 @@
 					<p>{componentData?.description}</p>
 					<div class="bg-gray-100 dark:bg-gray-700 flex flex-col gap-2 mt-4 p-2">
 						<div class="flex flex-row items-center">
-							<Ionicon class="mr-2 text-lg" color="primary" icon="{logoIonic}" />
+							<Ionicon
+								class="mr-2 text-lg"
+								color="primary"
+								icon="{logoIonic}"
+							/>
 							<h3 class="text-base">Ionic References</h3>
 						</div>
 						<div class="flex flex-row items-center">
-							<Ionicon class="mr-2 text-lg" icon="{documentOutline}" />
+							<Ionicon
+								class="mr-2 text-lg"
+								icon="{documentOutline}"
+							/>
 							<a
 								class="text-slate-900 dark:text-slate-100 hover:underline"
 								href="{componentData?.ionic?.documentationUrl}"
@@ -75,7 +92,10 @@
 							>
 						</div>
 						<div class="flex flex-row items-center">
-							<Ionicon class="mr-2 text-lg" icon="{logoGithub}" />
+							<Ionicon
+								class="mr-2 text-lg"
+								icon="{logoGithub}"
+							/>
 							<a
 								class="text-slate-900 dark:text-slate-100 hover:underline"
 								href="{componentData?.ionic?.sourceUrl}"
@@ -94,7 +114,10 @@
 				eventList="{componentData?.dispatchedEventList}"
 				eventType="dispatched"
 			/>
-			<ComponentEventBlock eventList="{componentData?.forwardedEventList}" eventType="forwarded" />
+			<ComponentEventBlock
+				eventList="{componentData?.forwardedEventList}"
+				eventType="forwarded"
+			/>
 			<ComponentMethodBlock methodList="{componentData?.methodList}" />
 			<ComponentSlotBlock slotList="{componentData?.slotList}" />
 		{/if}

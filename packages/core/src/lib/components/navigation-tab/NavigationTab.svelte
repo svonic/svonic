@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonTab } from '@ionic/core/components/ion-tab';
@@ -27,7 +27,11 @@
 	}
 </script>
 
-<ion-tab class="{cssClass}" tab="{tabId}" bind:this="{component}">
+<ion-tab
+	class="{cssClass}"
+	tab="{tabId}"
+	bind:this="{component}"
+>
 	<slot />
 </ion-tab>
 

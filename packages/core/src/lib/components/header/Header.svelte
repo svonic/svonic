@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
 	import { defineCustomElement } from '$lib/utils/utils';
@@ -24,7 +24,12 @@
 	}
 </script>
 
-<ion-header class="{cssClass}" collapse="{collapse}" mode="{mode}" translucent="{translucent}">
+<ion-header
+	class="{cssClass}"
+	collapse="{collapse}"
+	mode="{mode}"
+	translucent="{translucent}"
+>
 	<slot />
 </ion-header>
 

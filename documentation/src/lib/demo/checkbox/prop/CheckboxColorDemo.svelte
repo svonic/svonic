@@ -18,12 +18,48 @@
 `;
 </script>
 
-<Checkbox color="primary" checked="{true}" {...$$restProps} />
-<Checkbox color="secondary" checked="{true}" {...$$restProps} />
-<Checkbox color="tertiary" checked="{true}" {...$$restProps} />
-<Checkbox color="success" checked="{true}" {...$$restProps} />
-<Checkbox color="warning" checked="{true}" {...$$restProps} />
-<Checkbox color="danger" checked="{true}" {...$$restProps} />
-<Checkbox color="light" checked="{true}" {...$$restProps} />
-<Checkbox color="medium" checked="{true}" {...$$restProps} />
-<Checkbox color="dark" checked="{true}" {...$$restProps} />
+<Checkbox
+	color="primary"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="secondary"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="tertiary"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="success"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="warning"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="danger"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="light"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="medium"
+	checked="{true}"
+	{...$$restProps}
+/>
+<Checkbox
+	color="dark"
+	checked="{true}"
+	{...$$restProps}
+/>

@@ -329,7 +329,11 @@
 {:else}
 	<List {...$$restProps}>
 		<ListHeader>
-			<ProgressSkeleton animated height="16px" width="80px" />
+			<ProgressSkeleton
+				animated
+				height="16px"
+				width="80px"
+			/>
 		</ListHeader>
 		<Item>
 			<Thumbnail toSlot="start">
@@ -337,13 +341,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -353,13 +366,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -369,13 +391,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -385,13 +416,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -401,13 +441,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -417,13 +466,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -433,13 +491,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>
@@ -449,13 +516,22 @@
 			</Thumbnail>
 			<Label>
 				<h3>
-					<ProgressSkeleton animated width="80%" />
+					<ProgressSkeleton
+						animated
+						width="80%"
+					/>
 				</h3>
 				<p>
-					<ProgressSkeleton animated width="60%" />
+					<ProgressSkeleton
+						animated
+						width="60%"
+					/>
 				</p>
 				<p>
-					<ProgressSkeleton animated width="30%" />
+					<ProgressSkeleton
+						animated
+						width="30%"
+					/>
 				</p>
 			</Label>
 		</Item>

@@ -20,7 +20,10 @@
 `;
 </script>
 
-<Segment value="shared" {...$$restProps}>
+<Segment
+	value="shared"
+	{...$$restProps}
+>
 	<SegmentButton value="bookmarks">
 		<Label>Bookmarks</Label>
 	</SegmentButton>

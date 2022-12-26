@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
@@ -22,12 +22,28 @@
 	}
 </script>
 
-<ion-toolbar class="{cssClass}" color="{color}" mode="{mode}">
-	<slot name="start" slot="start" />
-	<slot name="secondary" slot="secondary" />
+<ion-toolbar
+	class="{cssClass}"
+	color="{color}"
+	mode="{mode}"
+>
+	<slot
+		name="start"
+		slot="start"
+	/>
+	<slot
+		name="secondary"
+		slot="secondary"
+	/>
 	<slot />
-	<slot name="primary" slot="primary" />
-	<slot name="end" slot="end" />
+	<slot
+		name="primary"
+		slot="primary"
+	/>
+	<slot
+		name="end"
+		slot="end"
+	/>
 </ion-toolbar>
 
 <style>

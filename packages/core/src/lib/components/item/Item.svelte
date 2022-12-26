@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ButtonType } from '$lib/types/button.type';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
@@ -97,11 +97,23 @@
 	bind:this="{component}"
 	on:click
 >
-	<slot name="start" slot="start" />
+	<slot
+		name="start"
+		slot="start"
+	/>
 	<slot />
-	<slot name="end" slot="end" />
-	<slot name="helper" slot="helper" />
-	<slot name="error" slot="error" />
+	<slot
+		name="end"
+		slot="end"
+	/>
+	<slot
+		name="helper"
+		slot="helper"
+	/>
+	<slot
+		name="error"
+		slot="error"
+	/>
 </ion-item>
 
 <style>

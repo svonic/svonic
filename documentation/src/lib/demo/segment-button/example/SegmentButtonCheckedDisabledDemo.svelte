@@ -20,14 +20,20 @@
 `;
 </script>
 
-<Segment value="paid" {...$$restProps}>
+<Segment
+	value="paid"
+	{...$$restProps}
+>
 	<SegmentButton value="paid">
 		<Label>Paid</Label>
 	</SegmentButton>
 	<SegmentButton value="free">
 		<Label>Free</Label>
 	</SegmentButton>
-	<SegmentButton disabled="{true}" value="top">
+	<SegmentButton
+		disabled="{true}"
+		value="top"
+	>
 		<Label>Top</Label>
 	</SegmentButton>
 </Segment>

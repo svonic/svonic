@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { SlotType } from '$lib/types/slot.type';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
@@ -24,7 +24,10 @@
 	}
 </script>
 
-<ion-thumbnail class="{cssClass}" bind:this="{component}">
+<ion-thumbnail
+	class="{cssClass}"
+	bind:this="{component}"
+>
 	<slot />
 </ion-thumbnail>
 

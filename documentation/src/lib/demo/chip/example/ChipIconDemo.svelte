@@ -34,25 +34,41 @@
 `;
 </script>
 
-<Chip color="primary" outline="{true}" {...$$restProps}>
+<Chip
+	color="primary"
+	outline="{true}"
+	{...$$restProps}
+>
 	<Ionicon icon="{pin}" />
 	<Label>Madison</Label>
 	<Ionicon icon="{closeCircle}" />
 </Chip>
 
-<Chip color="secondary" outline="{true}" {...$$restProps}>
+<Chip
+	color="secondary"
+	outline="{true}"
+	{...$$restProps}
+>
 	<Ionicon icon="{wine}" />
 	<Label>Nightlife</Label>
 	<Ionicon icon="{closeCircle}" />
 </Chip>
 
-<Chip color="tertiary" outline="{true}" {...$$restProps}>
+<Chip
+	color="tertiary"
+	outline="{true}"
+	{...$$restProps}
+>
 	<Ionicon icon="{restaurant}" />
 	<Label>Dining</Label>
 	<Ionicon icon="{closeCircle}" />
 </Chip>
 
-<Chip color="dark" outline="{true}" {...$$restProps}>
+<Chip
+	color="dark"
+	outline="{true}"
+	{...$$restProps}
+>
 	<Ionicon icon="{videocam}" />
 	<Label>Entertainment</Label>
 	<Ionicon icon="{closeCircle}" />

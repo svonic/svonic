@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ApplicationConfig } from '$lib/types/application-config.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { initializeIonic } from '$lib/utils/ionic-svelte';
@@ -55,11 +55,19 @@
 </script>
 
 {#if initialized}
-	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
+	<ion-app
+		class="{cssClass}{currentCssClass}"
+		id="{id}"
+		bind:this="{component}"
+	>
 		<slot />
 	</ion-app>
 {:else}
-	<ion-app class="{cssClass}{currentCssClass}" id="{id}" bind:this="{component}">
+	<ion-app
+		class="{cssClass}{currentCssClass}"
+		id="{id}"
+		bind:this="{component}"
+	>
 		<slot />
 	</ion-app>
 {/if}

@@ -12,6 +12,18 @@
 `;
 </script>
 
-<Button color="primary" size="default" {...$$restProps}>Default</Button>
-<Button color="success" size="large" {...$$restProps}>Large</Button>
-<Button color="danger" size="small" {...$$restProps}>Small</Button>
+<Button
+	color="primary"
+	size="default"
+	{...$$restProps}>Default</Button
+>
+<Button
+	color="success"
+	size="large"
+	{...$$restProps}>Large</Button
+>
+<Button
+	color="danger"
+	size="small"
+	{...$$restProps}>Small</Button
+>

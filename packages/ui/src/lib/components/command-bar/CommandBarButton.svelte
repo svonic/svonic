@@ -12,13 +12,26 @@
 	export let label: string | undefined = undefined;
 </script>
 
-<Button class="svo-command-bar-button {cssClass}" id="{id}">
+<Button
+	class="svo-command-bar-button {cssClass}"
+	id="{id}"
+>
 	{#if iconStart}
-		<Icon class="mr-1" path="{iconStart}" size="large" toSlot="start" />
+		<Icon
+			class="mr-1"
+			path="{iconStart}"
+			size="large"
+			toSlot="start"
+		/>
 	{/if}
 	<span>{label}</span>
 	{#if iconEnd}
-		<Icon class="ml-1" path="{iconEnd}" size="large" toSlot="end" />
+		<Icon
+			class="ml-1"
+			path="{iconEnd}"
+			size="large"
+			toSlot="end"
+		/>
 	{/if}
 </Button>
 

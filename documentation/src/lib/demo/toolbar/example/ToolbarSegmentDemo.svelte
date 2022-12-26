@@ -15,8 +15,14 @@
 `;
 </script>
 
-<Toolbar color="light" {...$$restProps}>
-	<Segment color="primary" value="all">
+<Toolbar
+	color="light"
+	{...$$restProps}
+>
+	<Segment
+		color="primary"
+		value="all"
+	>
 		<SegmentButton value="all">All</SegmentButton>
 		<SegmentButton value="favorites">Favorites</SegmentButton>
 	</Segment>

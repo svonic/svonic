@@ -20,7 +20,10 @@
 `;
 </script>
 
-<Segment value="1" {...$$restProps}>
+<Segment
+	value="1"
+	{...$$restProps}
+>
 	<SegmentButton value="1">
 		<Label>Item One</Label>
 	</SegmentButton>

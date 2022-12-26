@@ -83,7 +83,10 @@
 <List {...$$restProps}>
 	<ListHeader>Icon top</ListHeader>
 
-	<Segment color="tertiary" value="favorite">
+	<Segment
+		color="tertiary"
+		value="favorite"
+	>
 		<SegmentButton value="call">
 			<Label>Call</Label>
 			<Ionicon icon="{call}" />
@@ -100,16 +103,28 @@
 
 	<ListHeader>Icon bottom</ListHeader>
 
-	<Segment color="success" value="call">
-		<SegmentButton value="call" layout="icon-bottom">
+	<Segment
+		color="success"
+		value="call"
+	>
+		<SegmentButton
+			value="call"
+			layout="icon-bottom"
+		>
 			<Ionicon icon="{call}" />
 			<Label>Call</Label>
 		</SegmentButton>
-		<SegmentButton value="favorite" layout="icon-bottom">
+		<SegmentButton
+			value="favorite"
+			layout="icon-bottom"
+		>
 			<Ionicon icon="{heart}" />
 			<Label>Favorite</Label>
 		</SegmentButton>
-		<SegmentButton value="map" layout="icon-bottom">
+		<SegmentButton
+			value="map"
+			layout="icon-bottom"
+		>
 			<Ionicon icon="{pin}" />
 			<Label>Map</Label>
 		</SegmentButton>
@@ -117,16 +132,28 @@
 
 	<ListHeader>Icon start</ListHeader>
 
-	<Segment color="warning" value="call">
-		<SegmentButton value="call" layout="icon-start">
+	<Segment
+		color="warning"
+		value="call"
+	>
+		<SegmentButton
+			value="call"
+			layout="icon-start"
+		>
 			<Label>Call</Label>
 			<Ionicon icon="{call}" />
 		</SegmentButton>
-		<SegmentButton value="favorite" layout="icon-start">
+		<SegmentButton
+			value="favorite"
+			layout="icon-start"
+		>
 			<Label>Favorite</Label>
 			<Ionicon icon="{heart}" />
 		</SegmentButton>
-		<SegmentButton value="map" layout="icon-start">
+		<SegmentButton
+			value="map"
+			layout="icon-start"
+		>
 			<Label>Map</Label>
 			<Ionicon icon="{pin}" />
 		</SegmentButton>
@@ -134,16 +161,28 @@
 
 	<ListHeader>Icon end</ListHeader>
 
-	<Segment color="danger" value="map">
-		<SegmentButton value="call" layout="icon-end">
+	<Segment
+		color="danger"
+		value="map"
+	>
+		<SegmentButton
+			value="call"
+			layout="icon-end"
+		>
 			<Ionicon icon="{call}" />
 			<Label>Call</Label>
 		</SegmentButton>
-		<SegmentButton value="favorite" layout="icon-end">
+		<SegmentButton
+			value="favorite"
+			layout="icon-end"
+		>
 			<Ionicon icon="{heart}" />
 			<Label>Favorite</Label>
 		</SegmentButton>
-		<SegmentButton value="map" layout="icon-end">
+		<SegmentButton
+			value="map"
+			layout="icon-end"
+		>
 			<Ionicon icon="{pin}" />
 			<Label>Map</Label>
 		</SegmentButton>

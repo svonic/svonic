@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from 'svelte-adapter-azure-swa';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,15 +12,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			default: true
-		},
-		vite: {
-			optimizeDeps: {
-				include: ['highlight.js', 'highlight.js/lib/core']
-			}
-		}
+		adapter: adapter()
+		// vite: {
+		// 	optimizeDeps: {
+		// 		include: ['highlight.js', 'highlight.js/lib/core']
+		// 	}
+		// }
 	}
 };
 

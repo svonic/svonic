@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { ButtonType } from '$lib/types/button.type';
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
@@ -56,12 +56,27 @@
 	bind:this="{component}"
 	on:click
 >
-	<slot name="top" slot="top" />
-	<slot name="start" slot="start" />
-	<slot name="icon-only" slot="icon-only" />
+	<slot
+		name="top"
+		slot="top"
+	/>
+	<slot
+		name="start"
+		slot="start"
+	/>
+	<slot
+		name="icon-only"
+		slot="icon-only"
+	/>
 	<slot />
-	<slot name="end" slot="end" />
-	<slot name="bottom" slot="bottom" />
+	<slot
+		name="end"
+		slot="end"
+	/>
+	<slot
+		name="bottom"
+		slot="bottom"
+	/>
 </ion-item-option>
 
 <style>

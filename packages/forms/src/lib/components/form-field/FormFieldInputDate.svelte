@@ -105,8 +105,15 @@
 			on:ionInput
 		/>
 
-		<Button color="dark" fill="clear" id="{name}-button">
-			<Ionicon icon="{calendarClearOutline}" toSlot="icon-only" />
+		<Button
+			color="dark"
+			fill="clear"
+			id="{name}-button"
+		>
+			<Ionicon
+				icon="{calendarClearOutline}"
+				toSlot="icon-only"
+			/>
 		</Button>
 		<Menu
 			class="{datePickerCssClass}"
@@ -116,7 +123,10 @@
 			on:onDidDismiss="{onDidDismiss}"
 		>
 			<Content>
-				<DatePicker presentation="date" bind:value="{$data[name]}" />
+				<DatePicker
+					presentation="date"
+					bind:value="{$data[name]}"
+				/>
 			</Content>
 		</Menu>
 	</div>

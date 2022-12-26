@@ -9,7 +9,10 @@
 
 <Card class="text-slate-900 dark:text-slate-100">
 	<CardHeader>
-		<BlockTitle class="capitalize" title="{eventType} Events" />
+		<BlockTitle
+			class="capitalize"
+			title="{eventType} Events"
+		/>
 	</CardHeader>
 	<CardContent>
 		{#if eventList.length > 0}

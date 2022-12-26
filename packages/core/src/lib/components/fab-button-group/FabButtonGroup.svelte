@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import { onMount } from 'svelte';
@@ -22,7 +22,11 @@
 	}
 </script>
 
-<ion-fab-list activated="{activated}" class="{cssClass}" side="{side}">
+<ion-fab-list
+	activated="{activated}"
+	class="{cssClass}"
+	side="{side}"
+>
 	<slot />
 </ion-fab-list>
 

@@ -16,8 +16,14 @@
 </script>
 
 <div>
-	<Checkbox disabled="{true}" {...$$restProps} /> Disabled
+	<Checkbox
+		disabled="{true}"
+		{...$$restProps}
+	/> Disabled
 </div>
 <div>
-	<Checkbox disabled="{false}" {...$$restProps} /> Enabled
+	<Checkbox
+		disabled="{false}"
+		{...$$restProps}
+	/> Enabled
 </div>

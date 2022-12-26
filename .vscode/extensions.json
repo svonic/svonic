@@ -5,6 +5,7 @@
         "stordahl.sveltekit-snippets",
         "bradlc.vscode-tailwindcss",
         "visualstudioexptteam.vscodeintellicode",
-        "heybourn.headwind"
+        "heybourn.headwind",
+        "csstools.postcss"
     ]
 }

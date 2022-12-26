@@ -67,6 +67,13 @@
 	});
 </script>
 
-<form class="{cssClass}" use:form>
-	<slot form="{form}" errors="{errors}" touched="{touched}" />
+<form
+	class="{cssClass}"
+	use:form
+>
+	<slot
+		form="{form}"
+		errors="{errors}"
+		touched="{touched}"
+	/>
 </form>

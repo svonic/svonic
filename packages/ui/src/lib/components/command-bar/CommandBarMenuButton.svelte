@@ -12,13 +12,27 @@
 	export let label: string | undefined = undefined;
 </script>
 
-<Item button="{true}" class="{cssClass}" id="{id}">
+<Item
+	button="{true}"
+	class="{cssClass}"
+	id="{id}"
+>
 	{#if iconStart}
-		<Icon class="mr-1" path="{iconStart}" size="large" toSlot="start" />
+		<Icon
+			class="mr-1"
+			path="{iconStart}"
+			size="large"
+			toSlot="start"
+		/>
 	{/if}
 	<Label>{label}</Label>
 	{#if iconEnd}
-		<Icon class="ml-1" path="{iconEnd}" size="large" toSlot="end" />
+		<Icon
+			class="ml-1"
+			path="{iconEnd}"
+			size="large"
+			toSlot="end"
+		/>
 	{/if}
 </Item>
 

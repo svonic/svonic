@@ -14,8 +14,14 @@
 `;
 </script>
 
-<Toolbar color="light" {...$$restProps}>
+<Toolbar
+	color="light"
+	{...$$restProps}
+>
 	<Title>Progress</Title>
 
-	<ProgressBar type="indeterminate" value="{0.4}" />
+	<ProgressBar
+		type="indeterminate"
+		value="{0.4}"
+	/>
 </Toolbar>

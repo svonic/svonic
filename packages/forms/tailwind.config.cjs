@@ -1,13 +1,6 @@
-const production = process.env.NODE_ENV === 'production';
+const config = {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 
-module.exports = {
-	mode: 'jit',
-	darkMode: 'class',
-	future: {
-		removeDeprecatedGapUtilities: true,
-		purgeLayersByDefault: true
-	},
-	plugins: [],
 	theme: {
 		extend: {
 			height: {
@@ -19,12 +12,8 @@ module.exports = {
 			}
 		}
 	},
-	variants: {
-		extend: {}
-	},
-	content: [
-		'./src/**/*.svelte',
-		// may also want to include HTML files
-		'./src/**/*.html'
-	]
+
+	plugins: []
 };
+
+module.exports = config;

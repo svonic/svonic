@@ -8,7 +8,10 @@
 
 <Application>
 	<slot name="drawer-start" />
-	<div class="ion-page" id="main">
+	<div
+		class="ion-page"
+		id="main"
+	>
 		<Header translucent="{true}">
 			<Toolbar color="{headerColor}">
 				<div slot="start">
@@ -22,7 +25,10 @@
 				</div>
 			</Toolbar>
 		</Header>
-		<Content color="{contentColor}" fullscreen="{false}">
+		<Content
+			color="{contentColor}"
+			fullscreen="{false}"
+		>
 			<slot />
 		</Content>
 	</div>

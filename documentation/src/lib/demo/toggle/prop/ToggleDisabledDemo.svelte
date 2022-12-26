@@ -10,4 +10,7 @@
 `;
 </script>
 
-<Toggle disabled="{true}" {...$$restProps}>Disabled</Toggle>
+<Toggle
+	disabled="{true}"
+	{...$$restProps}>Disabled</Toggle
+>

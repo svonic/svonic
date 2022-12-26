@@ -44,7 +44,12 @@
 </script>
 
 <div class="flex flex-row justify-center">
-	<Segment class="w-80" scrollable="{true}" value="star" {...$$restProps}>
+	<Segment
+		class="w-80"
+		scrollable="{true}"
+		value="star"
+		{...$$restProps}
+	>
 		<SegmentButton value="home">
 			<Ionicon icon="{home}" />
 			<Label>Home</Label>
