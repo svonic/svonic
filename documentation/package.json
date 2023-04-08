@@ -12,38 +12,38 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@mdi/js": "7.1.96",
-		"ionicons": "6.0.4",
-		"set-cookie-parser": "2.5.1"
+		"@mdi/js": "7.2.96",
+		"ionicons": "7.1.0",
+		"set-cookie-parser": "2.6.0"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "1.0.1",
+		"@sveltejs/kit": "1.15.2",
 		"@svonic/core": "workspace:*",
 		"@svonic/forms": "workspace:*",
 		"@svonic/ui": "workspace:*",
-		"@typescript-eslint/eslint-plugin": "5.47.0",
-		"@typescript-eslint/parser": "5.47.0",
-		"autoprefixer": "10.4.13",
-		"eslint": "8.30.0",
-		"eslint-config-prettier": "8.5.0",
+		"@typescript-eslint/eslint-plugin": "5.57.1",
+		"@typescript-eslint/parser": "5.57.1",
+		"autoprefixer": "10.4.14",
+		"eslint": "8.38.0",
+		"eslint-config-prettier": "8.8.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"highlight.js": "11.7.0",
-		"postcss": "8.4.20",
+		"postcss": "8.4.21",
 		"postcss-load-config": "4.0.1",
-		"prettier": "2.8.1",
-		"prettier-plugin-svelte": "2.9.0",
-		"svelte": "3.55.0",
-		"svelte-adapter-azure-swa": "0.12.0",
-		"svelte-check": "3.0.1",
-		"svelte-highlight": "6.2.1",
-		"svelte-preprocess": "5.0.0",
-		"tailwindcss": "3.2.4",
-		"tslib": "2.4.1",
-		"typescript": "4.9.4",
-		"vite": "4.0.3"
+		"prettier": "2.8.7",
+		"prettier-plugin-svelte": "2.10.0",
+		"svelte": "3.58.0",
+		"svelte-adapter-azure-swa": "0.15.0",
+		"svelte-check": "3.2.0",
+		"svelte-highlight": "7.2.1",
+		"svelte-preprocess": "5.0.3",
+		"tailwindcss": "3.3.1",
+		"tslib": "2.5.0",
+		"typescript": "5.0.4",
+		"vite": "4.2.1"
 	},
 	"engines": {
-		"node": ">=16.7.0",
-		"pnpm": "^7.0.0"
+		"node": ">=18.12.1",
+		"pnpm": "^8.0.0"
 	}
 }

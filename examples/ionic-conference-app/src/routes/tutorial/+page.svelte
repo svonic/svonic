@@ -6,20 +6,15 @@
 		ButtonGroup,
 		Content,
 		Header,
-		Ionicon,
 		menuController,
 		Title,
 		Toolbar
 	} from '@svonic/core';
-	import { arrowForward } from 'ionicons/icons/index.js';
 	import { onDestroy, onMount } from 'svelte';
-	import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper';
 	import 'swiper/css';
 	import 'swiper/css/pagination';
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
 
 	let showSkip = true;
-	let slides: Swiper;
 
 	if (browser) {
 		onMount(async () => {
@@ -32,20 +27,6 @@
 			console.log('menu destroy', await menuController.isEnabled());
 		});
 	}
-
-	const onSlideChangeStart = () => {
-		console.log('slides', slides);
-		showSkip = !slides.isEnd;
-	};
-
-	const setSwiperRef = ({ detail }) => {
-		console.log('swiper', detail);
-		const [swiper] = detail;
-		// set swiper instance
-		setTimeout(() => {
-			slides = swiper;
-		});
-	};
 
 	const startApp = async () => {
 		await goto('/app/tabs/schedule');
@@ -71,7 +52,7 @@
 </Header>
 
 <Content fullscreen="{true}">
-	<Swiper
+	<!-- <Swiper
 		keyboard="{{
 			enabled: true
 		}}"
@@ -145,7 +126,7 @@
 				/>
 			</Button>
 		</SwiperSlide>
-	</Swiper>
+	</Swiper> -->
 </Content>
 
 <style>
