@@ -98,6 +98,9 @@
 	on:click
 	on:ionBlur="{onIonBlur}"
 	on:ionFocus="{onIonFocus}"
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-fab-button>

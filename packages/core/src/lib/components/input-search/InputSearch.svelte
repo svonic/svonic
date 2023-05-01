@@ -28,7 +28,7 @@
 	export let cancelButtonText = 'Cancel';
 	export let clearIcon: string | undefined = undefined;
 	export let color: ColorType = undefined;
-	export let debounce = 250;
+	export let debounce: number | undefined = undefined;
 	export let disabled = false;
 	export let enterKeyHint: EnterKeyHintType = undefined;
 	export let inputMode: InputModeType = undefined;

@@ -25,6 +25,9 @@
 	class="{cssClass}"
 	menu="{DrawerId}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-menu-toggle>

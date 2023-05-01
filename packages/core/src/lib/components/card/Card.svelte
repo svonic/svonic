@@ -25,7 +25,7 @@
 	// export let routerAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let routerDirection: RouterDirectionType = undefined;
 	export let target: TargetType = undefined;
-	export let type: ButtonType = undefined;
+	export let type: ButtonType = 'button';
 
 	export let svelteKitPrefetch = false;
 
@@ -58,6 +58,9 @@
 	type="{type}"
 	bind:this="{component}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-card>

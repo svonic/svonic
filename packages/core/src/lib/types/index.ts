@@ -13,6 +13,7 @@ export * from './href.type';
 export * from './input-mode.type';
 export * from './input.type';
 export * from './interface.type';
+export * from './label-placement.type';
 export * from './line.type';
 export * from './mode.type';
 export * from './position.type';

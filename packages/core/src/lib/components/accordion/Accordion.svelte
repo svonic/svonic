@@ -25,7 +25,7 @@
 	export let value: ValueType = undefined;
 
 	const getSlottedHeaderIonItem = () => {
-		const headerEl = component.shadowRoot.getElementById('header');
+		const headerEl = component.shadowRoot?.getElementById('header');
 
 		if (!headerEl) {
 			return;
@@ -60,7 +60,7 @@
 			return;
 		}
 
-		const buttonEl = itemEl.shadowRoot.querySelector('button');
+		const buttonEl = itemEl.shadowRoot?.querySelector('button');
 
 		// console.log('buttonEl', buttonEl);
 

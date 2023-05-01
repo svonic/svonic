@@ -84,7 +84,7 @@
 	const dispatch = createEventDispatcher();
 
 	const fixMenuPaneVisible = async () => {
-		if (componentIsReady && component?.isOpen) {
+		if (componentIsReady && (await component?.isOpen())) {
 			const menuOpen = await isOpen();
 
 			if (disabled === false && isPaneVisible === true && menuOpen === false) {

@@ -113,6 +113,9 @@
 	on:ionToastDidPresent="{onIonToastDidPresent}"
 	on:ionToastWillDismiss="{onIonToastWillDismiss}"
 	on:ionToastWillPresent="{onIonToastWillPresent}"
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-toast>
