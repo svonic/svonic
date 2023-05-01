@@ -46,6 +46,9 @@
 	type="{type}"
 	value="{value}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-segment-button>

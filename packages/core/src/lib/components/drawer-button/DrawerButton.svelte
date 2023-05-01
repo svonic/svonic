@@ -78,6 +78,9 @@
 	type="{type}"
 	bind:this="{component}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-menu-button>

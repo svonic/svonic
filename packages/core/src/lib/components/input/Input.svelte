@@ -6,9 +6,12 @@
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { EnterKeyHintType } from '$lib/types/enter-key-hint.type';
+	import type { FillType } from '$lib/types/fill.type';
 	import type { InputModeType } from '$lib/types/input-mode.type';
 	import type { InputType } from '$lib/types/input.type';
+	import type { LabelPlacementType } from '$lib/types/label-placement.type';
 	import type { ModeType } from '$lib/types/mode.type';
+	import type { ShapeType } from '$lib/types/shape.type';
 	import type { ValueType } from '$lib/types/value.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { InputChangeEventDetail, InputCustomEvent } from '@ionic/core/components';
@@ -20,7 +23,8 @@
 
 	export { cssClass as class };
 
-	export let accept: string | undefined = undefined;
+	// export let accept: string | undefined = undefined;
+	export let ariaLabel: string | undefined = undefined;
 	export let autocapitalize: AutoCapitalizeType = 'off';
 	export let autocomplete: AutoCompleteType = 'off';
 	export let autocorrect: AutoCorrectType = 'off';
@@ -28,22 +32,29 @@
 	export let clearInput = false;
 	export let clearOnEdit: boolean | undefined = undefined;
 	export let color: ColorType = undefined;
-	export let debounce = 0;
+	export let counter = false;
+	export let debounce: number | undefined = undefined;
 	export let disabled = false;
 	export let enterKeyHint: EnterKeyHintType = undefined;
+	export let errorText: string | undefined = undefined;
+	export let fill: FillType = undefined;
+	export let helperText: string | undefined = undefined;
 	export let id: string | undefined = undefined;
 	export let inputMode: InputModeType = undefined;
+	export let label: string | undefined = undefined;
+	export let labelPlacement: LabelPlacementType = 'start';
 	export let max: string | undefined = undefined;
 	export let maxLength: number | undefined = undefined;
 	export let min: string | undefined = undefined;
 	export let minLength: number | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let multiple: boolean | undefined = undefined;
-	export let name = '';
+	export let name = id;
 	export let pattern: string | undefined = undefined;
-	export let placeholder: null | string | undefined = undefined;
+	export let placeholder: string | undefined = undefined;
 	export let readonly = false;
 	export let required = false;
+	export let shape: ShapeType = undefined;
 	export let size: number | undefined = undefined;
 	export let spellcheck = false;
 	export let step: string | undefined = undefined;
@@ -97,8 +108,9 @@
 	};
 </script>
 
+<!-- svelte-ignore a11y-autofocus -->
 <ion-input
-	accept="{accept}"
+	aria-label="{ariaLabel}"
 	autocapitalize="{autocapitalize}"
 	autocomplete="{autocomplete}"
 	autocorrect="{autocorrect}"
@@ -107,11 +119,17 @@
 	clear-input="{clearInput}"
 	clear-on-edit="{clearOnEdit}"
 	color="{color}"
+	counter="{counter}"
 	debounce="{debounce}"
 	disabled="{disabled}"
 	enterkeyhint="{enterKeyHint}"
+	error-text="{errorText}"
+	fill="{fill}"
+	helper-text="{helperText}"
 	id="{id}"
 	inputmode="{inputMode}"
+	label="{label}"
+	label-placement="{labelPlacement}"
 	max="{max}"
 	maxlength="{maxLength}"
 	min="{min}"
@@ -123,6 +141,7 @@
 	placeholder="{placeholder}"
 	readonly="{readonly}"
 	required="{required}"
+	shape="{shape}"
 	size="{size}"
 	spellcheck="{spellcheck}"
 	step="{step}"

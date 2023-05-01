@@ -11,7 +11,6 @@
 	import type { RelType } from '$lib/types/rel.type';
 	import type { RouterDirectionType } from '$lib/types/router-direction.type';
 	import type { ShapeType } from '$lib/types/shape.type';
-	import type { SlotType } from '$lib/types/slot.type';
 	import type { TargetType } from '$lib/types/target.type';
 	import {
 		addNamedSlot,
@@ -28,7 +27,7 @@
 
 	export let button: boolean | undefined = undefined;
 	export let color: ColorType = undefined;
-	export let counter = true;
+	// export let counter = true;
 	export let detail: boolean | undefined = undefined;
 	export let detailIcon = 'chevronForward';
 	export let disabled = false;
@@ -43,13 +42,13 @@
 	export let routerDirection: RouterDirectionType = undefined;
 	export let shape: ShapeType = undefined;
 	export let target: TargetType = undefined;
-	export let type: ButtonType = undefined;
+	export let type: ButtonType = 'button';
 
 	// Additional Item Props
 	export let isInValid: boolean | undefined = undefined;
 	export let isValid: boolean | undefined = undefined;
 	export let svelteKitPrefetch = false;
-	export let toSlot: SlotType = undefined;
+	export let toSlot: 'end' | 'start' | undefined = undefined;
 
 	if (browser) {
 		onMount(async () => {
@@ -79,7 +78,6 @@
 	class:ion-valid="{isValid}"
 	class:ion-invalid="{isInValid}"
 	color="{color}"
-	counter="{counter}"
 	detail="{detail}"
 	detail-icon="{detailIcon}"
 	disabled="{disabled}"
@@ -96,6 +94,9 @@
 	type="{type}"
 	bind:this="{component}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot
 		name="start"
@@ -105,14 +106,6 @@
 	<slot
 		name="end"
 		slot="end"
-	/>
-	<slot
-		name="helper"
-		slot="helper"
-	/>
-	<slot
-		name="error"
-		slot="error"
 	/>
 </ion-item>
 

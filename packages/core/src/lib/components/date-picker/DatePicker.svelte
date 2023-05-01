@@ -3,7 +3,6 @@
 	import type { ColorType } from '$lib/types/color.type';
 	import type { CssClassType } from '$lib/types/css-class.type';
 	import type { ModeType } from '$lib/types/mode.type';
-	import type { ValueType } from '$lib/types/value.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { DatetimeChangeEventDetail, DatetimeCustomEvent } from '@ionic/core/components';
 	import type { IonDatetime } from '@ionic/core/components/ion-datetime';
@@ -34,13 +33,16 @@
 	export let firstDayOfWeek: 0 | 1 | 2 | 3 | 4 | 5 | 6 = 0;
 	export let hourCycle: 'h12' | 'h23' | undefined = undefined;
 	export let hourValues: number | number[] | string | undefined = undefined;
+	export let id: string | undefined = undefined;
 	export let locale = 'default';
 	export let max: string | undefined = undefined;
 	export let min: string | undefined = undefined;
 	export let minuteValues: number | number[] | string | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let monthValues: number | number[] | string | undefined = undefined;
-	export let name = '';
+	export let multiple = false;
+	export let name = id;
+	export let preferWheel = false;
 	export let presentation: PresentationType = 'date-time';
 	export let readonly = false;
 	export let showClearButton = false;
@@ -48,7 +50,7 @@
 	export let showDefaultTimeLabel = true;
 	export let showDefaultTitle = false;
 	export let size: SizeType = 'fixed';
-	export let value: ValueType = '';
+	export let value: null | string | string[] | undefined = undefined;
 	export let yearValues: number | number[] | string | undefined = undefined;
 
 	export const cancel = async (closeOverlay?: boolean) => {
@@ -151,9 +153,11 @@
 	max="{max}"
 	min="{min}"
 	minute-values="{minuteValues}"
+	multiple="{multiple}"
 	mode="{mode}"
 	month-values="{monthValues}"
 	name="{name}"
+	prefer-wheel="{preferWheel}"
 	presentation="{presentation}"
 	readonly="{readonly}"
 	show-clear-button="{showClearButton}"

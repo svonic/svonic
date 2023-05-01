@@ -10,7 +10,7 @@
 
 	export { cssClass as class };
 
-	export let toSlot: 'end' | 'start' = undefined;
+	export let toSlot: 'end' | 'start' = 'end';
 
 	if (browser) {
 		onMount(async () => {

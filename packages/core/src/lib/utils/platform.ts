@@ -40,7 +40,7 @@ export const setupPlatforms = (win: any = window) => {
 const detectPlatforms = (win: Window) => {
 	const customPlatformMethods = config.get('platform');
 	return (Object.keys(PLATFORMS_MAP) as Platforms[]).filter((p) => {
-		const customMethod = customPlatformMethods && customPlatformMethods[p];
+		const customMethod = customPlatformMethods?.[p];
 		return typeof customMethod === 'function' ? customMethod(win) : PLATFORMS_MAP[p](win);
 	});
 };
@@ -104,21 +104,17 @@ const isCordova = (win: Window): boolean =>
 
 const isCapacitorNative = (win: Window): boolean => {
 	const capacitor = win['Capacitor'];
-	return !!(capacitor && capacitor.isNative);
+	return !!capacitor?.isNative;
 };
 
 const isElectron = (win: Window): boolean => testUserAgent(win, /electron/i);
 
 const isPWA = (win: Window): boolean =>
-	!!(
-		(win.matchMedia && win.matchMedia('(display-mode: standalone)').matches) ||
-		(win.navigator as any).standalone
-	);
+	!!(win.matchMedia?.('(display-mode: standalone)').matches || (win.navigator as any).standalone);
 
 export const testUserAgent = (win: Window, expr: RegExp) => expr.test(win.navigator.userAgent);
 
-const matchMedia = (win: Window, query: string): boolean =>
-	win.matchMedia && win.matchMedia(query).matches;
+const matchMedia = (win: Window, query: string): boolean => win.matchMedia?.(query).matches;
 
 export type PlatformConfig = Partial<typeof PLATFORMS_MAP>;
 

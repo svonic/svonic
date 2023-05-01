@@ -93,6 +93,9 @@
 		src="{src}"
 		bind:this="{component}"
 		on:click
+		on:keydown
+		on:keypress
+		on:keyup
 	>
 	</ion-icon>
 {/if}
