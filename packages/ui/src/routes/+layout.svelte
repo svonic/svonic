@@ -39,7 +39,7 @@
 			<Content>
 				<AppNavigation navList="{navList}">
 					<svelte:fragment slot="end">
-						<Item>Version 1.0.0-next.37</Item>
+						<Item>Version 1.0.0-next.38</Item>
 					</svelte:fragment>
 				</AppNavigation>
 			</Content>
