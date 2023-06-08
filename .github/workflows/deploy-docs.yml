@@ -30,7 +30,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         env:
           PRE_BUILD_COMMAND: npm install -g pnpm
-          CUSTOM_BUILD_COMMAND: pnpm install && pnpm run build
+          CUSTOM_BUILD_COMMAND: pnpm install --no-frozen-lockfile && pnpm run build
         with:
           node-version: '16.x'
           cache: pnpm
