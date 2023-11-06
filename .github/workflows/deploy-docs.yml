@@ -16,12 +16,12 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: pnpm/action-setup@v2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           cache: pnpm
       - run: pnpm -r install --ignore-scripts --frozen-lockfile --strict-peer-dependencies
       - run: cd packages/core && pnpm build && pnpm package && pnpm -r install
@@ -34,8 +34,6 @@ jobs:
           PRE_BUILD_COMMAND: npm install -g pnpm
           CUSTOM_BUILD_COMMAND: pnpm install && pnpm run build
         with:
-          node-version: '16.x'
-          cache: pnpm
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_SKY_0A100331E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
