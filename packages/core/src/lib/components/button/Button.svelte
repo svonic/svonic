@@ -1,22 +1,24 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ButtonType } from '$lib/types/button.type';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { DownloadType } from '$lib/types/download.type';
-	import type { HrefType } from '$lib/types/href.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { RelType } from '$lib/types/rel.type';
-	import type { RouterDirectionType } from '$lib/types/router-direction.type';
-	import type { ShapeType } from '$lib/types/shape.type';
-	import type { SlotType } from '$lib/types/slot.type';
-	import type { TargetType } from '$lib/types/target.type';
+	import type {
+		CssClassType,
+		ButtonType,
+		ColorType,
+		DownloadType,
+		HrefType,
+		ModeType,
+		RelType,
+		RouterDirectionType,
+		ShapeType,
+		TargetType,
+		SlotType
+	} from '$lib/types';
 	import {
 		addNamedSlot,
 		addSvelteKitPrefetchAttribute,
 		defineCustomElement
 	} from '$lib/utils/utils';
 	import type { IonButton } from '@ionic/core/components/ion-button';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	type ButtonFillType = 'clear' | 'default' | 'outline' | 'solid' | undefined;
@@ -46,10 +48,10 @@
 	export let target: TargetType = undefined;
 	export let type: ButtonType = 'button';
 
+	export let slot: SlotType = undefined;
 	export let svelteKitPrefetch = false;
-	export let toSlot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonButton = (await import('@ionic/core/components/ion-button')).IonButton;
 			const IonRippleEffect = (await import('@ionic/core/components/ion-ripple-effect'))
@@ -58,7 +60,7 @@
 			defineCustomElement('ion-button', IonButton);
 			defineCustomElement('ion-ripple-effect', IonRippleEffect);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 
 			if (component && href && svelteKitPrefetch) {
 				addSvelteKitPrefetchAttribute(component);
@@ -71,16 +73,17 @@
 	const onIonBlur = () => {
 		const eventDetail = true;
 
-		dispatch('svo:blur', eventDetail);
+		dispatch('ionBlur', eventDetail);
 	};
 
 	const onIonFocus = () => {
 		const eventDetail = true;
 
-		dispatch('svo:focus', eventDetail);
+		dispatch('ionFocus', eventDetail);
 	};
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-button
 	button-type="{buttonType}"
 	class="{cssClass}"
@@ -103,6 +106,9 @@
 	on:click
 	on:ionBlur="{onIonBlur}"
 	on:ionFocus="{onIonFocus}"
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot
 		name="icon-only"

@@ -61,20 +61,20 @@
 			}
 		});
 
-		actionSheet.$on('svo:did-dismiss', (event: CustomEvent) => {
-			console.log('svo:did-dismiss', event.detail);
+		actionSheet.$on('didDismiss', (event: CustomEvent) => {
+			console.log('didDismiss', event.detail);
 		});
 
-		actionSheet.$on('svo:did-present', (event: CustomEvent) => {
-			console.log('svo:did-present', event.detail);
+		actionSheet.$on('didPresent', (event: CustomEvent) => {
+			console.log('didPresent', event.detail);
 		});
 
-		actionSheet.$on('svo:will-dismiss', (event: CustomEvent) => {
-			console.log('svo:will-dismiss', event.detail);
+		actionSheet.$on('willDismiss', (event: CustomEvent) => {
+			console.log('willDismiss', event.detail);
 		});
 
-		actionSheet.$on('svo:will-present', (event: CustomEvent) => {
-			console.log('svo:will-present', event.detail);
+		actionSheet.$on('willPresent', (event: CustomEvent) => {
+			console.log('willPresent', event.detail);
 		});
 
 		setTimeout(async () => {
@@ -147,20 +147,20 @@
 			}
 		});
 
-		actionSheet.$on('svo:did-dismiss', (event: CustomEvent) => {
-			console.log('svo:did-dismiss', event.detail);
+		actionSheet.$on('didDismiss', (event: CustomEvent) => {
+			console.log('didDismiss', event.detail);
 		});
 
-		actionSheet.$on('svo:did-present', (event: CustomEvent) => {
-			console.log('svo:did-present', event.detail);
+		actionSheet.$on('didPresent', (event: CustomEvent) => {
+			console.log('didPresent', event.detail);
 		});
 
-		actionSheet.$on('svo:will-dismiss', (event: CustomEvent) => {
-			console.log('svo:will-dismiss', event.detail);
+		actionSheet.$on('willDismiss', (event: CustomEvent) => {
+			console.log('willDismiss', event.detail);
 		});
 
-		actionSheet.$on('svo:will-present', (event: CustomEvent) => {
-			console.log('svo:will-present', event.detail);
+		actionSheet.$on('willPresent', (event: CustomEvent) => {
+			console.log('willPresent', event.detail);
 		});
 
 		setTimeout(async () => {

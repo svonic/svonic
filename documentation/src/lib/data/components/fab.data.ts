@@ -2,7 +2,7 @@ import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
 
 export const FabData: ComponentDataAPI = {
 	description: {
-		en: `Fabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content. Fab should have one main fab-button. Fabs can also contain Fab Button Groups which contain related buttons that show when the main fab button is clicked. The same fab container can contain several Fab Button Group elements with different side values.`
+		en: `Fabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content. Fab should have one main fab-button. Fabs can also contain Fab Lists which contain related buttons that show when the main fab button is clicked. The same fab container can contain several Fab List elements with different side values.`
 	},
 	dispatchedEventList: [],
 	forwardedEventList: [],
@@ -14,7 +14,7 @@ export const FabData: ComponentDataAPI = {
 	label: 'Fab',
 	methodList: [
 		{
-			description: { en: `Close an active FAB Button Group container.` },
+			description: { en: `Close an active FAB List container.` },
 			name: 'close',
 			signature: `close() => Promise<void>`
 		}
@@ -24,8 +24,8 @@ export const FabData: ComponentDataAPI = {
 		{
 			defaultValue: 'false',
 			description: {
-				en: `If true, both the Fab Button and all Fab Button Groups inside Fab will become active.
-			That means the Fab Button will become a close icon and Fab Button Group will become visible.`
+				en: `If true, both the Fab Button and all Fab Lists inside Fab will become active.
+			That means the Fab Button will become a close icon and Fab List will become visible.`
 			},
 			hasDemo: false,
 			isSpecial: false,

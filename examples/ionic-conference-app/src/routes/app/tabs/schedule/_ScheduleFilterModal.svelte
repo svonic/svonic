@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Checkbox,
 		Content,
 		Footer,
@@ -74,17 +74,17 @@
 >
 	<Header translucent="{true}">
 		<Toolbar>
-			<ButtonGroup toSlot="start">
+			<Buttons slot="start">
 				{#if ios}
 					<Button on:click="{dismiss}">Cancel</Button>
 				{:else}
 					<Button on:click="{() => selectAll(false)}">Reset</Button>
 				{/if}
-			</ButtonGroup>
+			</Buttons>
 			<Title>Filter Sessions</Title>
 
 			<Button
-				toSlot="end"
+				slot="end"
 				on:click="{dismiss}">Done</Button
 			>
 		</Toolbar>
@@ -100,7 +100,7 @@
 						<Ionicon
 							color="medium"
 							icon="{track.icon}"
-							toSlot="start"
+							slot="start"
 						/>
 					{/if}
 					<Label>{track.name}</Label>
@@ -113,16 +113,16 @@
 	{#if ios}
 		<Footer translucent="{true}">
 			<Toolbar>
-				<ButtonGroup>
+				<Buttons>
 					<Button
-						toSlot="start"
+						slot="start"
 						on:click="{() => selectAll(false)}">Deselect All</Button
 					>
 					<Button
-						toSlot="end"
+						slot="end"
 						on:click="{() => selectAll(true)}">Select All</Button
 					>
-				</ButtonGroup>
+				</Buttons>
 			</Toolbar>
 		</Footer>
 	{/if}

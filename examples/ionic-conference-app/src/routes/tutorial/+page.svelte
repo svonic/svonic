@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
 		Header,
 		menuController,
@@ -39,14 +39,14 @@
 
 <Header class="ion-no-border tutorial-header">
 	<Toolbar>
-		<ButtonGroup toSlot="end">
+		<Buttons slot="end">
 			{#if showSkip}
 				<Button
 					color="primary"
 					on:click="{startApp}">Skip</Button
 				>
 			{/if}
-		</ButtonGroup>
+		</Buttons>
 		<Title>Account</Title>
 	</Toolbar>
 </Header>
@@ -122,7 +122,7 @@
 				Continue
 				<Ionicon
 					icon="{arrowForward}"
-					toSlot="end"
+					slot="end"
 				/>
 			</Button>
 		</SwiperSlide>

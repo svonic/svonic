@@ -9,47 +9,47 @@
 <List>
 	<Item>
 		<Label>Primary</Label>
-		<Toggle checked="{true}" color="primary" name="primary" toSlot="start" />
+		<Toggle checked="{true}" color="primary" name="primary" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Secondary</Label>
-		<Toggle checked="{true}" color="secondary" name="secondary" toSlot="start" />
+		<Toggle checked="{true}" color="secondary" name="secondary" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Tertiary</Label>
-		<Toggle checked="{true}" color="tertiary" name="tertiary" toSlot="start" />
+		<Toggle checked="{true}" color="tertiary" name="tertiary" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Success</Label>
-		<Toggle checked="{true}" color="success" name="success" toSlot="start" />
+		<Toggle checked="{true}" color="success" name="success" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Warning</Label>
-		<Toggle checked="{true}" color="warning" name="warning" toSlot="start" />
+		<Toggle checked="{true}" color="warning" name="warning" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Danger</Label>
-		<Toggle checked="{true}" color="danger" name="danger" toSlot="start" />
+		<Toggle checked="{true}" color="danger" name="danger" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Light</Label>
-		<Toggle checked="{true}" color="light" name="light" toSlot="start" />
+		<Toggle checked="{true}" color="light" name="light" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Medium</Label>
-		<Toggle checked="{true}" color="medium" name="medium" toSlot="start" />
+		<Toggle checked="{true}" color="medium" name="medium" slot="start" />
 	</Item>
 
 	<Item>
 		<Label>Dark</Label>
-		<Toggle checked="{true}" color="dark" name="dark" toSlot="start" />
+		<Toggle checked="{true}" color="dark" name="dark" slot="start" />
 	</Item>
 </List>
 `;
@@ -62,7 +62,7 @@
 			checked="{true}"
 			color="primary"
 			name="primary"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -72,7 +72,7 @@
 			checked="{true}"
 			color="secondary"
 			name="secondary"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -82,7 +82,7 @@
 			checked="{true}"
 			color="tertiary"
 			name="tertiary"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -92,7 +92,7 @@
 			checked="{true}"
 			color="success"
 			name="success"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -102,7 +102,7 @@
 			checked="{true}"
 			color="warning"
 			name="warning"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -112,7 +112,7 @@
 			checked="{true}"
 			color="danger"
 			name="danger"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -122,7 +122,7 @@
 			checked="{true}"
 			color="light"
 			name="light"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -132,7 +132,7 @@
 			checked="{true}"
 			color="medium"
 			name="medium"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 
@@ -142,7 +142,7 @@
 			checked="{true}"
 			color="dark"
 			name="dark"
-			toSlot="start"
+			slot="start"
 		/>
 	</Item>
 </List>

@@ -8,7 +8,7 @@
 
 	export let iconEnd: string | undefined = undefined;
 	export let iconStart: string | undefined = undefined;
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 	export let label: string | undefined = undefined;
 </script>
 
@@ -21,7 +21,7 @@
 			class="mr-1"
 			path="{iconStart}"
 			size="large"
-			toSlot="start"
+			slot="start"
 		/>
 	{/if}
 	<span>{label}</span>
@@ -30,7 +30,7 @@
 			class="ml-1"
 			path="{iconEnd}"
 			size="large"
-			toSlot="end"
+			slot="end"
 		/>
 	{/if}
 </Button>

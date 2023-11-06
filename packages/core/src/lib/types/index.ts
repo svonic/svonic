@@ -1,3 +1,4 @@
+export * from './alignment.type';
 export * from './application-config.type';
 export * from './autocapitalize.type';
 export * from './autocomplete.type';
@@ -13,6 +14,8 @@ export * from './href.type';
 export * from './input-mode.type';
 export * from './input.type';
 export * from './interface.type';
+export * from './label-placement-input.type';
+export * from './label-placement.type';
 export * from './line.type';
 export * from './mode.type';
 export * from './position.type';

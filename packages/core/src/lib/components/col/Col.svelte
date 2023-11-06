@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type ColSizeType = 'auto' | string | undefined;
@@ -35,7 +35,7 @@
 	export let sizeXl: ColSizeType = undefined;
 	export let sizeXs: ColSizeType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonCol = (await import('@ionic/core/components/ion-col')).IonCol;
 

@@ -16,7 +16,7 @@
 		iosIcon="{chevronBack}"
 		md="arrow-back-sharp"
 		mdIcon="{arrowBackSharp}"
-		toSlot="icon-only"
+		slot="icon-only"
 	/>
 </Button>
 

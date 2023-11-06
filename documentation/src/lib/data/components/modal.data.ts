@@ -17,7 +17,7 @@ export const ModalData: ComponentDataAPI = {
 	dispatchedEventList: [
 		{
 			description: { en: `Emitted after the modal breakpoint has changed.` },
-			name: 'svo:breakpoint-did-change'
+			name: 'ionBreakpointDidChange'
 		},
 		{ ...didDismiss },
 		{ ...didPresent },

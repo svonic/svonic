@@ -5,16 +5,16 @@ export const ItemReorderGroupData: ComponentDataAPI = {
 	description: {
 		en: `The reorder group is a wrapper component for items using the Reorder component. See the Reorder documentation for further information about the anchor component that is used to drag items within the Reorder Group.
 
-	Once the user drags an item and drops it in a new position, the svo:item-reorder event is dispatched. A handler for it should be implemented that calls the complete() method.
+	Once the user drags an item and drops it in a new position, the ionItemReorder event is dispatched. A handler for it should be implemented that calls the complete() method.
 
-	The detail property of the svo:item-reorder event includes all of the relevant information about the reorder operation, including the from and to indexes. In the context of reordering, an item moves from an index to a new index.`
+	The detail property of the ionItemReorder event includes all of the relevant information about the reorder operation, including the from and to indexes. In the context of reordering, an item moves from an index to a new index.`
 	},
 	dispatchedEventList: [
 		{
 			description: {
 				en: `Event that needs to be listened to in order to complete the reorder action.`
 			},
-			name: 'svo:item-reorder'
+			name: 'ionItemReorder'
 		}
 	],
 	forwardedEventList: [],
@@ -28,7 +28,7 @@ export const ItemReorderGroupData: ComponentDataAPI = {
 	methodList: [
 		{
 			description: {
-				en: `Completes the reorder operation. Must be called by the svo:item-reorder event.
+				en: `Completes the reorder operation. Must be called by the ionItemReorder event.
 
 			If a list of items is passed, the list will be reordered and returned in the proper order.
 

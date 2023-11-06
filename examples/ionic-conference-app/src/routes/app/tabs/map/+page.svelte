@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import type { Location } from '$lib/models/location';
-	import { ButtonGroup, Content, DrawerButton, Header, Title, Toolbar } from '@svonic/core';
+	import { Buttons, Content, MenuButton, Header, Title, Toolbar } from '@svonic/core';
 	import { onMount } from 'svelte';
 	import { darkStyle } from './_map-dark-style';
 
@@ -119,9 +119,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Map</Title>
 	</Toolbar>
 </Header>

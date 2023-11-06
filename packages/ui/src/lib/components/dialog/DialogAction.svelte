@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { ButtonGroup } from '@svonic/core';
+	import { Buttons } from '@svonic/core';
 </script>
 
-<ButtonGroup>
+<Buttons>
 	<slot />
-</ButtonGroup>
+</Buttons>
 
 <style>
 </style>

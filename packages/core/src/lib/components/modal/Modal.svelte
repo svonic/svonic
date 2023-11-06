@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
+	import type { CssClassType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { OverlayEventDetail } from '@ionic/core/components';
 	import type { IonModal } from '@ionic/core/components/ion-modal';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonModal;
@@ -19,9 +18,11 @@
 	export let canDismiss: (() => Promise<boolean>) | boolean | undefined = undefined;
 	// export let enterAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let handle: boolean | undefined = undefined;
+	export let handleBehavior: 'cycle' | 'none' | undefined = undefined;
 	// export let htmlAttributes: undefined | { [key: string]: any } | undefined = undefined;
 	export let initialBreakpoint: number | undefined = undefined;
 	export let isOpen = false;
+	export let keepContentsMounted = false;
 	export let keyboardClose = true;
 	// export let leaveAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let mode: ModeType = undefined;
@@ -31,42 +32,42 @@
 	export let trigger: string | undefined = undefined;
 
 	export const dismiss = async (data?: any, role?: string | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.dismiss(data, role);
 		}
 	};
 
 	export const getCurrentBreakpoint = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.getCurrentBreakpoint();
 		}
 	};
 
 	export const onDidDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const onWillDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const present = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.present();
 		}
 	};
 
 	export const setCurrentBreakpoint = async (breakpoint: number) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.setCurrentBreakpoint(breakpoint);
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonBackdrop = (await import('@ionic/core/components/ion-backdrop')).IonBackdrop;
 			const IonModal = (await import('@ionic/core/components/ion-modal')).IonModal;
@@ -78,36 +79,34 @@
 
 	const dispatch = createEventDispatcher();
 
-	const onIonBreakpointDidChange = (event: CustomEvent) => {
+	const breakpointDidChange = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:breakpoint-did-change', eventDetail);
+		dispatch('ionBreakpointDidChange', eventDetail);
 	};
 
-	const onIonModalDidDismiss = (event: CustomEvent) => {
+	const didDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		isOpen = false;
-
-		dispatch('svo:did-dismiss', eventDetail);
+		dispatch('didDismiss', eventDetail);
 	};
 
-	const onIonModalDidPresent = () => {
+	const didPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:did-present', eventDetail);
+		dispatch('didPresent', eventDetail);
 	};
 
-	const onIonModalWillDismiss = (event: CustomEvent) => {
+	const willDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:will-dismiss', eventDetail);
+		dispatch('willDismiss', eventDetail);
 	};
 
-	const onIonModalWillPresent = () => {
+	const willPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:will-present', eventDetail);
+		dispatch('willPresent', eventDetail);
 	};
 </script>
 
@@ -119,19 +118,21 @@
 	can-dismiss="{canDismiss}"
 	class="{cssClass}"
 	handle="{handle}"
+	handle-behavior="{handleBehavior}"
 	initial-breakpoint="{initialBreakpoint}"
 	is-open="{isOpen}"
+	keep-contents-mounted="{keepContentsMounted}"
 	keyboard-close="{keyboardClose}"
 	mode="{mode}"
 	show-backdrop="{showBackdrop}"
 	swipe-to-close="{swipeToClose}"
 	trigger="{trigger}"
 	bind:this="{component}"
-	on:ionBreakpointDidChange="{onIonBreakpointDidChange}"
-	on:ionModalDidDismiss="{onIonModalDidDismiss}"
-	on:ionModalDidPresent="{onIonModalDidPresent}"
-	on:ionModalWillDismiss="{onIonModalWillDismiss}"
-	on:ionModalWillPresent="{onIonModalWillPresent}"
+	on:ionBreakpointDidChange="{breakpointDidChange}"
+	on:ionModalDidDismiss="{didDismiss}"
+	on:ionModalDidPresent="{didPresent}"
+	on:ionModalWillDismiss="{willDismiss}"
+	on:ionModalWillPresent="{willPresent}"
 >
 	<slot />
 </ion-modal>

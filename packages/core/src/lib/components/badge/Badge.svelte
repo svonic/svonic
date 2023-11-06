@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
+	import type { CssClassType, ColorType, ModeType, SlotType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonBadge } from '@ionic/core/components/ion-badge';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let component: IonBadge;
@@ -16,15 +13,15 @@
 	export let color: ColorType = 'primary';
 	export let mode: ModeType = undefined;
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonBadge = (await import('@ionic/core/components/ion-badge')).IonBadge;
 
 			defineCustomElement('ion-badge', IonBadge);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 </script>

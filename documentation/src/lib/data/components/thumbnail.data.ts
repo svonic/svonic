@@ -1,4 +1,4 @@
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
 
 export const ThumbnailData: ComponentDataAPI = {
@@ -18,6 +18,6 @@ export const ThumbnailData: ComponentDataAPI = {
 	label: 'Thumbnail',
 	methodList: [],
 	name: 'thumbnail',
-	propList: [{ ...toSlot }],
+	propList: [{ ...slot }],
 	slotList: []
 };

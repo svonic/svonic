@@ -1,16 +1,16 @@
 <script lang="ts">
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
-		DatePicker,
-		DrawerButton,
+		Datetime,
 		Header,
 		Ionicon,
 		Item,
 		Label,
 		List,
-		Menu,
+		MenuButton,
+		Popover,
 		Select,
 		SelectOption,
 		Text,
@@ -18,8 +18,8 @@
 	} from '@svonic/core';
 	import { format } from 'date-fns';
 	import { ellipsisHorizontal, ellipsisVertical } from 'ionicons/icons/index.js';
-	import './about.css';
 	import AboutPopover from './_AboutPopover.svelte';
+	import './about.css';
 
 	let conferenceDate = '2047-05-17';
 	let formattedConferenceDate = '';
@@ -40,20 +40,20 @@
 <Content class="about-page">
 	<Header class="ion-no-border">
 		<Toolbar>
-			<ButtonGroup toSlot="start">
-				<DrawerButton />
-			</ButtonGroup>
-			<ButtonGroup toSlot="end">
+			<Buttons slot="start">
+				<MenuButton />
+			</Buttons>
+			<Buttons slot="end">
 				<Button id="more-info-button">
 					<Ionicon
 						icon="{ellipsisVertical}"
 						ios="{ellipsisHorizontal}"
 						md="{ellipsisVertical}"
-						toSlot="icon-only"
+						slot="icon-only"
 					/>
 				</Button>
 				<AboutPopover id="more-info-button" />
-			</ButtonGroup>
+			</Buttons>
 		</Toolbar>
 	</Header>
 
@@ -108,20 +108,20 @@
 				id="open-date-input"
 			>
 				<Label>Date</Label>
-				<Text toSlot="end">{conferenceDate}</Text>
-				<Menu
+				<Text slot="end">{conferenceDate}</Text>
+				<Popover
 					alignment="end"
 					id="date-input-popover"
 					showBackdrop="{false}"
 					side="top"
 					trigger="open-date-input"
 				>
-					<DatePicker
+					<Datetime
 						max="2056"
 						presentation="date"
 						bind:value="{conferenceDate}"
 					/>
-				</Menu>
+				</Popover>
 			</Item>
 		</List>
 

@@ -1,6 +1,8 @@
 import type { SlotType } from '$lib/types/slot.type';
-import type { MenuI, Platforms } from '@ionic/core/components';
+import type { Platforms } from '@ionic/core/components';
 import { getPlatforms as getPlatformsCore, isPlatform as isPlatformCore } from './platform';
+import type { MenuI } from '@ionic/core/dist/types/components/menu/menu-interface';
+import type { CssClassType } from '$lib/types/css-class.type';
 // import { isPlatform as isPlatformCore } from '@ionic/core/components';
 
 export const addNamedSlot = (element: HTMLElement, slot: SlotType | string) => {
@@ -13,7 +15,9 @@ export const addSvelteKitPrefetchAttribute = async (element: HTMLElement) => {
 	if (element) {
 		await new Promise((resolve) => componentOnReady(element, resolve));
 
-		element.shadowRoot.firstElementChild.setAttribute('sveltekit:prefetch', '');
+		if (element.shadowRoot?.firstElementChild) {
+			element.shadowRoot.firstElementChild.setAttribute('sveltekit:prefetch', '');
+		}
 	}
 };
 
@@ -39,7 +43,11 @@ export const getIonicMenu = (menuId: string): MenuI => {
 };
 
 export const hostContext = (selector: string, el: HTMLElement): boolean => {
-	return el.closest(selector).parentElement !== null;
+	if (!selector) {
+		return false;
+	}
+
+	return el.closest(selector)?.parentElement !== null;
 };
 
 export const getPlatforms = () => {
@@ -47,10 +55,7 @@ export const getPlatforms = () => {
 };
 
 export const isPlatform = (platform: Platforms): boolean => {
-	if (typeof (window as Window) !== 'undefined') {
-		``;
-		return isPlatformCore(window, platform);
-	}
+	return isPlatformCore(window, platform);
 };
 
 export const raf = (h: any): number | NodeJS.Timeout => {
@@ -58,4 +63,29 @@ export const raf = (h: any): number | NodeJS.Timeout => {
 		return requestAnimationFrame(h);
 	}
 	return setTimeout(h);
+};
+
+export const updateCurrentCssClass = (
+	componentClassList: DOMTokenList,
+	newCssClass: CssClassType,
+	previousCssClass: CssClassType
+) => {
+	if (componentClassList) {
+		let currentCssClass = Array.from(componentClassList)
+			.filter((componentClass) => {
+				return (
+					!componentClass.startsWith('s-') &&
+					componentClass !== previousCssClass &&
+					componentClass !== newCssClass &&
+					componentClass !== ' '
+				);
+			})
+			.join(' ');
+
+		currentCssClass = (newCssClass + ' ' + currentCssClass).trim();
+
+		return currentCssClass;
+	}
+
+	return newCssClass;
 };

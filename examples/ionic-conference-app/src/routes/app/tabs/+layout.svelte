@@ -4,10 +4,10 @@
 	import {
 		Ionicon,
 		Label,
-		NavigationTab,
-		NavigationTabBar,
-		NavigationTabButton,
-		NavigationTabGroup
+		Tab,
+		TabBar,
+		TabButton,
+		Tabs
 	} from '@svonic/core';
 	import { calendar, informationCircle, location, people } from 'ionicons/icons/index.js';
 
@@ -16,7 +16,7 @@
 	let basePathName = '/app/tabs';
 	let pathname: TabType | string = '';
 	let selectedTab: TabType;
-	let tabGroup: NavigationTabGroup;
+	let TabsComponent: Tabs;
 
 	$: {
 		pathname = $page.url.pathname.split('/').find((pathname) => {
@@ -44,8 +44,8 @@
 	// $: console.log('selectedTab', selectedTab);
 
 	$: {
-		if (tabGroup?.select) {
-			console.log('tabGroup.select', tabGroup.select);
+		if (TabsComponent?.select) {
+			console.log('Tabs.select', TabsComponent.select);
 			setTimeout(() => {
 				setSelectedTab(pathname as TabType);
 			}, 200);
@@ -62,7 +62,7 @@
 	const onTabDidChange = (ev: CustomEvent) => {
 		const eventDetail = ev.detail;
 
-		// console.log('svo:did-change', eventDetail);
+		// console.log('ionTabsDidChange', eventDetail);
 	};
 
 	const setSelectedTab = async (tabId: TabType) => {
@@ -74,34 +74,34 @@
 		}
 		// console.log('selectedTab', selectedTab);
 
-		// console.log('NavigationTabGroup', tabGroup);
+		// console.log('Tabs', Tabs);
 
-		if (tabGroup) {
-			const tabGroupSelectedTab = await tabGroup.getSelected();
+		if (TabsComponent) {
+			const TabsSelectedTab = await TabsComponent.getSelected();
 
-			if (tabGroupSelectedTab !== selectedTab) {
-				await tabGroup.select(selectedTab);
+			if (TabsSelectedTab !== selectedTab) {
+				await TabsComponent.select(selectedTab);
 			}
 		}
 	};
 </script>
 
-<NavigationTabGroup
-	bind:this="{tabGroup}"
-	on:svo:did-change="{onTabDidChange}"
+<Tabs
+	bind:this="{TabsComponent}"
+	on:ionTabsDidChange="{onTabDidChange}"
 >
 	<svelte:component
-		this="{NavigationTab}"
+		this="{Tab}"
 		tabId="{selectedTab}"
 	>
 		<slot />
 	</svelte:component>
 
-	<NavigationTabBar
+	<TabBar
 		selectedTab="{selectedTab}"
-		toSlot="bottom"
+		slot="bottom"
 	>
-		<NavigationTabButton
+		<TabButton
 			href="{basePathName}/schedule"
 			svelteKitPrefetch="{true}"
 			tabId="{'schedule'}"
@@ -109,9 +109,9 @@
 		>
 			<Ionicon icon="{calendar}" />
 			<Label>Schedule</Label>
-		</NavigationTabButton>
+		</TabButton>
 
-		<NavigationTabButton
+		<TabButton
 			href="{basePathName}/speakers"
 			svelteKitPrefetch="{true}"
 			tabId="{'speakers'}"
@@ -119,9 +119,9 @@
 		>
 			<Ionicon icon="{people}" />
 			<Label>Speakers</Label>
-		</NavigationTabButton>
+		</TabButton>
 
-		<NavigationTabButton
+		<TabButton
 			href="{basePathName}/map"
 			svelteKitPrefetch="{true}"
 			tabId="{'map'}"
@@ -129,9 +129,9 @@
 		>
 			<Ionicon icon="{location}" />
 			<Label>Map</Label>
-		</NavigationTabButton>
+		</TabButton>
 
-		<NavigationTabButton
+		<TabButton
 			href="{basePathName}/about"
 			svelteKitPrefetch="{true}"
 			tabId="{'about'}"
@@ -139,9 +139,9 @@
 		>
 			<Ionicon icon="{informationCircle}" />
 			<Label>About</Label>
-		</NavigationTabButton>
-	</NavigationTabBar>
-</NavigationTabGroup>
+		</TabButton>
+	</TabBar>
+</Tabs>
 
 <style>
 </style>

@@ -11,7 +11,7 @@
 		PositionType,
 		ValueType
 	} from '@svonic/core';
-	import { Button, Content, DatePicker, Input, Ionicon, Menu } from '@svonic/core';
+	import { Button, Content, Datetime, Input, Ionicon, Popover } from '@svonic/core';
 	import { calendarClearOutline } from 'ionicons/icons/index.js';
 	import { getContext } from 'svelte';
 	import { key } from '../form/context-key';
@@ -29,17 +29,17 @@
 	export let fill: FillType = undefined;
 	export let formFieldCssClass: CssClassType = undefined;
 	export let inputCssClass: CssClassType = undefined;
-	export let inputMode: InputModeType = undefined;
+	export let inputmode: InputModeType = undefined;
 	export let label = '';
 	export let labelPosition: PositionType = 'stacked';
 	export let lines: LineType = undefined;
 	export let max: string | undefined = undefined;
-	export let maxLength: number | undefined = undefined;
+	export let maxlength: number | undefined = undefined;
 	export let min: string | undefined = undefined;
-	export let minLength: number | undefined = undefined;
+	export let minlength: number | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let name = '';
-	export let placeholder: null | string | undefined = undefined;
+	export let placeholder: string | undefined = undefined;
 	export let readonly = false;
 	export let required = false;
 	export let value: ValueType = '';
@@ -86,12 +86,11 @@
 			debounce="{debounce}"
 			disabled="{disabled}"
 			enterKeyHint="{enterKeyHint}"
-			id="{name}"
-			inputMode="{inputMode}"
+			inputmode="{inputmode}"
 			max="{max}"
-			maxLength="{maxLength}"
+			maxlength="{maxlength}"
 			min="{min}"
-			minLength="{minLength}"
+			minlength="{minlength}"
 			mode="{mode}"
 			name="{name}"
 			placeholder="{placeholder}"
@@ -112,10 +111,10 @@
 		>
 			<Ionicon
 				icon="{calendarClearOutline}"
-				toSlot="icon-only"
+				slot="icon-only"
 			/>
 		</Button>
-		<Menu
+		<Popover
 			class="{datePickerCssClass}"
 			dismissOnSelect="{true}"
 			trigger="{name}-button"
@@ -123,12 +122,12 @@
 			on:onDidDismiss="{onDidDismiss}"
 		>
 			<Content>
-				<DatePicker
+				<Datetime
 					presentation="date"
 					bind:value="{$data[name]}"
 				/>
 			</Content>
-		</Menu>
+		</Popover>
 	</div>
 </FormField>
 

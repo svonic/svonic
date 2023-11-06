@@ -1,15 +1,15 @@
 <script lang="ts">
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
-		DrawerButton,
 		Header,
-		InputTextArea,
 		Item,
 		Label,
 		List,
+		MenuButton,
 		Text,
+		Textarea,
 		Title,
 		Toolbar
 	} from '@svonic/core';
@@ -21,9 +21,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Support</Title>
 	</Toolbar>
 </Header>
@@ -40,7 +40,7 @@
 		<List lines="none">
 			<Item>
 				<Label>Enter your support message below</Label>
-				<InputTextArea />
+				<Textarea />
 			</Item>
 
 			<Text>

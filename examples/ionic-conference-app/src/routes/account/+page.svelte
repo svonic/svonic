@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import {
-		ButtonGroup,
+		Buttons,
 		Content,
-		DrawerButton,
+		MenuButton,
 		Header,
 		Item,
 		List,
@@ -40,9 +40,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Account</Title>
 	</Toolbar>
 </Header>

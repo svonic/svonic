@@ -9,17 +9,17 @@
 <\/script>
 
 <Button>
-	<Icon icon="{star}" toSlot="start" />
+	<Icon icon="{star}" slot="start" />
 	Left Icon
 </Button>
 
 <Button>
 	Right Icon
-	<Icon icon="{star}" toSlot="end" />
+	<Icon icon="{star}" slot="end" />
 </Button>
 
 <Button>
-	<Icon icon="{star}" toSlot="icon-only" />
+	<Icon icon="{star}" slot="icon-only" />
 </Button>
 `;
 </script>
@@ -27,7 +27,7 @@
 <Button {...$$restProps}>
 	<Icon
 		icon="{star}"
-		toSlot="start"
+		slot="start"
 	/>
 	Left Icon
 </Button>
@@ -36,13 +36,13 @@
 	Right Icon
 	<Icon
 		icon="{star}"
-		toSlot="end"
+		slot="end"
 	/>
 </Button>
 
 <Button {...$$restProps}>
 	<Icon
 		icon="{star}"
-		toSlot="icon-only"
+		slot="icon-only"
 	/>
 </Button>

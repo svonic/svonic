@@ -1,21 +1,21 @@
 <script lang="ts">
-	import { Button, ButtonGroup, Footer, Ionicon, Title, Toolbar } from '@svonic/core';
+	import { Button, Buttons, Footer, Ionicon, Title, Toolbar } from '@svonic/core';
 	import { refresh } from 'ionicons/icons/index.js';
 
 	export const codeSnippet = `
 <script lang="ts">
-	import { Button, ButtonGroup, Footer, Ionicon, Title, Toolbar } from '@svonic/core';
+	import { Button, Buttons, Footer, Ionicon, Title, Toolbar } from '@svonic/core';
 	import { refresh } from 'ionicons/icons/index.js';
 <\/script>
 
 <Footer>
 	<Toolbar color="light">
 		<Title>Click to Add Text</Title>
-		<ButtonGroup toSlot="end">
+		<Buttons slot="end">
 			<Button id="changeText" on:click="{toggleText}">
-				<Ionicon icon="{refresh}" toSlot="start" />
+				<Ionicon icon="{refresh}" slot="start" />
 			</Button>
-		</ButtonGroup>
+		</Buttons>
 	</Toolbar>
 </Footer>
 `;
@@ -28,16 +28,16 @@
 <Footer {...$$restProps}>
 	<Toolbar color="light">
 		<Title>Click to Add Text</Title>
-		<ButtonGroup toSlot="end">
+		<Buttons slot="end">
 			<Button
 				id="changeText"
 				on:click="{toggleText}"
 			>
 				<Ionicon
 					icon="{refresh}"
-					toSlot="start"
+					slot="start"
 				/>
 			</Button>
-		</ButtonGroup>
+		</Buttons>
 	</Toolbar>
 </Footer>

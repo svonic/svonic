@@ -10,14 +10,14 @@
 
 	const exampleDemoList = [
 		{
-			component: AvatarDefaultDemo,
-			description: 'The default Avatar component.',
-			name: 'Default Avatar'
-		},
-		{
 			component: AvatarChipDemo,
 			description: 'Avatar inside a Chip.',
 			name: 'Chip Avatar'
+		},
+		{
+			component: AvatarDefaultDemo,
+			description: 'The default Avatar component.',
+			name: 'Default Avatar'
 		},
 		{
 			component: AvatarListItemDemo,

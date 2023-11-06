@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
+	import type { CssClassType, ColorType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
@@ -13,7 +11,7 @@
 	export let color: ColorType = undefined;
 	export let mode: ModeType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonToolbar = (await import('@ionic/core/components/ion-toolbar')).IonToolbar;
 

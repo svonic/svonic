@@ -19,12 +19,12 @@ export const SelectData: ComponentDataAPI = {
 		{ ...blur },
 		{
 			description: { en: `Emitted when the selection is cancelled.` },
-			name: 'svo:cancel'
+			name: 'ionCancel'
 		},
 		{ ...change },
 		{
 			description: { en: `Emitted when the overlay is dismissed.` },
-			name: 'svo:dismiss'
+			name: 'ionDismiss'
 		},
 		{ ...focus }
 	],

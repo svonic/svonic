@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonReorder } from '@ionic/core/components/ion-reorder';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let component: IonReorder;
@@ -10,9 +10,9 @@
 
 	export { cssClass as class };
 
-	export let toSlot: 'end' | 'start' = undefined;
+	export let slot: 'end' | 'start' = 'end';
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
 			const IonReorder = (await import('@ionic/core/components/ion-reorder')).IonReorder;
@@ -20,7 +20,7 @@
 			defineCustomElement('ion-icon', IonIcon);
 			defineCustomElement('ion-reorder', IonReorder);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 </script>

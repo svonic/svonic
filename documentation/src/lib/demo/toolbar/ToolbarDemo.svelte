@@ -2,10 +2,10 @@
 	import DemoCodeSection from '$lib/components/DemoCodeSection.svelte';
 	import DocPageContent from '$lib/components/DocPageContent.svelte';
 	import type { ComponentData } from '$lib/types/component-data.type';
-	import ToolbarButtonGroupDemo from './example/ToolbarButtonGroupDemo.svelte';
-	import ToolbarDrawerButtonDemo from './example/ToolbarDrawerButtonDemo.svelte';
-	import ToolbarInputSearchDemo from './example/ToolbarInputSearchDemo.svelte';
+	import ToolbarButtonGroupDemo from './example/ToolbarButtonsDemo.svelte';
+	import ToolbarMenuButtonDemo from './example/ToolbarMenuButtonDemo.svelte';
 	import ToolbarProgressBarDemo from './example/ToolbarProgressBarDemo.svelte';
+	import ToolbarSearchbarDemo from './example/ToolbarSearchbarDemo.svelte';
 	import ToolbarSegmentDemo from './example/ToolbarSegmentDemo.svelte';
 	import ToolbarTitleOnlyDemo from './example/ToolbarTitleOnlyDemo.svelte';
 	import ToolbarColorDemo from './prop/ToolbarColorDemo.svelte';
@@ -24,14 +24,14 @@
 			name: 'Toolbar with ButtonGroups examples'
 		},
 		{
-			component: ToolbarDrawerButtonDemo,
+			component: ToolbarMenuButtonDemo,
 			description: '',
-			name: 'Toolbar with DrawerButton examples'
+			name: 'Toolbar with MenuButton examples'
 		},
 		{
-			component: ToolbarInputSearchDemo,
+			component: ToolbarSearchbarDemo,
 			description: '',
-			name: 'Toolbar with InputSearch'
+			name: 'Toolbar with Searchbar'
 		},
 		{
 			component: ToolbarSegmentDemo,

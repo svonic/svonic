@@ -10,15 +10,15 @@
 	<ListHeader>Checkboxes in a List</ListHeader>
 	<Item>
 		<Label>Pepperoni</Label>
-		<Checkbox checked="{true}" toSlot="end" value="pepperoni" />
+		<Checkbox checked="{true}" slot="end" value="pepperoni" />
 	</Item>
 	<Item>
 		<Label>Sausage</Label>
-		<Checkbox disabled="{true}" toSlot="end" value="sausage" />
+		<Checkbox disabled="{true}" slot="end" value="sausage" />
 	</Item>
 	<Item>
 		<Label>Mushrooms</Label>
-		<Checkbox toSlot="end" value="mushrooms" />
+		<Checkbox slot="end" value="mushrooms" />
 	</Item>
 </List>
 `;
@@ -30,7 +30,7 @@
 		<Label>Pepperoni</Label>
 		<Checkbox
 			checked="{true}"
-			toSlot="end"
+			slot="end"
 			value="pepperoni"
 		/>
 	</Item>
@@ -38,14 +38,14 @@
 		<Label>Sausage</Label>
 		<Checkbox
 			disabled="{true}"
-			toSlot="end"
+			slot="end"
 			value="sausage"
 		/>
 	</Item>
 	<Item>
 		<Label>Mushrooms</Label>
 		<Checkbox
-			toSlot="end"
+			slot="end"
 			value="mushrooms"
 		/>
 	</Item>

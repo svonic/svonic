@@ -26,7 +26,7 @@
 	export let lines: LineType = undefined;
 	export let mode: ModeType = undefined;
 	export let name = '';
-	export let placeholder: null | string | undefined = undefined;
+	export let placeholder: string | undefined = undefined;
 	export let selectCssClass: CssClassType = undefined;
 	export let value: ValueType = '';
 

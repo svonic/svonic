@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, AlignmentType, ColorType, LabelPlacementType, ModeType, ValueType, SlotType } from '$lib/types';
+	import type { JustifyType } from '$lib/types/justify.type';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonRadio } from '@ionic/core/components/ion-radio';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonRadio;
@@ -14,21 +11,24 @@
 
 	export { cssClass as class };
 
+	export let alignment: AlignmentType = 'center';
 	export let color: ColorType = undefined;
 	export let disabled = false;
+	export let justify: JustifyType = 'space-between';
+	export let labelPlacement: LabelPlacementType = 'start';
 	export let mode: ModeType = undefined;
 	export let name = '';
 	export let value: ValueType = '';
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonRadio = (await import('@ionic/core/components/ion-radio')).IonRadio;
 
 			defineCustomElement('ion-radio', IonRadio);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 
@@ -37,20 +37,23 @@
 	const onIonBlur = () => {
 		const eventDetail = true;
 
-		dispatch('svo:blur', eventDetail);
+		dispatch('ionBlur', eventDetail);
 	};
 
 	const onIonFocus = () => {
 		const eventDetail = true;
 
-		dispatch('svo:focus', eventDetail);
+		dispatch('ionFocus', eventDetail);
 	};
 </script>
 
 <ion-radio
+	alignment="{alignment}"
 	class="{cssClass}"
 	color="{color}"
 	disabled="{disabled}"
+	justify="{justify}"
+	labelPlacement="{labelPlacement}"
 	mode="{mode}"
 	name="{name}"
 	value="{value}"
@@ -58,4 +61,5 @@
 	on:ionBlur="{onIonBlur}"
 	on:ionFocus="{onIonFocus}"
 >
+	<slot />
 </ion-radio>

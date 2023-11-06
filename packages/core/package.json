@@ -1,6 +1,6 @@
 {
 	"name": "@svonic/core",
-	"version": "1.0.0-next.36",
+	"version": "1.0.0-next.40",
 	"description": "Testing",
 	"keywords": [
 		"svelte",
@@ -43,29 +43,30 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@ionic/core": "7.0.1",
-		"ionicons": "7.1.0"
+		"@ionic/core": "7.5.3",
+		"esm-env": "1.0.0",
+		"ionicons": "7.2.1"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "2.0.0",
-		"@sveltejs/kit": "1.15.2",
-		"@sveltejs/package": "2.0.2",
-		"@typescript-eslint/eslint-plugin": "5.57.1",
-		"@typescript-eslint/parser": "5.57.1",
-		"eslint": "8.38.0",
-		"eslint-config-prettier": "8.8.0",
-		"eslint-plugin-svelte3": "4.0.0",
-		"prettier": "2.8.7",
-		"prettier-plugin-svelte": "2.10.0",
-		"publint": "0.1.11",
-		"svelte-check": "3.2.0",
-		"svelte-preprocess": "5.0.3",
-		"svelte2tsx": "0.6.11",
-		"tslib": "2.5.0",
-		"typescript": "5.0.4",
-		"vite": "4.2.1"
+		"@sveltejs/adapter-auto": "2.1.1",
+		"@sveltejs/kit": "1.27.3",
+		"@sveltejs/package": "2.2.2",
+		"@typescript-eslint/eslint-plugin": "6.9.1",
+		"@typescript-eslint/parser": "6.9.1",
+		"eslint": "8.53.0",
+		"eslint-config-prettier": "9.0.0",
+		"eslint-plugin-svelte": "2.34.1",
+		"prettier": "3.0.3",
+		"prettier-plugin-svelte": "3.0.3",
+		"publint": "0.2.5",
+		"svelte-check": "3.5.2",
+		"svelte-preprocess": "5.0.4",
+		"svelte2tsx": "0.6.23",
+		"tslib": "2.6.2",
+		"typescript": "5.2.2",
+		"vite": "4.5.0"
 	},
 	"peerDependencies": {
-		"svelte": "3.58.0"
+		"svelte": "4.2.2"
 	}
 }

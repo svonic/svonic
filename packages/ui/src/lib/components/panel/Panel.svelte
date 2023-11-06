@@ -1,14 +1,5 @@
 <script lang="ts">
-	// import { IonicShowModal } from '$lib/componentsservices/ionicControllers';
 	import { onMount } from 'svelte';
-
-	// export const showModal = () => {
-	// 	IonicShowModal('modal-extra', Modal, {
-	// 		firstName: 'Douglas',
-	// 		lastName: 'Adams',
-	// 		middleInitial: 'N'
-	// 	}).then(console.log);
-	// };
 
 	let closeOverlay;
 

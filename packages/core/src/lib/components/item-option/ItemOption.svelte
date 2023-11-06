@@ -1,14 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ButtonType } from '$lib/types/button.type';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { DownloadType } from '$lib/types/download.type';
-	import type { HrefType } from '$lib/types/href.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { TargetType } from '$lib/types/target.type';
+	import type { CssClassType, ColorType, DownloadType, HrefType, ModeType, RelType, TargetType, ButtonType } from '$lib/types';
 	import { addSvelteKitPrefetchAttribute, defineCustomElement } from '$lib/utils/utils';
 	import type { IonItemOption } from '@ionic/core/components/ion-item-option';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let component: IonItemOption;
@@ -22,12 +16,13 @@
 	export let expandable = false;
 	export let href: HrefType = undefined;
 	export let mode: ModeType = undefined;
+	export let rel: RelType = undefined;
 	export let target: TargetType = undefined;
 	export let type: ButtonType = 'button';
 
 	export let svelteKitPrefetch = false;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonItemOption = (await import('@ionic/core/components/ion-item-option')).IonItemOption;
 			const IonRippleEffect = (await import('@ionic/core/components/ion-ripple-effect'))
@@ -43,6 +38,7 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-item-option
 	class="{cssClass}"
 	color="{color}"
@@ -51,10 +47,14 @@
 	expandable="{expandable}"
 	href="{href}"
 	mode="{mode}"
+	rel="{rel}"
 	target="{target}"
 	type="{type}"
 	bind:this="{component}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot
 		name="top"

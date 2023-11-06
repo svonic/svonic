@@ -1,7 +1,7 @@
 import { click } from '$lib/data/events/click.data';
 import { color } from '$lib/data/props/color.data';
 import { mode } from '$lib/data/props/mode.data';
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
 
 export const IconData: ComponentDataAPI = {
@@ -137,7 +137,7 @@ export const IconData: ComponentDataAPI = {
 				}
 			]
 		},
-		{ ...toSlot }
+		{ ...slot }
 	],
 	slotList: []
 };

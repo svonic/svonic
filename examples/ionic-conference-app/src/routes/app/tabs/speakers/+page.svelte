@@ -3,19 +3,19 @@
 	import { speakersStore } from '$lib/stores/app.store';
 	import {
 		Avatar,
-		ButtonGroup,
+		Buttons,
 		Card,
 		CardContent,
 		CardHeader,
 		Col,
 		Content,
-		DrawerButton,
 		Grid,
 		Header,
-		Image,
+		Img,
 		Item,
 		Label,
 		List,
+		MenuButton,
 		Row,
 		Title,
 		Toolbar
@@ -46,9 +46,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Speakers</Title>
 	</Toolbar>
 </Header>
@@ -79,8 +79,8 @@
 									href="/app/tabs/speakers/speaker-details/{speaker.id}"
 									lines="none"
 								>
-									<Avatar toSlot="start">
-										<Image
+									<Avatar slot="start">
+										<Img
 											alt="{speaker.name + ' profile picture'}"
 											src="{speaker.profilePic}"
 										/>

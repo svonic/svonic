@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ButtonType } from '$lib/types/button.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ModeType, ButtonType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type SegmentButtonLayoutType =
@@ -23,9 +20,9 @@
 	export let layout: SegmentButtonLayoutType = 'icon-top';
 	export let mode: ModeType = undefined;
 	export let type: ButtonType = 'button';
-	export let value: ValueType = undefined;
+	export let value: number | string = '';
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonRippleEffect = (await import('@ionic/core/components/ion-ripple-effect'))
 				.IonRippleEffect;
@@ -38,6 +35,7 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-segment-button
 	class="{cssClass}"
 	disabled="{disabled}"
@@ -46,6 +44,9 @@
 	type="{type}"
 	value="{value}"
 	on:click
+	on:keydown
+	on:keypress
+	on:keyup
 >
 	<slot />
 </ion-segment-button>
