@@ -1,13 +1,13 @@
 import type { ComponentPropAPI } from '$lib/types/component-data-api.type';
 
-export const inputMode: ComponentPropAPI = {
+export const inputmode: ComponentPropAPI = {
 	defaultValue: 'undefined',
 	description: {
 		en: `A hint to the browser for which keyboard to display. Possible values: "none", "text", "tel", "url", "email", "numeric", "decimal", and "search".`
 	},
 	hasDemo: false,
 	isSpecial: false,
-	name: 'inputMode',
+	name: 'inputmode',
 	valueList: [
 		{
 			type: 'string',

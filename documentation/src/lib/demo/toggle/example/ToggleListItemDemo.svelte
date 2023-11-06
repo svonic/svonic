@@ -9,17 +9,17 @@
 <List>
 	<Item>
 		<Label>Pepperoni</Label>
-		<Toggle checked="{true}" toSlot="end" value="pepperoni" />
+		<Toggle checked="{true}" slot="end" value="pepperoni" />
 	</Item>
 
 	<Item>
 		<Label>Sausage</Label>
-		<Toggle disabled="{true}" toSlot="end" value="sausage" />
+		<Toggle disabled="{true}" slot="end" value="sausage" />
 	</Item>
 
 	<Item>
 		<Label>Mushrooms</Label>
-		<Toggle toSlot="end" value="mushrooms" />
+		<Toggle slot="end" value="mushrooms" />
 	</Item>
 </List>
 `;
@@ -30,7 +30,7 @@
 		<Label>Pepperoni</Label>
 		<Toggle
 			checked="{true}"
-			toSlot="end"
+			slot="end"
 			value="pepperoni"
 		/>
 	</Item>
@@ -39,7 +39,7 @@
 		<Label>Sausage</Label>
 		<Toggle
 			disabled="{true}"
-			toSlot="end"
+			slot="end"
 			value="sausage"
 		/>
 	</Item>
@@ -47,7 +47,7 @@
 	<Item>
 		<Label>Mushrooms</Label>
 		<Toggle
-			toSlot="end"
+			slot="end"
 			value="mushrooms"
 		/>
 	</Item>

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { Side } from '@ionic/core/components';
 	import type { IonItemSliding } from '@ionic/core/components/ion-item-sliding';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount, tick } from 'svelte';
 
 	let component: IonItemSliding;
@@ -14,36 +14,36 @@
 	export let disabled = false;
 
 	export const close = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.close();
 		}
 	};
 
 	export const closeOpened = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.closeOpened();
 		}
 	};
 
 	export const getOpenAmount = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.getOpenAmount();
 		}
 	};
 
 	export const getSlidingRatio = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.getSlidingRatio();
 		}
 	};
 
 	export const open = async (side: Side | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.open(side);
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonItemSliding = (await import('@ionic/core/components/ion-item-sliding'))
 				.IonItemSliding;
@@ -59,7 +59,7 @@
 	const onIonDrag = () => {
 		const eventDetail = true;
 
-		dispatch('svo:drag', eventDetail);
+		dispatch('ionDrag', eventDetail);
 	};
 </script>
 

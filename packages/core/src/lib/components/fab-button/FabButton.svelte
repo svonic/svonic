@@ -1,16 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ButtonType } from '$lib/types/button.type';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { DownloadType } from '$lib/types/download.type';
-	import type { HrefType } from '$lib/types/href.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { RelType } from '$lib/types/rel.type';
-	import type { RouterDirectionType } from '$lib/types/router-direction.type';
-	import type { TargetType } from '$lib/types/target.type';
+	import type { CssClassType, ColorType, DownloadType, HrefType, ModeType, RelType, RouterDirectionType, TargetType, ButtonType } from '$lib/types';
 	import { addSvelteKitPrefetchAttribute, defineCustomElement } from '$lib/utils/utils';
 	import type { IonFabButton } from '@ionic/core/components/ion-fab-button';
+	import { BROWSER } from 'esm-env';
 	import { addIcons } from 'ionicons';
 	import { close } from 'ionicons/icons/index.js';
 	import { createEventDispatcher, onMount } from 'svelte';
@@ -23,10 +15,10 @@
 	export { cssClass as class };
 
 	export let activated = false;
-	export let closeIcon = 'close';
+	export let closeIcon = close;
 	export let color: ColorType = undefined;
-	export let disabled = false;
 	export let download: DownloadType = undefined;
+	export let disabled = false;
 	export let href: HrefType = undefined;
 	export let mode: ModeType = undefined;
 	export let rel: RelType = undefined;
@@ -40,7 +32,7 @@
 
 	export let svelteKitPrefetch = false;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonFabButton = (await import('@ionic/core/components/ion-fab-button')).IonFabButton;
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
@@ -68,16 +60,17 @@
 	const onIonBlur = () => {
 		const eventDetail = true;
 
-		dispatch('svo:blur', eventDetail);
+		dispatch('ionBlur', eventDetail);
 	};
 
 	const onIonFocus = () => {
 		const eventDetail = true;
 
-		dispatch('svo:focus', eventDetail);
+		dispatch('ionFocus', eventDetail);
 	};
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-fab-button
 	activated="{activated}"
 	close-icon="{closeIcon}"

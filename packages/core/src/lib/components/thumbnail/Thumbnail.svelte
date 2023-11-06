@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { SlotType } from '$lib/types/slot.type';
+	import type { CssClassType, SlotType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonThumbnail } from '@ionic/core/components/ion-thumbnail';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let component: IonThumbnail;
@@ -11,15 +10,15 @@
 
 	export { cssClass as class };
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonThumbnail = (await import('@ionic/core/components/ion-thumbnail')).IonThumbnail;
 
 			defineCustomElement('ion-thumbnail', IonThumbnail);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 </script>

@@ -7,7 +7,7 @@
 	import type { ComponentData } from '$lib/types/component-data.type';
 	import { mdiAndroid, mdiApple } from '@mdi/js';
 	import {
-		ButtonGroup,
+		Buttons,
 		Card,
 		CardContent,
 		Content,
@@ -38,11 +38,11 @@
 <Header class="z-8">
 	<Toolbar>
 		<Title class="capitalize">{componentData?.label}</Title>
-		<ButtonGroup toSlot="end">
+		<Buttons slot="end">
 			<Segment
 				mode="ios"
 				bind:value="{segmentValue}"
-				on:svo:change="{updateMode}"
+				on:ionChange="{updateMode}"
 			>
 				<SegmentButton
 					value="ios"
@@ -59,17 +59,17 @@
 					<Icon path="{mdiAndroid}" />
 				</SegmentButton>
 			</Segment>
-		</ButtonGroup>
+		</Buttons>
 	</Toolbar>
 </Header>
 
 <Content fullscreen="{false}">
-	<div class="bg-stone-200 dark:bg-stone-700 flex flex-col">
+	<div class="flex flex-col bg-stone-200 dark:bg-stone-700">
 		{#if componentData}
 			<Card class="text-slate-900 dark:text-slate-100">
 				<CardContent>
 					<p>{componentData?.description}</p>
-					<div class="bg-gray-100 dark:bg-gray-700 flex flex-col gap-2 mt-4 p-2">
+					<div class="flex flex-col gap-2 p-2 mt-4 bg-gray-100 dark:bg-gray-700">
 						<div class="flex flex-row items-center">
 							<Ionicon
 								class="mr-2 text-lg"
@@ -123,8 +123,8 @@
 		{/if}
 	</div>
 	<div class="flex flex-row"></div>
-	<Footer class="bg-zinc-700 dark:bg-zinc-900 flex flex-row h-64 text-white">
-		<div class="flex flex-col grow p-8">
+	<Footer class="flex flex-row h-64 text-white bg-zinc-700 dark:bg-zinc-900">
+		<div class="flex flex-col p-8 grow">
 			<h3 class="text-2xl">Svonic</h3>
 			<p class="pl-0.5">
 				Svonic is a Svelte component library built on top of the Ionic Framework.

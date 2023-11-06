@@ -1,4 +1,4 @@
-export type ProgressSpinnerType =
+export type SpinnerType =
 	| 'bubbles'
 	| 'circles'
 	| 'circular'

@@ -1,13 +1,11 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ModeType, ValueType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type {
 		AccordionGroupChangeEventDetail,
 		AccordionGroupCustomEvent
 	} from '@ionic/core/components';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	type AccordionExpandType = 'compact' | 'inset' | undefined;
@@ -23,7 +21,7 @@
 	export let readonly = false;
 	export let value: ValueType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonAccordionGroup = (await import('@ionic/core/components/ion-accordion-group'))
 				.IonAccordionGroup;
@@ -37,7 +35,7 @@
 	const onIonChange = (event: AccordionGroupCustomEvent) => {
 		const eventDetail: AccordionGroupChangeEventDetail = event.detail;
 
-		dispatch('svo:change', eventDetail);
+		dispatch('ionChange', eventDetail);
 	};
 </script>
 

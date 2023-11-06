@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { InterfaceType } from '$lib/types/interface.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ColorType, FillType, InterfaceType, LabelPlacementInputType, ModeType, ShapeType, ValueType } from '$lib/types';
+	import type { JustifyType } from '$lib/types/justify.type';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type {
 		ActionSheetOptions,
@@ -13,6 +10,8 @@
 		SelectCustomEvent
 	} from '@ionic/core/components';
 	import type { IonSelect } from '@ionic/core/components/ion-select';
+	import { BROWSER } from 'esm-env';
+	import { caretDownSharp, chevronExpand } from 'ionicons/icons';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	type InterfaceOptionsType = ActionSheetOptions | AlertOptions | PopoverOptions | undefined;
@@ -23,29 +22,38 @@
 	export { cssClass as class };
 
 	export let cancelText: string | undefined = 'Cancel';
+	export let color: ColorType = undefined;
 	export let compareWith:
 		| ((currentValue: any, compareValue: any) => boolean)
 		| null
 		| string
 		| undefined = undefined;
 	export let disabled = false;
-	export let interfaceType: InterfaceType = 'alert';
+	export let fill: FillType = undefined;
 	export let interfaceOptions: InterfaceOptionsType = undefined;
+	export let interfaceType: InterfaceType = 'alert';
+	export let justify: JustifyType = 'space-between';
+	export let label: string | undefined = undefined;
+	export let labelPlacement: LabelPlacementInputType = 'start';
 	export let mode: ModeType = undefined;
 	export let multiple = false;
 	export let name = '';
 	export let okText: string | undefined = 'OK';
 	export let placeholder: string | undefined = undefined;
 	export let selectedText: null | string | undefined = undefined;
+	export let shape: ShapeType = undefined;
 	export let value: ValueType = '';
 
+	export let expandedIcon: string | undefined = mode === 'ios' ? chevronExpand : caretDownSharp;
+	export let toggleIcon: string | undefined = mode === 'ios' ? chevronExpand : caretDownSharp;
+
 	export const open = async (event?: UIEvent | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.open(event);
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonActionSheet = (await import('@ionic/core/components/ion-action-sheet'))
 				.IonActionSheet;
@@ -91,13 +99,13 @@
 	const onIonBlur = () => {
 		const eventDetail = true;
 
-		dispatch('svo:blur', eventDetail);
+		dispatch('ionBlur', eventDetail);
 	};
 
 	const onIonCancel = () => {
 		const eventDetail = true;
 
-		dispatch('svo:cancel', eventDetail);
+		dispatch('ionCancel', eventDetail);
 	};
 
 	const onIonChange = (event: SelectCustomEvent) => {
@@ -109,35 +117,43 @@
 			value = newValue;
 		}
 
-		dispatch('svo:change', eventDetail);
+		dispatch('ionChange', eventDetail);
 	};
 
 	const onIonDismiss = () => {
 		const eventDetail = true;
 
-		dispatch('svo:dismiss', eventDetail);
+		dispatch('ionDismiss', eventDetail);
 	};
 
 	const onIonFocus = () => {
 		const eventDetail = true;
 
-		dispatch('svo:focus', eventDetail);
+		dispatch('ionFocus', eventDetail);
 	};
 </script>
 
 <ion-select
 	cancel-text="{cancelText}"
 	class="{cssClass}"
+	color="{color}"
 	compare-with="{compareWith}"
 	disabled="{disabled}"
+	expanded-icon="{expandedIcon}"
+	fill="{fill}"
 	interface="{interfaceType}"
 	interface-options="{interfaceOptions}"
+	justify="{justify}"
+	label="{label}"
+	label-placement="{labelPlacement}"
 	mode="{mode}"
 	multiple="{multiple}"
 	name="{name}"
 	ok-text="{okText}"
 	placeholder="{placeholder}"
 	selected-text="{selectedText}"
+	shape="{shape}"
+	toggle-icon="{toggleIcon}"
 	value="{value}"
 	bind:this="{component}"
 	on:ionBlur="{onIonBlur}"
@@ -146,6 +162,10 @@
 	on:ionDismiss="{onIonDismiss}"
 	on:ionFocus="{onIonFocus}"
 >
+	<slot
+		name="label"
+		slot="label"
+	/>
 	<slot />
 </ion-select>
 

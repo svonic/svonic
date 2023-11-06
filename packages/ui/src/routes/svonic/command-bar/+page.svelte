@@ -6,9 +6,9 @@
 	import { mdiContentSaveOutline, mdiDotsVertical, mdiPlus, mdiSchoolOutline } from '@mdi/js';
 	import { Button, Icon, Title } from '@svonic/core';
 
-	function dismiss() {
-		console.log('dismiss');
-	}
+	const dismiss = () => {
+		console.log('comand bar dismiss');
+	};
 </script>
 
 <div class="bg-white m-8 p-8">
@@ -47,7 +47,7 @@
 					<Icon
 						path="{mdiDotsVertical}"
 						size="large"
-						toSlot="icon-only"
+						slot="icon-only"
 					/>
 				</Button>
 			</svelte:fragment>

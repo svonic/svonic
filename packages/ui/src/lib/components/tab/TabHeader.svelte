@@ -14,11 +14,11 @@
 
 	$: value = $tabIndex;
 
-	function tabSelected(event: CustomEvent<SegmentChangeEventDetail>) {
+	const tabSelected = (event: CustomEvent<SegmentChangeEventDetail>) => {
 		const newTabIndex: number = parseInt(event.detail.value, 10);
 
 		$tabIndex = newTabIndex;
-	}
+	};
 </script>
 
 <Toolbar

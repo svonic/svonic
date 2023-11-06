@@ -8,7 +8,7 @@ export const ItemSlidingData: ComponentDataAPI = {
 	dispatchedEventList: [
 		{
 			description: { en: `Emitted when the sliding position changes.` },
-			name: 'svo:drag'
+			name: 'ionDrag'
 		}
 	],
 	forwardedEventList: [],

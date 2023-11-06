@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonFab } from '@ionic/core/components/ion-fab';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type HorizontalAlignmentType = 'center' | 'end' | 'start' | undefined;
@@ -18,21 +18,21 @@
 	export let horizontal: HorizontalAlignmentType = undefined;
 	export let vertical: VerticalAlignmentType = undefined;
 
-	export let toSlot: 'fixed' | undefined = undefined;
+	export let slot: 'fixed' | undefined = undefined;
 
 	export const close = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.close();
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonFab = (await import('@ionic/core/components/ion-fab')).IonFab;
 
 			defineCustomElement('ion-fab', IonFab);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 </script>

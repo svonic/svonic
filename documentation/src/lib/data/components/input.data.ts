@@ -12,10 +12,10 @@ import { color } from '$lib/data/props/color.data';
 import { debounce } from '$lib/data/props/debounce.data';
 import { disabled } from '$lib/data/props/disabled.data';
 import { enterKeyHint } from '$lib/data/props/enter-key-hint.data';
-import { inputMode } from '$lib/data/props/input-mode.data';
-import { maxLength } from '$lib/data/props/max-length.data';
+import { inputmode } from '$lib/data/props/input-mode.data';
+import { maxlength } from '$lib/data/props/max-length.data';
 import { max } from '$lib/data/props/max.data';
-import { minLength } from '$lib/data/props/min-length.data';
+import { minlength } from '$lib/data/props/min-length.data';
 import { min } from '$lib/data/props/min.data';
 import { mode } from '$lib/data/props/mode.data';
 import { name } from '$lib/data/props/name.data';
@@ -86,11 +86,11 @@ export const InputData: ComponentDataAPI = {
 		{ ...debounce },
 		{ ...disabled },
 		{ ...enterKeyHint },
-		{ ...inputMode },
+		{ ...inputmode },
 		{ ...max },
-		{ ...maxLength },
+		{ ...maxlength },
 		{ ...min },
-		{ ...minLength },
+		{ ...minlength },
 		{ ...mode },
 		{
 			defaultValue: 'undefined',

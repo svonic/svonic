@@ -1,13 +1,15 @@
 <script lang="ts">
-	// import { dismissModal } from '$lib/components/dialog/dialog';
 	import { Button } from '@svonic/core';
+	import { createEventDispatcher } from 'svelte';
 
-	function dismissModal() {
-		console.log('dismissModal');
-	}
+	const dispatch = createEventDispatcher();
+
+	const onClick = () => {
+		dispatch('click');
+	};
 </script>
 
-<Button on:click="{dismissModal}">
+<Button on:click="{onClick}">
 	<slot />
 </Button>
 

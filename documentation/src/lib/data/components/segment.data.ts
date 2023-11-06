@@ -1,7 +1,7 @@
 import { color } from '$lib/data/props/color.data';
 import { disabled } from '$lib/data/props/disabled.data';
 import { mode } from '$lib/data/props/mode.data';
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import { value } from '$lib/data/props/value-input.data';
 import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
 
@@ -16,7 +16,7 @@ export const SegmentData: ComponentDataAPI = {
 			description: {
 				en: `Emitted when the value property has changed and any dragging pointer has been released from ion-segment.`
 			},
-			name: 'svo:change'
+			name: 'ionChange'
 		}
 	],
 	forwardedEventList: [],
@@ -148,7 +148,7 @@ export const SegmentData: ComponentDataAPI = {
 				}
 			]
 		},
-		{ ...toSlot },
+		{ ...slot },
 		{ ...value }
 	],
 	slotList: []

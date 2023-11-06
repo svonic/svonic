@@ -10,39 +10,39 @@
 	<ListHeader>Badges</ListHeader>
 	<Item>
 		<Label>Followers</Label>
-		<Badge toSlot="end">22k</Badge>
+		<Badge slot="end">22k</Badge>
 	</Item>
 	<Item>
 		<Label>Likes</Label>
-		<Badge color="secondary" toSlot="end">118k</Badge>
+		<Badge color="secondary" slot="end">118k</Badge>
 	</Item>
 	<Item>
 		<Label>Stars</Label>
-		<Badge color="tertiary" toSlot="end">34k</Badge>
+		<Badge color="tertiary" slot="end">34k</Badge>
 	</Item>
 	<Item>
 		<Label>Completed</Label>
-		<Badge color="success" toSlot="end">80</Badge>
+		<Badge color="success" slot="end">80</Badge>
 	</Item>
 	<Item>
 		<Label>Warnings</Label>
-		<Badge color="warning" toSlot="end">70</Badge>
+		<Badge color="warning" slot="end">70</Badge>
 	</Item>
 	<Item>
 		<Label>Notifications</Label>
-		<Badge color="danger" toSlot="end">1000</Badge>
+		<Badge color="danger" slot="end">1000</Badge>
 	</Item>
 	<Item>
 		<Label>Unread</Label>
-		<Badge color="light" toSlot="end">24</Badge>
+		<Badge color="light" slot="end">24</Badge>
 	</Item>
 	<Item>
 		<Label>Drafts</Label>
-		<Badge color="medium" toSlot="end">14</Badge>
+		<Badge color="medium" slot="end">14</Badge>
 	</Item>
 	<Item>
 		<Label>Deleted</Label>
-		<Badge color="dark" toSlot="end">4</Badge>
+		<Badge color="dark" slot="end">4</Badge>
 	</Item>
 </List>
 `;
@@ -52,62 +52,62 @@
 	<ListHeader>Badges</ListHeader>
 	<Item>
 		<Label>Followers</Label>
-		<Badge toSlot="end">22k</Badge>
+		<Badge slot="end">22k</Badge>
 	</Item>
 	<Item>
 		<Label>Likes</Label>
 		<Badge
 			color="secondary"
-			toSlot="end">118k</Badge
+			slot="end">118k</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Stars</Label>
 		<Badge
 			color="tertiary"
-			toSlot="end">34k</Badge
+			slot="end">34k</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Completed</Label>
 		<Badge
 			color="success"
-			toSlot="end">80</Badge
+			slot="end">80</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Warnings</Label>
 		<Badge
 			color="warning"
-			toSlot="end">70</Badge
+			slot="end">70</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Notifications</Label>
 		<Badge
 			color="danger"
-			toSlot="end">1000</Badge
+			slot="end">1000</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Unread</Label>
 		<Badge
 			color="light"
-			toSlot="end">24</Badge
+			slot="end">24</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Drafts</Label>
 		<Badge
 			color="medium"
-			toSlot="end">14</Badge
+			slot="end">14</Badge
 		>
 	</Item>
 	<Item>
 		<Label>Deleted</Label>
 		<Badge
 			color="dark"
-			toSlot="end">4</Badge
+			slot="end">4</Badge
 		>
 	</Item>
 </List>

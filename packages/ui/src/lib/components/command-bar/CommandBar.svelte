@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ColorType, CssClassType } from '@svonic/core';
-	import { ButtonGroup, Toolbar } from '@svonic/core';
+	import { Buttons, Toolbar } from '@svonic/core';
 
 	let cssClass: CssClassType = undefined;
 
@@ -13,9 +13,9 @@
 	class="{cssClass}"
 	color="{color}"
 >
-	<ButtonGroup toSlot="end">
+	<Buttons slot="start">
 		<slot name="start" />
-	</ButtonGroup>
+	</Buttons>
 	<slot
 		name="secondary"
 		slot="secondary"
@@ -25,9 +25,9 @@
 		name="primary"
 		slot="primary"
 	/>
-	<ButtonGroup toSlot="end">
+	<Buttons slot="end">
 		<slot name="end" />
-	</ButtonGroup>
+	</Buttons>
 </Toolbar>
 
 <style>

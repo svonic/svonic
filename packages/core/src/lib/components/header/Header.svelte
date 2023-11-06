@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
+	import type { CssClassType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type CollapseType = 'condense' | 'fade' | undefined;
@@ -15,7 +14,7 @@
 	export let mode: ModeType = undefined;
 	export let translucent = false;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonHeader = (await import('@ionic/core/components/ion-header')).IonHeader;
 

@@ -2,13 +2,13 @@ import type { ComponentGroup } from '$lib/types/component-list.type';
 import { AccordionGroupData } from './components/accordion-group.data';
 import { AccordionData } from './components/accordion.data';
 import { ActionSheetData } from './components/action-sheet.data';
-import { ApplicationData } from './components/application.data';
+import { AppData } from './components/app.data';
 import { AvatarData } from './components/avatar.data';
 import { BadgeData } from './components/badge.data';
-import { BreadcrumbGroupData } from './components/breadcrumb-group.data';
+import { BreadcrumbsData as BreadcrumbsData } from './components/breadcrumbs.data';
 import { BreadcrumbData } from './components/breadcrumb.data';
-import { ButtonGroupData } from './components/button-group.data';
 import { ButtonData } from './components/button.data';
+import { ButtonsData } from './components/buttons.data';
 import { CardContentData } from './components/card-content.data';
 import { CardHeaderData } from './components/card-header.data';
 import { CardSubTitleData } from './components/card-subtitle.data';
@@ -18,26 +18,21 @@ import { CheckboxData } from './components/checkbox.data';
 import { ChipData } from './components/chip.data';
 import { ColData } from './components/col.data';
 import { ContentData } from './components/content.data';
-import { DatePickerData } from './components/date-picker.data';
-import { DrawerButtonData } from './components/drawer-button.data';
-import { DrawerToggleData } from './components/drawer-toggle.data';
-import { DrawerData } from './components/drawer.data';
-import { FabButtonGroupData } from './components/fab-button-group.data';
+import { DatetimeData } from './components/datetime.data';
 import { FabButtonData } from './components/fab-button.data';
+import { FabListData } from './components/fab-list.data';
 import { FabData } from './components/fab.data';
 import { FooterData } from './components/footer.data';
 import { GridData } from './components/grid.data';
 import { HeaderData } from './components/header.data';
 import { IconData } from './components/icon.data';
-import { ImageData } from './components/image.data';
-import { InputSearchData } from './components/input-search.data';
-import { InputTextareaData } from './components/input-textarea.data';
+import { ImgData } from './components/img.data';
 import { InputData } from './components/input.data';
 import { IoniconData } from './components/ionicon.data';
 import { ItemDividerData } from './components/item-divider.data';
 import { ItemGroupData } from './components/item-group.data';
-import { ItemOptionGroupData } from './components/item-option-group.data';
 import { ItemOptionData } from './components/item-option.data';
+import { ItemOptionsData } from './components/item-options.data';
 import { ItemReorderGroupData } from './components/item-reorder-group.data';
 import { ItemReorderData } from './components/item-reorder.data';
 import { ItemSlidingData } from './components/item-sliding.data';
@@ -45,29 +40,34 @@ import { ItemData } from './components/item.data';
 import { LabelData } from './components/label.data';
 import { ListHeaderData } from './components/list-header.data';
 import { ListData } from './components/list.data';
+import { MenuButtonData } from './components/menu-button.data';
+import { MenuToggleData } from './components/menu-toggle.data';
 import { MenuData } from './components/menu.data';
 import { ModalData } from './components/modal.data';
-import { NavigationPaneData } from './components/navigation-pane.data';
-import { NavigationTabBarData } from './components/navigation-tab-bar.data';
-import { NavigationTabButtonData } from './components/navigation-tab-button.data';
-import { NavigationTabGroupData } from './components/navigation-tab-group.data';
-import { NavigationTabData } from './components/navigation-tab.data';
 import { NoteData } from './components/note.data';
+import { PopoverData } from './components/popover.data';
 import { ProgressBarData } from './components/progress-bar.data';
-import { ProgressSkeletonData } from './components/progress-skeleton.data';
-import { ProgressSpinnerData } from './components/progress-spinner.data';
+import { SpinnerData } from './components/spinner.data';
 import { RadioGroupData } from './components/radio-group.data';
 import { RadioData } from './components/radio.data';
-import { RangeSliderData } from './components/range-slider.data';
+import { RangeData } from './components/range.data';
 import { RefresherContentData } from './components/refresher-content.data';
 import { RefresherData } from './components/refresher.data';
-import { RippleData } from './components/ripple.data';
+import { RippleEffectData } from './components/ripple-effect.data';
 import { RowData } from './components/row.data';
+import { SearchbarData } from './components/searchbar.data';
 import { SegmentButtonData } from './components/segment-button.data';
 import { SegmentData } from './components/segment.data';
 import { SelectOptionData } from './components/select-option.data';
 import { SelectData } from './components/select.data';
+import { SkeletonTextData } from './components/skeleton-text.data';
+import { SplitPaneData } from './components/split-pane.data';
+import { TabBarData } from './components/tab-bar.data';
+import { TabButtonData } from './components/tab-button.data';
+import { TabData } from './components/tab.data';
+import { TabsData } from './components/tabs.data';
 import { TextData } from './components/text.data';
+import { TextareaData } from './components/textarea.data';
 import { ThumbnailData } from './components/thumbnail.data';
 import { TitleData } from './components/title.data';
 import { ToastData } from './components/toast.data';
@@ -97,7 +97,7 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/chip'
 			},
 			{
-				data: DatePickerData,
+				data: DatetimeData,
 				label: 'Date Picker',
 				name: 'date-picker',
 				route: '/components/date-picker'
@@ -109,16 +109,10 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/input'
 			},
 			{
-				data: InputSearchData,
-				label: 'Input Search',
-				name: 'input-search',
-				route: '/components/input-search'
-			},
-			{
-				data: InputTextareaData,
-				label: 'Input Textarea',
-				name: 'input-textarea',
-				route: '/components/input-textarea'
+				data: SearchbarData,
+				label: 'Searchbar',
+				name: 'searchbar',
+				route: '/components/searchbar'
 			},
 			{
 				data: RadioData,
@@ -133,16 +127,16 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/radio-group'
 			},
 			{
-				data: RangeSliderData,
-				label: 'Range Slider',
-				name: 'range-slider',
-				route: '/components/range-slider'
+				data: RangeData,
+				label: 'Range',
+				name: 'range',
+				route: '/components/range'
 			},
 			{
-				data: RippleData,
-				label: 'Ripple',
-				name: 'ripple',
-				route: '/components/ripple'
+				data: RippleEffectData,
+				label: 'Ripple Effect',
+				name: 'ripple-effect',
+				route: '/components/ripple-effect'
 			},
 			{
 				data: SegmentData,
@@ -169,6 +163,12 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/select-option'
 			},
 			{
+				data: TextareaData,
+				label: 'Textarea',
+				name: 'textarea',
+				route: '/components/textarea'
+			},
+			{
 				data: ToggleData,
 				label: 'Toggle',
 				name: 'toggle',
@@ -180,10 +180,10 @@ export const componentList: ComponentGroup[] = [
 		group: 'Content and Layout',
 		groupList: [
 			{
-				data: ApplicationData,
-				label: 'Application',
-				name: 'application',
-				route: '/components/application'
+				data: AppData,
+				label: 'App',
+				name: 'app',
+				route: '/components/app'
 			},
 			{
 				data: ColData,
@@ -293,7 +293,7 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/ionicon'
 			},
 			{
-				data: ImageData,
+				data: ImgData,
 				label: 'Image',
 				name: 'image',
 				route: '/components/image'
@@ -322,10 +322,10 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/fab-button'
 			},
 			{
-				data: FabButtonGroupData,
-				label: 'Fab Button Group',
-				name: 'fab-button-group',
-				route: '/components/fab-button-group'
+				data: FabListData,
+				label: 'Fab List',
+				name: 'fab-list',
+				route: '/components/fab-list'
 			}
 		]
 	},
@@ -357,10 +357,10 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/item-option'
 			},
 			{
-				data: ItemOptionGroupData,
-				label: 'Item Option Group',
-				name: 'item-option-group',
-				route: '/components/item-option-group'
+				data: ItemOptionsData,
+				label: 'Item Options',
+				name: 'item-options',
+				route: '/components/item-options'
 			},
 			{
 				data: ItemReorderData,
@@ -416,34 +416,34 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/action-sheet'
 			},
 			{
-				data: DrawerData,
-				label: 'Drawer',
-				name: 'drawer',
-				route: '/components/drawer'
-			},
-			{
-				data: DrawerButtonData,
-				label: 'Drawer Button',
-				name: 'drawer-button',
-				route: '/components/drawer-button'
-			},
-			{
-				data: DrawerToggleData,
-				label: 'Drawer Toggle',
-				name: 'drawer-toggle',
-				route: '/components/drawer-toggle'
-			},
-			{
 				data: MenuData,
 				label: 'Menu',
 				name: 'menu',
 				route: '/components/menu'
 			},
 			{
+				data: MenuButtonData,
+				label: 'Menu Button',
+				name: 'menu-button',
+				route: '/components/menu-button'
+			},
+			{
+				data: MenuToggleData,
+				label: 'Menu Toggle',
+				name: 'menu-toggle',
+				route: '/components/menu-toggle'
+			},
+			{
 				data: ModalData,
 				label: 'Modal',
 				name: 'modal',
 				route: '/components/modal'
+			},
+			{
+				data: PopoverData,
+				label: 'Popover',
+				name: 'popover',
+				route: '/components/popover'
 			},
 			{
 				data: ToastData,
@@ -463,40 +463,40 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/breadcrumb'
 			},
 			{
-				data: BreadcrumbGroupData,
-				label: 'Breadcrumb Group',
-				name: 'breadcrumb-group',
-				route: '/components/breadcrumb-group'
+				data: BreadcrumbsData,
+				label: 'Breadcrumbs',
+				name: 'breadcrumbs',
+				route: '/components/breadcrumbs'
 			},
 			{
-				data: NavigationPaneData,
-				label: 'Navigation Pane',
-				name: 'navigation-pane',
-				route: '/components/navigation-pane'
+				data: SplitPaneData,
+				label: 'Split Pane',
+				name: 'split-pane',
+				route: '/components/split-pane'
 			},
 			{
-				data: NavigationTabData,
-				label: 'Navigation Tab',
-				name: 'navigation-tab',
-				route: '/components/navigation-tab'
+				data: TabData,
+				label: 'Tab',
+				name: 'tab',
+				route: '/components/tab'
 			},
 			{
-				data: NavigationTabBarData,
-				label: 'Navigation Tab Bar',
-				name: 'navigation-tab-bar',
-				route: '/components/navigation-tab-bar'
+				data: TabBarData,
+				label: 'Tab Bar',
+				name: 'tab-bar',
+				route: '/components/tab-bar'
 			},
 			{
-				data: NavigationTabButtonData,
-				label: 'Navigation Tab Button',
-				name: 'navigation-tab-button',
-				route: '/components/navigation-tab-button'
+				data: TabButtonData,
+				label: 'Tab Button',
+				name: 'tab-button',
+				route: '/components/tab-button'
 			},
 			{
-				data: NavigationTabGroupData,
-				label: 'Navigation Tab Group',
-				name: 'navigation-tab-group',
-				route: '/components/navigation-tab-group'
+				data: TabsData,
+				label: 'Tabs',
+				name: 'tabs',
+				route: '/components/tabs'
 			}
 		]
 	},
@@ -510,16 +510,16 @@ export const componentList: ComponentGroup[] = [
 				route: '/components/progress-bar'
 			},
 			{
-				data: ProgressSkeletonData,
-				label: 'Progress Skeleton',
-				name: 'progress-skeleton',
-				route: '/components/progress-skeleton'
+				data: SkeletonTextData,
+				label: 'Skeleton Text',
+				name: 'skeleton-text',
+				route: '/components/skeleton-text'
 			},
 			{
-				data: ProgressSpinnerData,
-				label: 'Progress Spinner',
-				name: 'progress-spinner',
-				route: '/components/progress-spinner'
+				data: SpinnerData,
+				label: 'Spinner',
+				name: 'spinner',
+				route: '/components/spinner'
 			}
 		]
 	},
@@ -527,10 +527,10 @@ export const componentList: ComponentGroup[] = [
 		group: 'Toolbar',
 		groupList: [
 			{
-				data: ButtonGroupData,
-				label: 'Button Group',
-				name: 'button-group',
-				route: '/components/button-group'
+				data: ButtonsData,
+				label: 'Buttons',
+				name: 'buttons',
+				route: '/components/buttons'
 			},
 			{
 				data: FooterData,

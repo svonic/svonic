@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ValueType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
@@ -12,7 +11,7 @@
 	export let disabled = false;
 	export let value: ValueType = '';
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonSelectOption = (await import('@ionic/core/components/ion-select-option'))
 				.IonSelectOption;

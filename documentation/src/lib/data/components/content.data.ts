@@ -11,15 +11,15 @@ export const ContentData: ComponentDataAPI = {
 	dispatchedEventList: [
 		{
 			description: { en: `Emitted while scrolling. This event is disabled by default.` },
-			name: 'svo:scroll'
+			name: 'ionScroll'
 		},
 		{
 			description: { en: `Emitted when the scroll has ended.` },
-			name: 'svo:scroll-end'
+			name: 'ionScrollEnd'
 		},
 		{
 			description: { en: `Emitted when the scroll has started.` },
-			name: 'svo:scroll-start'
+			name: 'ionScrollStart'
 		}
 	],
 	forwardedEventList: [],
@@ -36,7 +36,7 @@ export const ContentData: ComponentDataAPI = {
 			This element can be used to subscribe to scroll events or manually modify
 			scrollTop. However, it's recommended to use the API provided by ion-content:
 
-			i.e. Using svo:scroll, svo:scroll-start, svo:scroll-end for scrolling events
+			i.e. Using ionScroll, ionScrollStart, ionScrollEnd for scrolling events
 			and scrollToPoint() to scroll the content into a certain point.`
 			},
 			name: 'getScrollElement',
@@ -111,7 +111,7 @@ export const ContentData: ComponentDataAPI = {
 		{
 			defaultValue: 'false',
 			description: {
-				en: `Because of performance reasons, svo:scroll events are disabled by default, in order to enable them and start listening from (svo:scroll), set this property to true.`
+				en: `Because of performance reasons, ionScroll events are disabled by default, in order to enable them and start listening from (ionScroll), set this property to true.`
 			},
 			hasDemo: false,
 			isSpecial: false,

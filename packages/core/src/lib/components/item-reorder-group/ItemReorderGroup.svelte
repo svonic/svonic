@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { ItemReorderCustomEvent, ItemReorderEventDetail } from '@ionic/core/components';
 	import type { IonReorderGroup } from '@ionic/core/components/ion-reorder-group';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonReorderGroup;
@@ -14,12 +14,12 @@
 	export let disabled = true;
 
 	export const complete = async (listOrReorder?: boolean | any[] | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.complete(listOrReorder);
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonReorderGroup = (await import('@ionic/core/components/ion-reorder-group'))
 				.IonReorderGroup;
@@ -33,7 +33,7 @@
 	const onIonItemReorder = (event: ItemReorderCustomEvent) => {
 		const eventDetail: ItemReorderEventDetail = event.detail;
 
-		dispatch('svo:item-reorder', eventDetail);
+		dispatch('ionItemReorder', eventDetail);
 	};
 </script>
 

@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
+	import type { CssClassType, ColorType, ModeType, SlotType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { addIcons } from 'ionicons';
 	import type { IonIcon } from 'ionicons/components/ion-icon';
 	import { onMount, tick } from 'svelte';
@@ -17,24 +14,25 @@
 
 	export { cssClass as class };
 
+	export let ariaLabel: string | undefined = undefined;
+	export let ariaHidden: boolean = false;
 	export let color: ColorType = undefined;
 	export let flipRtl: boolean | undefined = undefined;
 	export let icon: string | undefined = undefined;
 	export let lazy = false;
 	export let mode: ModeType = undefined;
-	export let path: string | undefined = undefined;
 	export let sanitize = true;
 	export let size: 'large' | 'small' | undefined = undefined;
 
-	export let customIcon: string | undefined = undefined;
-	export let customIconTitle: string | undefined = undefined;
-
-	export let toSlot: SlotType = undefined;
+	export let customIcon: string = '';
+	export let customIconTitle: string = '';
+	export let path: string = '';
+	export let slot: SlotType = undefined;
 
 	$: registerIcon(customIcon, customIconTitle);
 	$: usePathIcon(path);
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
 
@@ -44,7 +42,7 @@
 
 			await tick();
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 
@@ -81,6 +79,8 @@
 
 {#if componentIsReady}
 	<ion-icon
+		aria-label="{ariaLabel}"
+		aria-hidden="{ariaHidden}"
 		class="{cssClass}"
 		color="{color}"
 		flip-rtl="{flipRtl}"

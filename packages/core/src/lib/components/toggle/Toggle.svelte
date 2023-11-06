@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
+	import type { CssClassType, AlignmentType, ColorType, LabelPlacementType, ModeType, SlotType } from '$lib/types';
+	import type { JustifyType } from '$lib/types/justify.type';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { ToggleChangeEventDetail, ToggleCustomEvent } from '@ionic/core/components';
 	import type { IonToggle } from '@ionic/core/components/ion-toggle';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	type ToggleValueType = 'on' | string | undefined;
@@ -16,22 +14,26 @@
 
 	export { cssClass as class };
 
+	export let alignment: AlignmentType = 'center';
 	export let checked = false;
 	export let color: ColorType = undefined;
 	export let disabled = false;
+	export let enableOnOffLabels: boolean | undefined = undefined;
+	export let justify: JustifyType = 'space-between';
+	export let labelPlacement: LabelPlacementType = 'start';
 	export let mode: ModeType = undefined;
 	export let name = '';
 	export let value: ToggleValueType = 'on';
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonToggle = (await import('@ionic/core/components/ion-toggle')).IonToggle;
 
 			defineCustomElement('ion-toggle', IonToggle);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 
@@ -40,7 +42,7 @@
 	const onIonBlur = (event: FocusEvent) => {
 		const eventDetail = event.detail;
 
-		dispatch('svo:blur', eventDetail);
+		dispatch('ionBlur', eventDetail);
 	};
 
 	const onIonChange = (event: ToggleCustomEvent) => {
@@ -49,21 +51,25 @@
 		checked = eventDetail.checked;
 		value = eventDetail.value;
 
-		dispatch('svo:change', eventDetail);
+		dispatch('ionChange', eventDetail);
 	};
 
 	const onIonFocus = (event: FocusEvent) => {
 		const eventDetail = event.detail;
 
-		dispatch('svo:focus', eventDetail);
+		dispatch('ionFocus', eventDetail);
 	};
 </script>
 
 <ion-toggle
+	alignment="{alignment}"
 	checked="{checked}"
 	class="{cssClass}"
 	color="{color}"
 	disabled="{disabled}"
+	enable-on-off-labels="{enableOnOffLabels}"
+	label-placement="{labelPlacement}"
+	justify="{justify}"
 	mode="{mode}"
 	name="{name}"
 	value="{value}"
@@ -72,4 +78,5 @@
 	on:ionChange="{onIonChange}"
 	on:ionFocus="{onIonFocus}"
 >
+	<slot />
 </ion-toggle>

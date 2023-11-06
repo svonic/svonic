@@ -9,7 +9,7 @@ import { mode } from '$lib/data/props/mode.data';
 import { rel } from '$lib/data/props/rel.data';
 import { routerDirection } from '$lib/data/props/router-direction.data';
 import { target } from '$lib/data/props/target.data';
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import { translucent } from '$lib/data/props/translucent.data';
 import { type } from '$lib/data/props/type-button.data';
 import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
@@ -113,7 +113,7 @@ export const FabButtonData: ComponentDataAPI = {
 			]
 		},
 		{ ...target },
-		{ ...toSlot },
+		{ ...slot },
 		{ ...translucent },
 		{ ...type }
 	],

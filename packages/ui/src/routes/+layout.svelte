@@ -2,7 +2,7 @@
 	import AppNavigation from '$lib/components/app-navigation/AppNavigation.svelte';
 	import AppShell from '$lib/components/app-shell/AppShell.svelte';
 	import { mdiHomeAnalytics, mdiMonitorDashboard, mdiRobotHappyOutline } from '@mdi/js';
-	import { Content, Drawer, DrawerButton, Item } from '@svonic/core';
+	import { Content, Item, Menu, MenuButton } from '@svonic/core';
 	import '../app.postcss';
 
 	const navList = [
@@ -24,10 +24,10 @@
 
 <AppShell headerColor="light">
 	<svelte:fragment slot="app-toolbar-title">App Title</svelte:fragment>
-	<svelte:fragment slot="drawer-end">
-		<Drawer
+	<svelte:fragment slot="menu-end">
+		<Menu
 			contentId="main"
-			id="main-menu"
+			menuId="main-menu"
 			side="end"
 			type="overlay"
 		>
@@ -39,14 +39,14 @@
 			<Content>
 				<AppNavigation navList="{navList}">
 					<svelte:fragment slot="end">
-						<Item>Version 1.0.0-next.39</Item>
+						<Item>Version 1.0.0-next.40</Item>
 					</svelte:fragment>
 				</AppNavigation>
 			</Content>
-		</Drawer>
+		</Menu>
 	</svelte:fragment>
 	<svelte:fragment slot="app-toolbar-end">
-		<DrawerButton autoHide="{true}" />
+		<MenuButton autoHide="{true}" />
 	</svelte:fragment>
 	<slot />
 </AppShell>

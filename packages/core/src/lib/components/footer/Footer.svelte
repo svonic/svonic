@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type CollapseType = 'fade' | undefined;
@@ -11,9 +11,10 @@
 	export { cssClass as class };
 
 	export let collapse: CollapseType = undefined;
+	export let mode: ModeType = undefined;
 	export let translucent = false;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonFooter = (await import('@ionic/core/components/ion-footer')).IonFooter;
 
@@ -25,6 +26,7 @@
 <ion-footer
 	class="{cssClass}"
 	collapse="{collapse}"
+	mode="{mode}"
 	translucent="{translucent}"
 >
 	<slot />
