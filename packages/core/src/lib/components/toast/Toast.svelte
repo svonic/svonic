@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
+	import type { CssClassType, ColorType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonicSafeString, OverlayEventDetail, ToastButton } from '@ionic/core/components';
 	import type { IonToast } from '@ionic/core/components/ion-toast';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	type ToastPositionType = 'bottom' | 'middle' | 'top';
@@ -23,38 +21,42 @@
 	export let header: string | undefined = undefined;
 	// export let htmlAttributes: { [key: string]: any } | undefined = undefined;
 	export let icon: string | undefined = undefined;
+	export let isOpen = false;
 	export let keyboardClose = true;
+	export let layout: 'baseline' | 'stacked' = 'baseline';
 	// export let leaveAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let message: IonicSafeString | string | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let position: ToastPositionType = 'bottom';
+	export let positionAnchor: HTMLElement | undefined = undefined;
 	export let translucent = false;
+	export let trigger: string | undefined = undefined;
 
 	export const dismiss = async (data?: any, role?: string | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.dismiss(data, role);
 		}
 	};
 
 	export const onDidDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const onWillDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const present = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.present();
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
 			const IonRippleEffect = (await import('@ionic/core/components/ion-ripple-effect'))
@@ -69,31 +71,32 @@
 
 	const dispatch = createEventDispatcher();
 
-	const onIonToastDidDismiss = (event: CustomEvent) => {
+	const didDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:did-dismiss', eventDetail);
+		dispatch('didDismiss', eventDetail);
 	};
 
-	const onIonToastDidPresent = () => {
+	const didPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:did-present', eventDetail);
+		dispatch('didPresent', eventDetail);
 	};
 
-	const onIonToastWillDismiss = (event: CustomEvent) => {
+	const willDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:will-dismiss', eventDetail);
+		dispatch('willDismiss', eventDetail);
 	};
 
-	const onIonToastWillPresent = () => {
+	const willPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:will-present', eventDetail);
+		dispatch('willPresent', eventDetail);
 	};
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-toast
 	animated="{animated}"
 	buttons="{buttons}"
@@ -102,17 +105,21 @@
 	duration="{duration}"
 	header="{header}"
 	icon="{icon}"
+	is-open="{isOpen}"
 	keyboard-close="{keyboardClose}"
+	layout="{layout}"
 	message="{message}"
 	mode="{mode}"
 	position="{position}"
+	position-anchor="{positionAnchor}"
 	translucent="{translucent}"
+	trigger="{trigger}"
 	bind:this="{component}"
 	on:click
-	on:ionToastDidDismiss="{onIonToastDidDismiss}"
-	on:ionToastDidPresent="{onIonToastDidPresent}"
-	on:ionToastWillDismiss="{onIonToastWillDismiss}"
-	on:ionToastWillPresent="{onIonToastWillPresent}"
+	on:didDismiss="{didDismiss}"
+	on:didPresent="{didPresent}"
+	on:willDismiss="{willDismiss}"
+	on:willPresent="{willPresent}"
 	on:keydown
 	on:keypress
 	on:keyup

@@ -1,1 +1,1 @@
-export type LabelPlacementType = 'end' | 'fixed' | 'floating' | 'stacked' | 'start';
+export type LabelPlacementType = 'end' | 'fixed' | 'stacked' | 'start';

@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SideType } from '$lib/types/side.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ModeType, SideType, ValueType } from '$lib/types';
 	import { componentOnReady, defineCustomElement } from '$lib/utils/utils';
 	import type { IonAccordion } from '@ionic/core/components/ion-accordion';
 	import type { IonItem } from '@ionic/core/components/ion-item';
+	import { BROWSER } from 'esm-env';
 	import type { IonIcon } from 'ionicons/components/ion-icon';
 	import { chevronDown } from 'ionicons/icons/index.js';
 	import { onMount } from 'svelte';
@@ -20,7 +17,7 @@
 	export let disabled = false;
 	export let mode: ModeType = undefined;
 	export let readonly = false;
-	export let toggleIcon = 'chevronDown';
+	export let toggleIcon = chevronDown;
 	export let toggleIconSlot: SideType = 'end';
 	export let value: ValueType = undefined;
 
@@ -104,7 +101,7 @@
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonAccordion = (await import('@ionic/core/components/ion-accordion')).IonAccordion;
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;

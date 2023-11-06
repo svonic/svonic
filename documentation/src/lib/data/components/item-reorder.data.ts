@@ -22,7 +22,7 @@ export const ItemReorderData: ComponentDataAPI = {
 			description: { en: `Slot work around.` },
 			hasDemo: false,
 			isSpecial: true,
-			name: 'toSlot',
+			name: 'slot',
 			valueList: [
 				{
 					type: 'string',

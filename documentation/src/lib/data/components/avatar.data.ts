@@ -1,4 +1,4 @@
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import type { ComponentDataAPI } from '$lib/types/component-data-api.type';
 
 export const AvatarData: ComponentDataAPI = {
@@ -17,6 +17,6 @@ export const AvatarData: ComponentDataAPI = {
 	label: 'Avatar',
 	methodList: [],
 	name: 'avatar',
-	propList: [{ ...toSlot }],
+	propList: [{ ...slot }],
 	slotList: []
 };

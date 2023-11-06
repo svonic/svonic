@@ -12,7 +12,7 @@ export const RefresherData: ComponentDataAPI = {
 			description: {
 				en: `Emitted while the user is pulling down the content and exposing the refresher.`
 			},
-			name: 'svo:pull'
+			name: 'ionPull'
 		},
 		{
 			description: {
@@ -21,11 +21,11 @@ export const RefresherData: ComponentDataAPI = {
 			Updates the refresher state to refreshing. The complete() method should be
 			called when the async operation has completed.`
 			},
-			name: 'svo:refresh'
+			name: 'ionRefresh'
 		},
 		{
 			description: { en: `Emitted when the user begins to start pulling down.` },
-			name: 'svo:start'
+			name: 'ionStart'
 		}
 	],
 	forwardedEventList: [],
@@ -173,7 +173,7 @@ export const RefresherData: ComponentDataAPI = {
 			description: { en: `Slot work around.` },
 			hasDemo: false,
 			isSpecial: true,
-			name: 'toSlot',
+			name: 'slot',
 			valueList: [
 				{
 					type: 'string',

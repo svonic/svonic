@@ -8,13 +8,13 @@
 
 <List>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>Lorem ipsum</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -23,7 +23,7 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -33,13 +33,13 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>Lorem ipsum</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -48,7 +48,7 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -63,13 +63,13 @@
 
 <List {...$$restProps}>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>Lorem ipsum</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -78,7 +78,7 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="start">
+		<Thumbnail slot="start">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -88,13 +88,13 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>Lorem ipsum</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>
@@ -103,7 +103,7 @@
 		</Label>
 	</Item>
 	<Item>
-		<Thumbnail toSlot="end">
+		<Thumbnail slot="end">
 			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
 		</Thumbnail>
 		<Label>

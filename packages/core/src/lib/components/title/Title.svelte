@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType, ColorType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	type TitleSizeType = 'large' | 'small' | undefined;
@@ -14,7 +13,7 @@
 	export let color: ColorType = undefined;
 	export let size: TitleSizeType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonTitle = (await import('@ionic/core/components/ion-title')).IonTitle;
 

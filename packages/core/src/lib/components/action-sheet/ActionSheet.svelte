@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
+	import type { CssClassType, ModeType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { ActionSheetButton, OverlayEventDetail } from '@ionic/core/components';
 	import type { IonActionSheet } from '@ionic/core/components/ion-action-sheet';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount, tick } from 'svelte';
 
 	let component: IonActionSheet;
@@ -19,37 +18,39 @@
 	// export let enterAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let header: string | undefined = undefined;
 	// export let htmlAttributes: undefined | { [key: string]: any } = undefined;
+	export let isOpen = false;
 	export let keyboardClose = true;
 	// export let leaveAnimation: ((baseEl: any, opts?: any) => Animation) | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let subHeader: string | undefined = undefined;
 	export let translucent = false;
+	export let trigger: string | undefined = undefined;
 
 	export const dismiss = async (data?: any, role?: string | undefined) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.dismiss(data, role);
 		}
 	};
 
 	export const onDidDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const onWillDismiss = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.onDidDismiss();
 		}
 	};
 
 	export const present = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.present();
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonActionSheet = (await import('@ionic/core/components/ion-action-sheet'))
 				.IonActionSheet;
@@ -71,28 +72,28 @@
 
 	const dispatch = createEventDispatcher();
 
-	const ionActionSheetDidDismiss = (event: CustomEvent) => {
+	const didDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:did-dismiss', eventDetail);
+		dispatch('didDismiss', eventDetail);
 	};
 
-	const ionActionSheetDidPresent = () => {
+	const didPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:did-present', eventDetail);
+		dispatch('didPresent', eventDetail);
 	};
 
-	const ionActionSheetWillDismiss = (event: CustomEvent) => {
+	const willDismiss = (event: CustomEvent) => {
 		const eventDetail: OverlayEventDetail = event.detail;
 
-		dispatch('svo:will-dismiss', eventDetail);
+		dispatch('willDismiss', eventDetail);
 	};
 
-	const ionActionSheetWillPresent = () => {
+	const willPresent = () => {
 		const eventDetail = true;
 
-		dispatch('svo:will-present', eventDetail);
+		dispatch('willPresent', eventDetail);
 	};
 </script>
 
@@ -103,16 +104,17 @@
 		buttons="{buttons}"
 		css-class="{cssClass}"
 		header="{header}"
+		is-open="{isOpen}"
 		keyboard-close="{keyboardClose}"
 		mode="{mode}"
 		sub-header="{subHeader}"
 		translucent="{translucent}"
+		trigger="{trigger}"
 		bind:this="{component}"
-		on:ionActionSheetDidDismiss="{ionActionSheetDidDismiss}"
-		on:ionActionSheetDidPresent="{ionActionSheetDidPresent}"
-		on:ionActionSheetWillDismiss="{ionActionSheetWillDismiss}"
-		on:ionActionSheetWillPresent="{ionActionSheetWillPresent}"
+		on:ionActionSheetDidDismiss="{didDismiss}"
+		on:ionActionSheetDidPresent="{didPresent}"
+		on:ionActionSheetWillDismiss="{willDismiss}"
+		on:ionActionSheetWillPresent="{willPresent}"
 	>
-		<slot />
 	</ion-action-sheet>
 {/if}

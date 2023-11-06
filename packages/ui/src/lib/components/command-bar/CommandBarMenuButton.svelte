@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { CssClassType } from '@svonic/core';
 	import { Icon, Item, Label } from '@svonic/core';
+	import { createEventDispatcher } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
 
@@ -8,21 +9,28 @@
 
 	export let iconEnd: string | undefined = undefined;
 	export let iconStart: string | undefined = undefined;
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 	export let label: string | undefined = undefined;
+
+	const dispatch = createEventDispatcher();
+
+	function onClick() {
+        dispatch('click');
+    }
 </script>
 
 <Item
 	button="{true}"
 	class="{cssClass}"
 	id="{id}"
+	on:click="{onClick}"
 >
 	{#if iconStart}
 		<Icon
 			class="mr-1"
 			path="{iconStart}"
 			size="large"
-			toSlot="start"
+			slot="start"
 		/>
 	{/if}
 	<Label>{label}</Label>
@@ -31,7 +39,7 @@
 			class="ml-1"
 			path="{iconEnd}"
 			size="large"
-			toSlot="end"
+			slot="end"
 		/>
 	{/if}
 </Item>

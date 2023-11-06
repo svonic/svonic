@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
 
 	export { cssClass as class };
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonItemGroup = (await import('@ionic/core/components/ion-item-group')).IonItemGroup;
 

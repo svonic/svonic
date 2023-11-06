@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ProgressSpinnerType } from '$lib/types/progress-spinner.type';
+	import type { CssClassType, SpinnerType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { IonicSafeString } from '@ionic/core/components';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
@@ -12,10 +11,10 @@
 
 	export let pullingIcon: null | string | undefined = undefined;
 	export let pullingText: IonicSafeString | string | undefined = undefined;
-	export let refreshingSpinner: ProgressSpinnerType = undefined;
+	export let refreshingSpinner: SpinnerType = undefined;
 	export let refreshingText: IonicSafeString | string | undefined = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
 			const IonRefresherContent = (await import('@ionic/core/components/ion-refresher-content'))

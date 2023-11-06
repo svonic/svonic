@@ -1,13 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ColorType, ModeType, ValueType, SlotType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { SegmentChangeEventDetail, SegmentCustomEvent } from '@ionic/core/components';
 	import type { IonSegment } from '@ionic/core/components/ion-segment';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonSegment;
@@ -23,15 +19,15 @@
 	export let swipeGesture = true;
 	export let value: ValueType = undefined;
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonSegment = (await import('@ionic/core/components/ion-segment')).IonSegment;
 
 			defineCustomElement('ion-segment', IonSegment);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 
@@ -46,7 +42,7 @@
 			value = newValue;
 		}
 
-		dispatch('svo:change', eventDetail);
+		dispatch('ionChange', eventDetail);
 	};
 </script>
 

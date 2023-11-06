@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { ColorType } from '@svonic/core';
-	import { Application, Content, Header, Title, Toolbar } from '@svonic/core';
+	import { App, Content, Header, Title, Toolbar } from '@svonic/core';
 
 	export let contentColor: ColorType = undefined;
 	export let headerColor: ColorType = undefined;
 </script>
 
-<Application>
-	<slot name="drawer-start" />
+<App>
+	<slot name="menu-start" />
 	<div
 		class="ion-page"
 		id="main"
@@ -32,5 +32,5 @@
 			<slot />
 		</Content>
 	</div>
-	<slot name="drawer-end" />
-</Application>
+	<slot name="menu-end" />
+</App>

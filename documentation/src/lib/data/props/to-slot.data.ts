@@ -1,6 +1,6 @@
 import type { ComponentPropAPI } from '$lib/types/component-data-api.type';
 
-export const toSlot: ComponentPropAPI = {
+export const slot: ComponentPropAPI = {
 	defaultValue: 'undefined',
 	description: {
 		en: `Slot work around.
@@ -12,7 +12,7 @@ export const toSlot: ComponentPropAPI = {
 	},
 	hasDemo: false,
 	isSpecial: true,
-	name: 'toSlot',
+	name: 'slot',
 	valueList: [
 		{
 			type: 'string',

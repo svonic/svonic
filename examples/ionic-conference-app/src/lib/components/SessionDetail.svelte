@@ -3,7 +3,7 @@
 	import type { Session } from '$lib/models/session';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
 		Header,
 		Ionicon,
@@ -40,23 +40,23 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
+		<Buttons slot="start">
 			<BackButton defaultHref="{defaultHref}" />
-		</ButtonGroup>
-		<ButtonGroup toSlot="end">
+		</Buttons>
+		<Buttons slot="end">
 			<Button on:click="{toggleFavorite}">
 				<Ionicon
 					icon="{isFavorite ? star : starOutline}"
-					toSlot="icon-only"
+					slot="icon-only"
 				/>
 			</Button>
 			<Button on:click="{shareSession}">
 				<Ionicon
 					icon="{share}"
-					toSlot="icon-only"
+					slot="icon-only"
 				/>
 			</Button>
-		</ButtonGroup>
+		</Buttons>
 	</Toolbar>
 </Header>
 
@@ -104,7 +104,7 @@
 				color="primary"
 				icon="{cloudDownload}"
 				size="small"
-				toSlot="end"
+				slot="end"
 			/>
 		</Item>
 		<Item

@@ -33,7 +33,7 @@
 				color="medium"
 				path="{item.icon}"
 				size="large"
-				toSlot="start"
+				slot="start"
 			/>
 			<Label>{item.label}</Label>
 		</Item>

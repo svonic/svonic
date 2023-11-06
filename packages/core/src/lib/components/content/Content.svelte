@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType, ColorType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { ScrollBaseDetail, ScrollDetail } from '@ionic/core/components';
 	import type { IonContent } from '@ionic/core/components/ion-content';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonContent;
@@ -21,19 +20,19 @@
 	export let scrollY = true;
 
 	export const getScrollElement = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.getScrollElement();
 		}
 	};
 
 	export const scrollByPoint = async (x: number, y: number, duration: number) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.scrollByPoint(x, y, duration);
 		}
 	};
 
 	export const scrollToBottom = async (duration?: number) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.scrollToBottom(duration);
 		}
 	};
@@ -43,18 +42,18 @@
 		y: number | undefined | null,
 		duration?: number
 	) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.scrollToPoint(x, y, duration);
 		}
 	};
 
 	export const scrollToTop = async (duration?: number) => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.scrollToTop(duration);
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonContent = (await import('@ionic/core/components/ion-content')).IonContent;
 
@@ -67,19 +66,19 @@
 	const onIonScroll = (event: CustomEvent) => {
 		const eventDetail: ScrollDetail = event.detail;
 
-		dispatch('svo:scroll', eventDetail);
+		dispatch('ionScroll', eventDetail);
 	};
 
 	const onIonScrollEnd = (event: CustomEvent) => {
 		const eventDetail: ScrollBaseDetail = event.detail;
 
-		dispatch('svo:scroll-end', eventDetail);
+		dispatch('ionScrollEnd', eventDetail);
 	};
 
 	const onIonScrollStart = (event: CustomEvent) => {
 		const eventDetail: ScrollBaseDetail = event.detail;
 
-		dispatch('svo:scroll-start', eventDetail);
+		dispatch('ionScrollStart', eventDetail);
 	};
 </script>
 

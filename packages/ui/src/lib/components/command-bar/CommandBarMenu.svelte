@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { mdiChevronDown } from '@mdi/js';
 	import type { CssClassType } from '@svonic/core';
-	import { Content, List, Menu } from '@svonic/core';
+	import { Content, List, Popover } from '@svonic/core';
 	import CommandBarButton from './CommandBarButton.svelte';
 
 	let cssClass: CssClassType = undefined;
 
 	export { cssClass as class };
 
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 	export let label: string | undefined = undefined;
 
 	function onDidDismiss(event: CustomEvent) {
@@ -22,19 +22,19 @@
 	iconEnd="{mdiChevronDown}"
 	label="{label}"
 />
-<Menu
+<Popover
 	class="{cssClass}"
 	dismissOnSelect="{true}"
 	trigger="{id}"
 	triggerAction="click"
-	on:onDidDismiss="{onDidDismiss}"
+	on:didDismiss="{onDidDismiss}"
 >
 	<Content>
 		<List lines="none">
 			<slot />
 		</List>
 	</Content>
-</Menu>
+</Popover>
 
 <style>
 </style>

@@ -11,7 +11,7 @@
 		PositionType,
 		ValueType
 	} from '@svonic/core';
-	import { InputTextArea } from '@svonic/core';
+	import { Textarea } from '@svonic/core';
 	import FormField from './FormField.svelte';
 
 	let hasFocus = false;
@@ -28,15 +28,15 @@
 	export let fill: FillType = undefined;
 	export let formFieldCssClass: CssClassType = undefined;
 	export let inputCssClass: CssClassType = undefined;
-	export let inputMode: InputModeType = undefined;
+	export let inputmode: InputModeType = undefined;
 	export let label = '';
 	export let labelPosition: PositionType = 'stacked';
 	export let lines: LineType = undefined;
-	export let maxLength: number | undefined = undefined;
-	export let minLength: number | undefined = undefined;
+	export let maxlength: number | undefined = undefined;
+	export let minlength: number | undefined = undefined;
 	export let mode: ModeType = undefined;
 	export let name = '';
-	export let placeholder: null | string | undefined = undefined;
+	export let placeholder: string | undefined = undefined;
 	export let readonly = false;
 	export let required = false;
 	export let rows: number | undefined = undefined;
@@ -64,7 +64,7 @@
 	lines="{lines}"
 	name="{name}"
 >
-	<InputTextArea
+	<Textarea
 		autocapitalize="{autocapitalize}"
 		autofocus="{autofocus}"
 		autoGrow="{autoGrow}"
@@ -76,9 +76,9 @@
 		disabled="{disabled}"
 		enterKeyHint="{enterKeyHint}"
 		id="{name}"
-		inputMode="{inputMode}"
-		maxLength="{maxLength}"
-		minLength="{minLength}"
+		inputmode="{inputmode}"
+		maxlength="{maxlength}"
+		minlength="{minlength}"
 		mode="{mode}"
 		name="{name}"
 		placeholder="{placeholder}"

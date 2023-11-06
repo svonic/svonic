@@ -4,7 +4,7 @@
 	import {
 		ActionSheet,
 		Button,
-		ButtonGroup,
+		Buttons,
 		Chip,
 		Content,
 		getConfig,
@@ -109,18 +109,18 @@
 <Content class="speaker-detail">
 	<Header class="ion-no-border">
 		<Toolbar>
-			<ButtonGroup toSlot="start">
+			<Buttons slot="start">
 				<BackButton defaultHref="/app/tabs/speakers" />
-			</ButtonGroup>
+			</Buttons>
 			{#if speaker}
-				<ButtonGroup toSlot="end">
+				<Buttons slot="end">
 					<Button on:click="{() => openContact(speaker)}">
 						<Ionicon
 							ios="call-outline"
 							iosIcon="{callOutline}"
 							md="call-sharp"
 							mdIcon="{callSharp}"
-							toSlot="icon-only"
+							slot="icon-only"
 						/>
 					</Button>
 					<Button on:click="{() => openSpeakerShare(speaker)}">
@@ -129,10 +129,10 @@
 							iosIcon="{shareOutline}"
 							md="share-sharp"
 							mdIcon="{shareSharp}"
-							toSlot="icon-only"
+							slot="icon-only"
 						/>
 					</Button>
-				</ButtonGroup>
+				</Buttons>
 			{/if}
 		</Toolbar>
 	</Header>

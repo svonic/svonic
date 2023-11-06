@@ -2,18 +2,18 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import {
-		Application,
+		App,
 		Content,
-		Drawer,
-		DrawerToggle,
 		Ionicon,
 		Item,
 		Label,
 		List,
 		ListHeader,
-		menuController,
-		NavigationPane,
-		Toggle
+		Menu,
+		MenuToggle,
+		SplitPane,
+		Toggle,
+		menuController
 	} from '@svonic/core';
 	import {
 		calendarOutline,
@@ -102,28 +102,28 @@
 	};
 </script>
 
-<Application
+<App
 	class="{dark === true ? 'dark-theme' : ''}"
 	id="ionic-app"
 >
-	<NavigationPane
+	<SplitPane
 		class="app-menu"
 		contentId="main-content"
 	>
-		<Drawer
+		<Menu
 			contentId="main-content"
-			id="main-menu"
-			on:svo:did-close="{onDidClose}"
-			on:svo:did-open="{onDidOpen}"
-			on:svo:will-open="{onWillOpen}"
-			on:svo:will-close="{onWillClose}"
+			menuId="main-menu"
+			on:onIonDidClose="{onDidClose}"
+			on:onIonDidOpen="{onDidOpen}"
+			on:ionWillOpen="{onWillOpen}"
+			on:ionWillClose="{onWillClose}"
 		>
 			<Content>
 				<List lines="none">
 					<ListHeader>Conference</ListHeader>
 
 					{#each appPages as p}
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname.includes(basePathName + p.url) === true
 									? 'selected'
@@ -134,11 +134,11 @@
 							>
 								<Ionicon
 									icon="{p.icon}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>{p.title}</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 					{/each}
 				</List>
 
@@ -146,7 +146,7 @@
 					<List lines="none">
 						<ListHeader>Account</ListHeader>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname === '/account' ? 'selected' : ''}"
 								detail="{false}"
@@ -155,13 +155,13 @@
 							>
 								<Ionicon
 									icon="{person}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Account</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname === '/support' ? 'selected' : ''}"
 								detail="{false}"
@@ -170,13 +170,13 @@
 							>
 								<Ionicon
 									icon="{helpOutline}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Support</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								button="{true}"
 								detail="{false}"
@@ -184,11 +184,11 @@
 							>
 								<Ionicon
 									icon="{logOut}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Logout</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 					</List>
 				{/if}
 
@@ -196,7 +196,7 @@
 					<List lines="none">
 						<ListHeader>Account</ListHeader>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname === '/login' ? 'selected' : ''}"
 								detail="{false}"
@@ -205,13 +205,13 @@
 							>
 								<Ionicon
 									icon="{logIn}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Login</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname === '/support' ? 'selected' : ''}"
 								detail="{false}"
@@ -220,13 +220,13 @@
 							>
 								<Ionicon
 									icon="{helpOutline}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Support</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								class="{$page.url.pathname === '/signup' ? 'selected' : ''}"
 								detail="{false}"
@@ -235,16 +235,16 @@
 							>
 								<Ionicon
 									icon="{personAdd}"
-									toSlot="start"
+									slot="start"
 								/>
 								<Label>Signup</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 
 						<Item>
 							<Ionicon
 								icon="{moonOutline}"
-								toSlot="start"
+								slot="start"
 							/>
 							<Label>Dark Mode</Label>
 							<Toggle bind:checked="{dark}" />
@@ -255,7 +255,7 @@
 				<List lines="none">
 					<ListHeader>Tutorial</ListHeader>
 
-					<DrawerToggle autoHide="{false}">
+					<MenuToggle autoHide="{false}">
 						<Item
 							button="{true}"
 							svelteKitPrefetch="{true}"
@@ -263,19 +263,19 @@
 						>
 							<Ionicon
 								icon="{hammer}"
-								toSlot="start"
+								slot="start"
 							/>
 							<Label>Show Tutorial</Label>
 						</Item>
-					</DrawerToggle>
+					</MenuToggle>
 				</List>
 			</Content>
-		</Drawer>
+		</Menu>
 		<div id="main-content">
 			<slot />
 		</div>
-	</NavigationPane>
-</Application>
+	</SplitPane>
+</App>
 
 <style>
 </style>

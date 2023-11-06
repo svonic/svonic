@@ -19,8 +19,7 @@ interface HandlerRegister {
  * will still happen.
  */
 export const blockHardwareBackButton = () => {
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
-	document.addEventListener('backbutton', () => {}); // tslint:disable-line
+	document.addEventListener('backbutton', () => {});
 };
 
 export const startHardwareBackButton = () => {

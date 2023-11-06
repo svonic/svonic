@@ -12,6 +12,7 @@
 <Modal
 	class="{cssClass}"
 	isOpen="{isOpen}"
+	on:didDismiss="{() => (isOpen = false)}"
 >
 	<div class="ion-page">
 		<slot />

@@ -6,13 +6,13 @@
 	import DialogFooter from '$lib/components/dialog/DialogFooter.svelte';
 	import DialogHeader from '$lib/components/dialog/DialogHeader.svelte';
 	import DialogTitle from '$lib/components/dialog/DialogTitle.svelte';
-	import { Avatar, Checkbox, Image, Item, Label, List } from '@svonic/core';
+	import { Avatar, Checkbox, Img, Item, Label, List } from '@svonic/core';
 
 	let cssClass = 'svo-modal';
 	let isOpen = false;
 	let value = 'modal';
 
-	const checkBoxChange = (event) => {
+	const checkBoxChange = (event: { detail: { value: any; checked: boolean; }; }) => {
 		if (event.detail.value) {
 			isOpen = event.detail.checked;
 			console.log(JSON.stringify(event.detail, null, 2));
@@ -35,14 +35,14 @@
 	<DialogHeader>
 		<DialogTitle>Right Panel</DialogTitle>
 		<svelte:fragment slot="end">
-			<DialogClose>Close</DialogClose>
+			<DialogClose on:click={() => isOpen = false}>Close</DialogClose>
 		</svelte:fragment>
 	</DialogHeader>
 	<DialogContent>
 		<List>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -50,8 +50,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -59,8 +59,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>
@@ -68,8 +68,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -77,8 +77,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -86,8 +86,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>
@@ -95,8 +95,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -104,8 +104,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -113,8 +113,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>
@@ -122,8 +122,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -131,8 +131,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -140,8 +140,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>
@@ -149,8 +149,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -158,8 +158,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -167,8 +167,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>
@@ -176,8 +176,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Gollum</h2>
@@ -185,8 +185,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Frodo</h2>
@@ -194,8 +194,8 @@
 				</Label>
 			</Item>
 			<Item>
-				<Avatar toSlot="start">
-					<Image src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+				<Avatar slot="start">
+					<Img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
 				</Avatar>
 				<Label>
 					<h2>Samwise</h2>

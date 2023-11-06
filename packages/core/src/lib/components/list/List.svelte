@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { LineType } from '$lib/types/line.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { SlotType } from '$lib/types/slot.type';
+	import type { CssClassType, ModeType, LineType, SlotType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { IonList } from '@ionic/core/components/ion-list';
+	import { BROWSER } from 'esm-env';
 	import { onMount } from 'svelte';
 
 	let component: IonList;
@@ -17,21 +14,21 @@
 	export let mode: ModeType = undefined;
 	export let lines: LineType = undefined;
 
-	export let toSlot: SlotType = undefined;
+	export let slot: SlotType = undefined;
 
 	export const closeSlidingItems = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.closeSlidingItems();
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonList = (await import('@ionic/core/components/ion-list')).IonList;
 
 			defineCustomElement('ion-list', IonList);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 </script>

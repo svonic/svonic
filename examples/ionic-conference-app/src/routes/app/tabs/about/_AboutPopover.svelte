@@ -1,27 +1,27 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Content, Item, Label, List, Menu } from '@svonic/core';
+	import { Content, Item, Label, List, Popover } from '@svonic/core';
 
-	let menu: Menu;
+	let popover: Popover;
 
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 
 	const close = async (url: string) => {
 		if (url === 'support') {
 			await goto('/support');
 		} else {
 			window.open(url, '_blank');
-			await menu.dismiss();
+			await popover.dismiss();
 		}
 	};
 </script>
 
-<Menu
+<Popover
 	dismissOnSelect="{true}"
 	id="{id}"
 	trigger="more-info-button"
 	triggerAction="click"
-	bind:this="{menu}"
+	bind:this="{popover}"
 >
 	<Content>
 		<List lines="none">
@@ -57,7 +57,7 @@
 			</Item>
 		</List>
 	</Content>
-</Menu>
+</Popover>
 
 <style>
 </style>

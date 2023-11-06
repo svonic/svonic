@@ -9,7 +9,7 @@ import { rel } from '$lib/data/props/rel.data';
 import { routerDirection } from '$lib/data/props/router-direction.data';
 import { svelteKitPrefetch } from '$lib/data/props/sveltekit-prefetch.data';
 import { target } from '$lib/data/props/target.data';
-import { toSlot } from '$lib/data/props/to-slot.data';
+import { slot } from '$lib/data/props/to-slot.data';
 import { type } from '$lib/data/props/type-button.data';
 import { defaultSlot } from '$lib/data/slots/default.data';
 import { end } from '$lib/data/slots/end.data';
@@ -167,7 +167,7 @@ export const ButtonData: ComponentDataAPI = {
 		},
 		{ ...svelteKitPrefetch },
 		{ ...target },
-		{ ...toSlot },
+		{ ...slot },
 		{ ...type }
 	],
 	slotList: [

@@ -1,40 +1,43 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { ButtonType } from '$lib/types/button.type';
-	import type { ColorType } from '$lib/types/color.type';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { DownloadType } from '$lib/types/download.type';
-	import type { FillType } from '$lib/types/fill.type';
-	import type { HrefType } from '$lib/types/href.type';
-	import type { LineType } from '$lib/types/line.type';
-	import type { ModeType } from '$lib/types/mode.type';
-	import type { RelType } from '$lib/types/rel.type';
-	import type { RouterDirectionType } from '$lib/types/router-direction.type';
-	import type { ShapeType } from '$lib/types/shape.type';
-	import type { TargetType } from '$lib/types/target.type';
+	import type {
+		ButtonType,
+		ColorType,
+		CssClassType,
+		DownloadType,
+		HrefType,
+		LineType,
+		ModeType,
+		RelType,
+		RouterDirectionType,
+		ShapeType,
+		TargetType
+	} from '$lib/types';
 	import {
 		addNamedSlot,
 		addSvelteKitPrefetchAttribute,
-		defineCustomElement
+		defineCustomElement,
+		updateCurrentCssClass
 	} from '$lib/utils/utils';
 	import type { IonItem } from '@ionic/core/components/ion-item';
+	import { BROWSER } from 'esm-env';
+	import { chevronForward } from 'ionicons/icons';
 	import { onMount } from 'svelte';
 
 	let component: IonItem;
-	let cssClass: CssClassType = undefined;
+	let cssClass: CssClassType = '';
+	let currentCssClass: CssClassType = '';
+	let previousCssClass: CssClassType = cssClass;
 
 	export { cssClass as class };
 
 	export let button: boolean | undefined = undefined;
 	export let color: ColorType = undefined;
-	// export let counter = true;
 	export let detail: boolean | undefined = undefined;
-	export let detailIcon = 'chevronForward';
+	export let detailIcon = chevronForward;
 	export let disabled = false;
 	export let download: DownloadType = undefined;
-	export let fill: FillType = undefined;
 	export let href: HrefType = undefined;
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 	export let lines: LineType = undefined;
 	export let mode: ModeType = undefined;
 	export let rel: RelType = undefined;
@@ -45,12 +48,10 @@
 	export let type: ButtonType = 'button';
 
 	// Additional Item Props
-	export let isInValid: boolean | undefined = undefined;
-	export let isValid: boolean | undefined = undefined;
+	export let slot: 'end' | 'header' | 'start' | undefined = undefined;
 	export let svelteKitPrefetch = false;
-	export let toSlot: 'end' | 'start' | undefined = undefined;
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonIcon = (await import('ionicons/components/ion-icon')).IonIcon;
 			const IonItem = (await import('@ionic/core/components/ion-item')).IonItem;
@@ -63,26 +64,31 @@
 			defineCustomElement('ion-note', IonNote);
 			defineCustomElement('ion-ripple-effect', IonRippleEffect);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 
 			if (component && href && svelteKitPrefetch) {
 				addSvelteKitPrefetchAttribute(component);
 			}
 		});
 	}
+
+	const onCssClassChange = (newCssClass: CssClassType) => {
+		currentCssClass = updateCurrentCssClass(component?.classList, newCssClass, previousCssClass);
+		previousCssClass = newCssClass;
+	};
+
+	$: onCssClassChange(cssClass);
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <ion-item
 	button="{button}"
-	class="{cssClass}"
-	class:ion-valid="{isValid}"
-	class:ion-invalid="{isInValid}"
+	class="{currentCssClass}"
 	color="{color}"
 	detail="{detail}"
 	detail-icon="{detailIcon}"
 	disabled="{disabled}"
 	download="{download}"
-	fill="{fill}"
 	href="{href}"
 	id="{id}"
 	lines="{lines}"

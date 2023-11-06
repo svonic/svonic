@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
-	import type { ValueType } from '$lib/types/value.type';
+	import type { CssClassType, ValueType } from '$lib/types';
 	import { defineCustomElement } from '$lib/utils/utils';
 	import type { RadioGroupChangeEventDetail, RadioGroupCustomEvent } from '@ionic/core/components';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let cssClass: CssClassType = undefined;
@@ -14,7 +13,7 @@
 	export let name = '';
 	export let value: ValueType = '';
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonRadioGroup = (await import('@ionic/core/components/ion-radio-group')).IonRadioGroup;
 
@@ -27,7 +26,7 @@
 	const onIonChange = (event: RadioGroupCustomEvent) => {
 		const eventDetail: RadioGroupChangeEventDetail = event.detail;
 
-		dispatch('svo:change', eventDetail);
+		dispatch('ionChange', eventDetail);
 	};
 </script>
 

@@ -4,29 +4,29 @@
 	import { addTrackFilter, scheduleStore, sessionsStore } from '$lib/stores/app.store';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
-		DrawerButton,
 		Fab,
 		FabButton,
-		FabButtonGroup,
-		getConfig,
+		FabList,
 		Header,
-		InputSearch,
+		Searchbar,
 		Ionicon,
 		Item,
 		ItemDivider,
 		ItemGroup,
 		ItemOption,
-		ItemOptionGroup,
+		ItemOptions,
 		ItemSliding,
 		Label,
 		List,
 		ListHeader,
+		MenuButton,
 		Segment,
 		SegmentButton,
 		Title,
-		Toolbar
+		Toolbar,
+		getConfig
 	} from '@svonic/core';
 	import {
 		logoFacebook,
@@ -38,8 +38,8 @@
 		shareSocial
 	} from 'ionicons/icons/index.js';
 	import { onMount } from 'svelte';
-	import './schedule.css';
 	import ScheduleFilterModal from './_ScheduleFilterModal.svelte';
+	import './schedule.css';
 
 	let dayIndex = 0;
 	let fab: Fab;
@@ -118,14 +118,14 @@
 <Header translucent="{true}">
 	<Toolbar>
 		{#if !showSearchbar}
-			<ButtonGroup toSlot="start">
-				<DrawerButton />
-			</ButtonGroup>
+			<Buttons slot="start">
+				<MenuButton />
+			</Buttons>
 		{/if}
 		{#if ios}
 			<Segment
 				bind:value="{segment}"
-				on:svo:change="{updateSchedule}"
+				on:ionChange="{updateSchedule}"
 			>
 				<SegmentButton value="all">All</SegmentButton>
 				<SegmentButton value="favorites">Favorites</SegmentButton>
@@ -135,26 +135,26 @@
 			<Title>Schedule</Title>
 		{/if}
 		{#if showSearchbar}
-			<InputSearch
+			<Searchbar
 				placeholder="Search"
 				showCancelButton="always"
 				bind:value="{queryText}"
-				on:svo:change="{updateSchedule}"
-				on:svo:cancel="{() => {
+				on:ionChange="{updateSchedule}"
+				on:ionCancel="{() => {
 					showSearchbar = false;
 				}}"
 			/>
 		{/if}
-		<ButtonGroup toSlot="end">
+		<Buttons slot="end">
 			{#if !ios && !showSearchbar}
 				<Button
-					on:svo:click="{() => {
+					on:click="{() => {
 						showSearchbar = true;
 					}}"
 				>
 					<Ionicon
 						icon="{search}"
-						toSlot="icon-only"
+						slot="icon-only"
 					/>
 				</Button>
 				{#if !showSearchbar}
@@ -165,20 +165,20 @@
 						{#if !ios}
 							<Ionicon
 								icon="{options}"
-								toSlot="icon-only"
+								slot="icon-only"
 							/>
 						{/if}
 					</Button>
 					<ScheduleFilterModal bind:this="{scheduleFilterModal}" />
 				{/if}
 			{/if}
-		</ButtonGroup>
+		</Buttons>
 	</Toolbar>
 	{#if !ios}
 		<Toolbar>
 			<Segment
 				bind:value="{segment}"
-				on:svo:change="{updateSchedule}"
+				on:ionChange="{updateSchedule}"
 			>
 				<SegmentButton value="all">All</SegmentButton>
 				<SegmentButton value="favorites">Favorites</SegmentButton>
@@ -193,10 +193,10 @@
 			<Title size="large">Schedule</Title>
 		</Toolbar>
 		<Toolbar>
-			<InputSearch
+			<Searchbar
 				placeholder="Search"
 				bind:value="{queryText}"
-				on:svo:change="{updateSchedule}"
+				on:ionChange="{updateSchedule}"
 			/>
 		</Toolbar>
 	</Header>
@@ -222,7 +222,7 @@
 									</p>
 								</Label>
 							</Item>
-							<ItemOptionGroup>
+							<ItemOptions>
 								{#if segment === 'all'}
 									<ItemOption
 										color="favorite"
@@ -238,7 +238,7 @@
 										>Remove
 									</ItemOption>
 								{/if}
-							</ItemOptionGroup>
+							</ItemOptions>
 						</ItemSliding>
 					{/each}
 				</ItemGroup>
@@ -253,14 +253,14 @@
 	<Fab
 		class="schedule-fab"
 		horizontal="end"
-		toSlot="fixed"
+		slot="fixed"
 		vertical="bottom"
 		bind:this="{fab}"
 	>
 		<FabButton>
 			<Ionicon icon="{shareSocial}" />
 		</FabButton>
-		<FabButtonGroup side="top">
+		<FabList side="top">
 			<FabButton
 				color="vimeo"
 				on:click="{() => openSocial('Vimeo', fab)}"
@@ -285,7 +285,7 @@
 			>
 				<Ionicon icon="{logoFacebook}" />
 			</FabButton>
-		</FabButtonGroup>
+		</FabList>
 	</Fab>
 </Content>
 

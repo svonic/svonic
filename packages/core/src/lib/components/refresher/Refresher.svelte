@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import type { CssClassType } from '$lib/types/css-class.type';
+	import type { CssClassType } from '$lib/types';
 	import { addNamedSlot, defineCustomElement } from '$lib/utils/utils';
 	import type { RefresherCustomEvent, RefresherEventDetail } from '@ionic/core/components';
 	import type { IonRefresher } from '@ionic/core/components/ion-refresher';
+	import { BROWSER } from 'esm-env';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let component: IonRefresher;
@@ -18,33 +18,33 @@
 	export let pullMin: number | undefined = 60;
 	export let snapbackDuration: string | undefined = '280ms';
 
-	export let toSlot: 'fixed' | undefined = undefined;
+	export let slot: 'fixed' | undefined = undefined;
 
 	export const cancel = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.cancel();
 		}
 	};
 
 	export const complete = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			await component.complete();
 		}
 	};
 
 	export const getProgress = async () => {
-		if (browser && component) {
+		if (BROWSER && component) {
 			return await component.getProgress();
 		}
 	};
 
-	if (browser) {
+	if (BROWSER) {
 		onMount(async () => {
 			const IonRefresher = (await import('@ionic/core/components/ion-refresher')).IonRefresher;
 
 			defineCustomElement('ion-refresher', IonRefresher);
 
-			addNamedSlot(component, toSlot);
+			addNamedSlot(component, slot);
 		});
 	}
 
@@ -53,19 +53,19 @@
 	const onIonPull = () => {
 		const eventDetail = true;
 
-		dispatch('svo:pull', eventDetail);
+		dispatch('ionPull', eventDetail);
 	};
 
 	const onIonRefresh = (event: RefresherCustomEvent) => {
 		const eventDetail: RefresherEventDetail = event.detail;
 
-		dispatch('svo:refresh', eventDetail);
+		dispatch('ionRefresh', eventDetail);
 	};
 
 	const onIonStart = () => {
 		const eventDetail = true;
 
-		dispatch('svo:start', eventDetail);
+		dispatch('ionStart', eventDetail);
 	};
 </script>
 

@@ -4,15 +4,15 @@
 	import type { UserOptions } from '$lib/models/user-options';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Col,
 		Content,
-		DrawerButton,
 		Header,
 		Input,
 		Item,
 		Label,
 		List,
+		MenuButton,
 		Row,
 		Text,
 		Title,
@@ -45,9 +45,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Login</Title>
 	</Toolbar>
 </Header>

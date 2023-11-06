@@ -3,14 +3,14 @@
 	import type { UserOptions } from '$lib/models/user-options';
 	import {
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
-		DrawerButton,
 		Header,
 		Input,
 		Item,
 		Label,
 		List,
+		MenuButton,
 		Text,
 		Title,
 		Toolbar
@@ -34,9 +34,9 @@
 
 <Header>
 	<Toolbar>
-		<ButtonGroup toSlot="start">
-			<DrawerButton />
-		</ButtonGroup>
+		<Buttons slot="start">
+			<MenuButton />
+		</Buttons>
 		<Title>Signup</Title>
 	</Toolbar>
 </Header>

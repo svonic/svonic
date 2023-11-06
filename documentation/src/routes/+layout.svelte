@@ -5,14 +5,10 @@
 	import {
 		Accordion,
 		AccordionGroup,
-		Application,
+		App,
 		Button,
-		ButtonGroup,
+		Buttons,
 		Content,
-		Drawer,
-		DrawerButton,
-		DrawerToggle,
-		getConfig,
 		Header,
 		Icon,
 		Ionicon,
@@ -20,13 +16,25 @@
 		Label,
 		List,
 		ListHeader,
-		NavigationPane,
+		Menu,
+		MenuButton,
+		MenuToggle,
+		SplitPane,
 		Title,
 		Toolbar,
+		getConfig,
 		type ModeType
 	} from '@svonic/core';
-	import { logoGithub, moonOutline, sunnyOutline } from 'ionicons/icons/index.js';
-	import { setContext } from 'svelte';
+	import { BROWSER } from 'esm-env';
+	import {
+		logoGithub,
+		menu,
+		menuOutline,
+		menuSharp,
+		moonOutline,
+		sunnyOutline
+	} from 'ionicons/icons/index.js';
+	import { onMount, setContext } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
 	import '../app.postcss';
 
@@ -34,27 +42,75 @@
 	const navComponentList = getComponentList();
 	const navPageList = getPageList();
 
+	let appMode: ModeType;
 	let darkMode = false;
+	let isMenuActive: boolean | undefined = undefined;
+	let isMenuVisible = false;
+	let isSplitPaneActive = false;
+	let isSplitPaneVisible = false;
+	let menuComponent: Menu;
+	let menuIcon = menuSharp;
 	let rtlMode: 'ltr' | 'rtl' = 'ltr';
 	let selectedComponent = '';
 	let selectedComponentGroup = '';
+	let showSplitPane = false;
 
 	setContext('mode', mode);
 
-	const toogleDarkMode = () => {
-		darkMode = !darkMode;
+	if (BROWSER) {
+		onMount(async () => {
+			appMode = getConfig()?.get('mode') ?? 'md';
+		});
+	}
+
+	const onMenuDidClose = async (event: CustomEvent) => {
+		isMenuVisible = false;
+
+		if (menuComponent) {
+			isMenuActive = await menuComponent.isActive();
+		}
+
+		if (isMenuActive === true) {
+			isSplitPaneActive = false;
+		}
 	};
 
-	const toogleRTLMode = () => {
-		console.log('toogleRTLMode', rtlMode);
-		if (rtlMode === 'ltr') {
-			rtlMode = 'rtl';
+	const onMenuDidOpen = async (event: CustomEvent) => {
+		isMenuVisible = true;
 
-			document.dir = rtlMode;
-		} else {
-			rtlMode = 'ltr';
+		if (menuComponent) {
+			isMenuActive = await menuComponent.isActive();
+		}
 
-			document.dir = rtlMode;
+		if (isMenuActive === true) {
+			isSplitPaneActive = false;
+		}
+	};
+
+	const onOrientationChange = async () => {
+		if (menuComponent) {
+			isMenuActive = await menuComponent.isActive();
+		}
+
+		if (isMenuActive === true) {
+			isSplitPaneActive = false;
+		}
+	};
+
+	const onSplitPaneVisible = async (event: CustomEvent) => {
+		isSplitPaneVisible = event.detail.visible;
+
+		if (isSplitPaneVisible === true) {
+			isMenuActive = false;
+			isSplitPaneActive = true;
+		}
+
+		if (isSplitPaneVisible === false && showSplitPane === true) {
+			isSplitPaneActive = true;
+		}
+
+		if (isMenuActive === true) {
+			isSplitPaneActive = false;
 		}
 	};
 
@@ -70,6 +126,26 @@
 		if (componentGroup) {
 			selectedComponentGroup = componentGroup.group;
 		}
+	};
+
+	const toogleDarkMode = () => {
+		darkMode = !darkMode;
+	};
+
+	const toogleRTLMode = () => {
+		if (rtlMode === 'ltr') {
+			rtlMode = 'rtl';
+
+			document.dir = rtlMode;
+		} else {
+			rtlMode = 'ltr';
+
+			document.dir = rtlMode;
+		}
+	};
+
+	const toggleSplitPane = () => {
+		showSplitPane = !showSplitPane;
 	};
 
 	// const scrollIntoView = ({ currentTarget }) => {
@@ -88,21 +164,28 @@
 
 	$: {
 		selectedComponent = $page.url.pathname.split('/').pop() ?? '';
-		console.log(selectedComponent);
 		setSelectedGroup(selectedComponent);
 	}
 
+	$: menuIcon = appMode === 'ios' ? menuOutline : menuSharp;
 	// $: setAnchorLink(title);
 </script>
 
-<Application class="{darkMode === true ? 'dark' : ''}">
-	<NavigationPane
+<svelte:window on:resize="{onOrientationChange}" />
+
+<App class="{darkMode === true ? 'dark' : ''}">
+	<SplitPane
 		class="app-menu"
 		contentId="main-content"
+		disabled="{showSplitPane}"
+		on:ionSplitPaneVisible="{onSplitPaneVisible}"
 	>
-		<Drawer
+		<Menu
 			contentId="main-content"
-			id="main-menu"
+			menuId="main-menu"
+			bind:this="{menuComponent}"
+			on:ionDidClose="{onMenuDidClose}"
+			on:ionDidOpen="{onMenuDidOpen}"
 		>
 			<Header>
 				<Toolbar>
@@ -111,9 +194,9 @@
 			</Header>
 			<Content class="dark:border-x-neutral-900 ltr:border-r-2 rtl:border-l-2">
 				<List lines="none">
-					<ListHeader class="font-bold text-lg">Overview</ListHeader>
+					<ListHeader class="text-lg font-bold">Overview</ListHeader>
 					{#each navPageList as page}
-						<DrawerToggle autoHide="{false}">
+						<MenuToggle autoHide="{false}">
 							<Item
 								detail="{false}"
 								href="{page.route}"
@@ -121,7 +204,7 @@
 							>
 								<Label>{page.label}</Label>
 							</Item>
-						</DrawerToggle>
+						</MenuToggle>
 					{/each}
 					<AccordionGroup
 						multiple="{true}"
@@ -131,10 +214,10 @@
 							toggleIconSlot="end"
 							value="svonic-core"
 						>
-							<Item toSlot="header">
-								<Label class="font-bold text-lg">Svonic Core</Label>
+							<Item slot="header">
+								<Label class="text-lg font-bold">Svonic Core</Label>
 							</Item>
-							<List toSlot="content">
+							<List slot="content">
 								{#each navComponentList as componentGroup}
 									<AccordionGroup
 										multiple="{true}"
@@ -144,21 +227,19 @@
 											toggleIconSlot="end"
 											value="{componentGroup.group}"
 										>
-											<Item toSlot="header">
+											<Item slot="header">
 												<Label class="pl-2">{componentGroup.group}</Label>
 											</Item>
-											<List toSlot="content">
+											<List slot="content">
 												{#each componentGroup.groupList as component}
-													<DrawerToggle autoHide="{false}">
-														<Item
-															class="{selectedComponent === component.name ? 'selected' : ''}"
-															detail="{false}"
-															href="{component.route}"
-															svelteKitPrefetch="{true}"
-														>
-															<Label class="pl-4">{component.label}</Label>
-														</Item>
-													</DrawerToggle>
+													<Item
+														class="{selectedComponent === component.name ? 'selected' : ''}"
+														detail="{false}"
+														href="{component.route}"
+														svelteKitPrefetch="{true}"
+													>
+														<Label class="pl-4">{component.label}</Label>
+													</Item>
 												{/each}
 											</List>
 										</Accordion>
@@ -169,36 +250,45 @@
 					</AccordionGroup>
 				</List>
 			</Content>
-		</Drawer>
+		</Menu>
 		<div
 			class="ion-page"
 			id="main-content"
 		>
 			<Header>
 				<Toolbar>
-					<ButtonGroup toSlot="start">
-						<DrawerButton />
-					</ButtonGroup>
-					<ButtonGroup toSlot="end">
+					<Buttons slot="start">
+						{#if isSplitPaneActive === true}
+							<Button on:click="{toggleSplitPane}">
+								<Ionicon
+									icon="{menuIcon}"
+									slot="icon-only"
+								/></Button
+							>
+						{:else}
+							<MenuButton autoHide="{true}"></MenuButton>
+						{/if}
+					</Buttons>
+					<Buttons slot="end">
 						<Button
 							href="https://github.com/svonic/svonic"
 							target="_blank"
 						>
 							<Ionicon
 								icon="{logoGithub}"
-								toSlot="icon-only"
+								slot="icon-only"
 							/>
 						</Button>
 						<Button on:click="{toogleRTLMode}">
 							{#if rtlMode === 'ltr'}
 								<Icon
 									path="{mdiFormatPilcrowArrowRight}"
-									toSlot="icon-only"
+									slot="icon-only"
 								/>
 							{:else}
 								<Icon
 									path="{mdiFormatPilcrowArrowLeft}"
-									toSlot="icon-only"
+									slot="icon-only"
 								/>
 							{/if}
 						</Button>
@@ -206,23 +296,23 @@
 							{#if darkMode === false}
 								<Ionicon
 									icon="{moonOutline}"
-									toSlot="icon-only"
+									slot="icon-only"
 								/>
 							{:else}
 								<Ionicon
 									color="warning"
 									icon="{sunnyOutline}"
-									toSlot="icon-only"
+									slot="icon-only"
 								/>
 							{/if}
 						</Button>
-					</ButtonGroup>
+					</Buttons>
 				</Toolbar>
 			</Header>
 			<slot />
 		</div>
-	</NavigationPane>
-</Application>
+	</SplitPane>
+</App>
 
 <style>
 </style>
