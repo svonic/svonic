@@ -7,7 +7,7 @@ export { default as Avatar } from './avatar/Avatar.svelte';
 export { default as BackButton } from './back-button/BackButton.svelte';
 export { default as Backdrop } from './backdrop/Backdrop.svelte';
 export { default as Badge } from './badge/Badge.svelte';
-export { default as BreadCrumb } from './breadcrumb/Breadcrumb.svelte';
+export { default as Breadcrumb } from './breadcrumb/Breadcrumb.svelte';
 export { default as Breadcrumbs } from './breadcrumbs/Breadcrumbs.svelte';
 export { default as Button } from './button/Button.svelte';
 export { default as Buttons } from './buttons/Buttons.svelte';
